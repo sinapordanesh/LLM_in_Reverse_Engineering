@@ -1,0 +1,4197 @@
+﻿id,problem_name,,explanation,output,original_code,13,comment_less_code
+1,"C ""Hello, World!"" Program",25,"How ""Hello, World!"" program works?
+The #include is a preprocessor command that tells the compiler to include the contents of stdio.h (standard input and output) file in the program.
+The stdio.h file contains functions such as scanf() and printf() to take input and display output respectively.
+If you use the printf() function without writing #include <stdio.h>, the program will not compile.
+The execution of a C program starts from the main() function.
+printf() is a library function to send formatted output to the screen. In this program, printf() displays Hello, World! text on the screen.
+The return 0; statement is the ""Exit status"" of the program. In simple terms, the program ends with this statement.",,"#include <stdio.h>
+int main() {
+   // printf() displays the string inside quotation
+   printf(""Hello, World!"");
+   return 0;
+}",126,"#include <stdio.h>
+int main() {
+printf(""Hello, World!"");
+return 0;
+}"
+2,C Program to Print an Integer (Entered by the User),51,"In this program, an integer variable number is declared.
+
+int number;
+
+
+Then, the user is asked to enter an integer number. This number is stored in the number variable.
+
+printf(""Enter an integer: "");
+scanf(""%d"", &number);
+
+Finally, the value stored in number is displayed on the screen using printf().
+
+printf(""You entered: %d"", number);",,"#include <stdio.h>
+int main() {
+int number;
+printf(""Enter an integer: "");
+// reads and stores input
+scanf(""%d"", &number);
+// displays output
+printf(""You entered: %d"", number);
+return 0;
+}",187,"#include <stdio.h>
+int main() {
+int number;
+printf(""Enter an integer: "");
+scanf(""%d"", &number);
+printf(""You entered: %d"", number);
+return 0;
+}"
+3,C Program to Add Two Integers,29,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+• https://www.programiz.com/c-programming/c-operators
+
+In this program, the user is asked to enter two integers. These two integers are stored in variables number1 and number2 respectively.
+printf(""Enter two integers: "");
+scanf(""%d %d"", &number1, &number2);
+Then, these two numbers are added using the + operator, and the result is stored in the sum variable.
+sum = number1 + number2;
+Add Two Numbers
+Finally, the printf() function is used to display the sum of numbers.
+printf(""%d + %d = %d"", number1, number2, sum);",,"#include <stdio.h>
+int main() {
+int number1, number2, sum;
+printf(""Enter two integers: "");
+scanf(""%d %d"", &number1, &number2);
+// calculate the sum
+sum = number1 + number2;
+printf(""%d + %d = %d"", number1, number2, sum);
+return 0;
+}",231,"#include <stdio.h>
+int main() {
+int number1, number2;
+printf(""Enter two integers: "");
+scanf(""%d %d"", &number1, &number2);
+int sum = number1 + number2;
+printf(""%d + %d = %d"", number1, number2, sum);
+return 0;
+}"
+4,C Program to Multiply Two Floating-Point Numbers,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-input-output
+• https://www.programiz.com/c-programming/c-operators
+In this program, the user is asked to enter two numbers which are stored in variables a and b respectively.
+
+printf(""Enter two numbers: "");
+scanf(""%lf %lf"", &a, &b); 
+
+Then, the product of a and b is evaluated and the result is stored in product.
+
+product = a * b;
+
+
+Finally, product is displayed on the screen using printf().
+
+printf(""Product = %.2lf"", product);
+
+Notice that, the result is rounded off to the second decimal place using %.2lf conversion character.",,"#include <stdio.h>
+int main() {
+double a, b, product;
+printf(""Enter two numbers: "");
+scanf(""%lf %lf"", &a, &b);
+// Calculating product
+product = a * b;
+// %.2lf displays number up to 2 decimal point
+printf(""Product = %.2lf"", product);
+return 0;
+}",245,"#include <stdio.h>
+int main() {
+double a, b;
+printf(""Enter two numbers: "");
+scanf(""%lf %lf"", &a, &b);
+double product = a * b;
+printf(""Product = %.2lf"", product);
+return 0;
+}"
+5,C Program to Find ASCII Value of a Character,44,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+
+In C programming, a character variable holds ASCII value (an integer number between 0 and 127) rather than that character itself. This integer value is the ASCII code of the character.
+For example, the ASCII value of 'A' is 65.
+What this means is that, if you assign 'A' to a character variable, 65 is stored in the variable rather than 'A' itself.
+Now, let's see how we can print the ASCII value of characters in C programming.
+
+In this program, the user is asked to enter a character. The character is stored in variable c.
+When %d format string is used, 71 (the ASCII value of G) is displayed.
+When %c format string is used, 'G' itself is displayed.",,"#include <stdio.h>
+int main() {
+char c;
+printf(""Enter a character: "");
+scanf(""%c"", &c);
+// %d displays the integer value of a character
+// %c displays the actual character
+printf(""ASCII value of %c = %d"", c, c);
+return 0;
+}",223,"#include <stdio.h>
+int main() {
+char c;
+printf(""Enter a character: "");
+scanf(""%c"", &c);
+printf(""ASCII value of %c = %d"", c, c);
+return 0;
+}"
+6,C Program to Compute Quotient and Remainder,43,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+• https://www.programiz.com/c-programming/c-operators
+
+In this program, the user is asked to enter two integers (dividend and divisor). They are stored in variables dividend and divisor respectively.
+
+printf(""Enter dividend: "");
+scanf(""%d"", &dividend);
+printf(""Enter divisor: "");
+scanf(""%d"", &divisor);
+
+Then the quotient is evaluated using / (the division operator), and stored in quotient.
+
+quotient = dividend / divisor;
+
+
+Similarly, the remainder is evaluated using % (the modulo operator) and stored in remainder.
+
+remainder = dividend % divisor;
+
+Finally, the quotient and remainder are displayed using printf().
+
+printf(""Quotient = %d\n"", quotient);
+printf(""Remainder = %d"", remainder);
+
+Learn more about https://www.programiz.com/c-programming/c-operators.",,"#include <stdio.h>
+int main() {
+int dividend, divisor, quotient, remainder;
+printf(""Enter dividend: "");
+scanf(""%d"", &dividend);
+printf(""Enter divisor: "");
+scanf(""%d"", &divisor);
+// Computes quotient
+quotient = dividend / divisor;
+// Computes remainder
+remainder = dividend % divisor;
+printf(""Quotient = %d\n"", quotient);
+printf(""Remainder = %d"", remainder);
+return 0;
+}",369,"#include <stdio.h>
+int main() {
+int dividend, divisor, quotient, remainder;
+printf(""Enter dividend: "");
+scanf(""%d"", &dividend);
+printf(""Enter divisor: "");
+scanf(""%d"", &divisor);
+quotient = dividend / divisor;
+remainder = dividend % divisor;
+printf(""Quotient = %d\n"", quotient);
+printf(""Remainder = %d"", remainder);
+return 0;
+}"
+7,"C Program to Find the Size of int, float, double and char",57,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+The sizeof(variable)operator computes the size of a variable. And, to print the result returned by sizeof, we use either %lu or %zu format specifier.
+
+In this program, 4 variables intType, floatType, doubleType and charType are declared.
+Then, the size of each variable is computed using the sizeof operator.",,"#include<stdio.h>
+int main() {
+int intType;
+float floatType;
+double doubleType;
+char charType;
+// sizeof evaluates the size of a variable
+printf(""Size of int: %zu bytes\n"", sizeof(intType));
+printf(""Size of float: %zu bytes\n"", sizeof(floatType));
+printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
+printf(""Size of char: %zu byte\n"", sizeof(charType));
+return 0;
+}",372,"#include<stdio.h>
+int main() {
+int intType;
+float floatType;
+double doubleType;
+char charType;
+printf(""Size of int: %zu bytes\n"", sizeof(intType));
+printf(""Size of float: %zu bytes\n"", sizeof(floatType));
+printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
+printf(""Size of char: %zu byte\n"", sizeof(charType));
+return 0;
+}"
+8,C Program to Demonstrate the Working of Keyword long,52,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+
+In this program, the sizeof operator is used to find the size of int, long, long long, double and long double variables.
+As you can see, the size of long int and long double variables are larger than int and double variables, respectively.
+By the way, the sizeof operator returns size_t (unsigned integral type).
+The size_t data type is used to represent the size of an object. The format specifier used for size_t is %zu.
+Note: The long keyword cannot be used with float and char types.",,"#include <stdio.h>
+int main() {
+int a;
+long b; // equivalent to long int b;
+long long c; // equivalent to long long int c;
+double e;
+long double f;
+printf(""Size of int = %zu bytes \n"", sizeof(a));
+printf(""Size of long int = %zu bytes\n"", sizeof(b));
+printf(""Size of long long int = %zu bytes\n"", sizeof(c));
+printf(""Size of double = %zu bytes\n"", sizeof(e));
+printf(""Size of long double = %zu bytes\n"", sizeof(f));
+return 0;
+}",426,"#include <stdio.h>
+int main() {
+int a;
+long b;
+long long c;
+double e;
+long double f;
+printf(""Size of int = %zu bytes \n"", sizeof(a));
+printf(""Size of long int = %zu bytes\n"", sizeof(b));
+printf(""Size of long long int = %zu bytes\n"", sizeof(c));
+printf(""Size of double = %zu bytes\n"", sizeof(e));
+printf(""Size of long double = %zu bytes\n"", sizeof(f));
+return 0;
+}"
+9,C Program to Swap Two Numbers,29,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-input-output
+
+In the above program, the temp variable is assigned the value of the first variable.
+Then, the value of the first variable is assigned to the second variable.
+
+Finally, the temp (which holds the initial value of first) is assigned to second. This completes the swapping process.",,"#include<stdio.h>
+int main() {
+double first, second, temp;
+printf(""Enter first number: "");
+scanf(""%lf"", &first);
+printf(""Enter second number: "");
+scanf(""%lf"", &second);
+// value of first is assigned to temp
+temp = first;
+// value of second is assigned to first
+first = second;
+// value of temp (initial value of first) is assigned to second
+second = temp;
+// %.2lf displays number up to 2 decimal points
+printf(""\nAfter swapping, first number = %.2lf\n"", first);
+printf(""After swapping, second number = %.2lf"", second);
+return 0;
+}",531,"#include<stdio.h>
+int main() {
+double first, second, temp;
+printf(""Enter first number: "");
+scanf(""%lf"", &first);
+printf(""Enter second number: "");
+scanf(""%lf"", &second);
+temp = first;
+first = second;
+second = temp;
+printf(""\nAfter swapping, first number = %.2lf\n"", first);
+printf(""After swapping, second number = %.2lf"", second);
+return 0;
+}"
+10,C Program to Check Whether a Number is Even or Odd,50,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+An even number is an integer that is exactly divisible by 2. For example: 0, 8, -24
+An odd number is an integer that is not exactly divisible by 2. For example: 1, 7, -11, 15
+
+In the program, the integer entered by the user is stored in the variable num.
+Then, whether num is perfectly divisible by 2 or not is checked using the modulus % operator.
+
+If the number is perfectly divisible by 2, test expression number%2 == 0 evaluates to 1 (true). This means the number is even.
+However, if the test expression evaluates to 0 (false), the number is odd.",,"#include <stdio.h>
+int main() {
+int num;
+printf(""Enter an integer: "");
+scanf(""%d"", &num);
+// true if num is perfectly divisible by 2
+if(num % 2 == 0)
+printf(""%d is even."", num);
+else
+printf(""%d is odd."", num);
+return 0;
+}",221,"#include <stdio.h>
+int main() {
+int num;
+printf(""Enter an integer: "");
+scanf(""%d"", &num);
+if(num % 2 == 0)
+printf(""%d is even."", num);
+else
+printf(""%d is odd."", num);
+return 0;
+}"
+11,C Program to Check Whether a Character is a Vowel or Consonant,62,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-do-while-loops
+The five letters A, E, I, O and U are called vowels. All other alphabets except these 5 vowels are called consonants.
+This program assumes that the user will always enter an alphabet character.
+
+The character entered by the user is stored in variable c.
+The lowercase_vowel variable evaluates to 1 (true) if c is a lowercase vowel and 0 (false) for any other characters.
+
+Similarly, the uppercase_vowel variable evaluates to 1 (true) if c is an uppercase vowel and 0 (false) for any other character.
+If either lowercase_vowel or uppercase_vowel variable is 1 (true), the entered character is a vowel. However, if both lowercase_vowel and uppercase_vowel variables are 0, the entered character is a consonant.
+Note: This program assumes that the user will enter an alphabet. If the user enters a non-alphabetic character, it displays the character is a consonant.",,"#include <stdio.h>
+int main() {
+char c;
+int lowercase_vowel, uppercase_vowel;
+printf(""Enter an alphabet: "");
+scanf(""%c"", &c);
+// evaluates to 1 if variable c is a lowercase vowel
+lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+// evaluates to 1 if variable c is a uppercase vowel
+uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+// evaluates to 1 (true) if c is a vowel
+if (lowercase_vowel || uppercase_vowel)
+printf(""%c is a vowel."", c);
+else
+printf(""%c is a consonant."", c);
+return 0;
+}",547,"#include <stdio.h>
+int main() {
+char c;
+int lowercase_vowel, uppercase_vowel;
+printf(""Enter an alphabet: "");
+scanf(""%c"", &c);
+lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+if (lowercase_vowel || uppercase_vowel)
+printf(""%c is a vowel."", c);
+else
+printf(""%c is a consonant."", c);
+return 0;
+}"
+12,C Program to Find the Largest Number Among Three Numbers,56,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+
+Here, we have used 3 different if statements. The first one checks whether n1 is the largest number.
+The second and third if statements check if n2 and n3 are the largest, respectively.
+The biggest drawback of this program is that all 3  if statements are executed, regardless of which number is the largest.
+However, we want to execute only one if statement. We can do this by using an if...else ladder.",,"#include <stdio.h>
+
+int main() {
+
+  double n1, n2, n3;
+
+  printf(""Enter three different numbers: "");
+  scanf(""%lf %lf %lf"", &n1, &n2, &n3);
+
+  // if n1 is greater than both n2 and n3, n1 is the largest
+  if (n1 >= n2 && n1 >= n3)
+    printf(""%.2f is the largest number."", n1);
+
+  // if n2 is greater than both n1 and n3, n2 is the largest
+  if (n2 >= n1 && n2 >= n3)
+    printf(""%.2f is the largest number."", n2);
+
+  // if n3 is greater than both n1 and n2, n3 is the largest
+  if (n3 >= n1 && n3 >= n2)
+    printf(""%.2f is the largest number."", n3);
+
+  return 0;
+}",565,"#include <stdio.h>
+
+int main() {
+
+  double n1, n2, n3;
+
+  printf(""Enter three different numbers: "");
+  scanf(""%lf %lf %lf"", &n1, &n2, &n3);
+
+  if (n1 >= n2 && n1 >= n3)
+    printf(""%.2f is the largest number."", n1);
+
+  if (n2 >= n1 && n2 >= n3)
+    printf(""%.2f is the largest number."", n2);
+
+  if (n3 >= n1 && n3 >= n2)
+    printf(""%.2f is the largest number."", n3);
+
+  return 0;
+}"
+13,C Program to Find the Roots of a Quadratic Equation,51,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+The standard form of a quadratic equation is:
+
+ax2 + bx + c = 0, where
+a, b and c are real numbers and
+a != 0
+
+The term b2; - 4ac is known as the discriminant of a quadratic equation. It tells the nature of the roots.
+• If the discriminant is greater than 0, the roots are real and different.
+• If the discriminant is equal to 0, the roots are real and equal.
+• If the discriminant is less than 0, the roots are complex and different.
+
+In this program, the sqrt() library function is used to find the square root of a number. To learn more, visit: https://www.programiz.com/c-programming/library-function/math.h/sqrt.",,"#include <math.h>
+#include <stdio.h>
+int main() {
+double a, b, c, discriminant, root1, root2, realPart, imagPart;
+printf(""Enter coefficients a, b and c: "");
+scanf(""%lf %lf %lf"", &a, &b, &c);
+discriminant = b * b - 4 * a * c;
+// condition for real and different roots
+if (discriminant > 0) {
+root1 = (-b + sqrt(discriminant)) / (2 * a);
+root2 = (-b - sqrt(discriminant)) / (2 * a);
+printf(""root1 = %.2lf and root2 = %.2lf"", root1, root2);
+}
+// condition for real and equal roots
+else if (discriminant == 0) {
+root1 = root2 = -b / (2 * a);
+printf(""root1 = root2 = %.2lf;"", root1);
+}
+// if roots are not real
+else {
+realPart = -b / (2 * a);
+imagPart = sqrt(-discriminant) / (2 * a);
+printf(""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"", realPart, imagPart, realPart, imagPart);
+}
+return 0;
+}",788,"#include <math.h>
+#include <stdio.h>
+int main() {
+double a, b, c, discriminant, root1, root2, realPart, imagPart;
+printf(""Enter coefficients a, b and c: "");
+scanf(""%lf %lf %lf"", &a, &b, &c);
+discriminant = b * b - 4 * a * c;
+if (discriminant > 0) {
+root1 = (-b + sqrt(discriminant)) / (2 * a);
+root2 = (-b - sqrt(discriminant)) / (2 * a);
+printf(""root1 = %.2lf and root2 = %.2lf"", root1, root2);
+}
+else if (discriminant == 0) {
+root1 = root2 = -b / (2 * a);
+printf(""root1 = root2 = %.2lf;"", root1);
+}
+else {
+realPart = -b / (2 * a);
+imagPart = sqrt(-discriminant) / (2 * a);
+printf(""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"", realPart, imagPart, realPart, imagPart);
+}
+return 0;
+}"
+14,C Program to Check Leap Year,28,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+A leap year is exactly divisible by 4 except for century years (years ending with 00). The century year is a leap year only if it is perfectly divisible by 400.
+For example,
+• 1999 is not a leap year
+• 2000 is a leap year
+• 2004 is a leap year",,"#include <stdio.h>
+int main() {
+int year;
+printf(""Enter a year: "");
+scanf(""%d"", &year);
+// leap year if perfectly divisible by 400
+if (year % 400 == 0) {
+printf(""%d is a leap year."", year);
+}
+// not a leap year if divisible by 100
+// but not divisible by 400
+else if (year % 100 == 0) {
+printf(""%d is not a leap year."", year);
+}
+// leap year if not divisible by 100
+// but divisible by 4
+else if (year % 4 == 0) {
+printf(""%d is a leap year."", year);
+}
+// all other years are not leap years
+else {
+printf(""%d is not a leap year."", year);
+}
+return 0;
+}",550,"#include <stdio.h>
+int main() {
+int year;
+printf(""Enter a year: "");
+scanf(""%d"", &year);
+if (year % 400 == 0) {
+printf(""%d is a leap year."", year);
+}
+else if (year % 100 == 0) {
+printf(""%d is not a leap year."", year);
+}
+else if (year % 4 == 0) {
+printf(""%d is a leap year."", year);
+}
+else {
+printf(""%d is not a leap year."", year);
+}
+return 0;
+}"
+15,C Program to Check Whether a Number is Positive or Negative,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+This program takes a number from the user and checks whether that number is either positive or negative or zero.",,"#include <stdio.h>
+int main() {
+double num;
+printf(""Enter a number: "");
+scanf(""%lf"", &num);
+if (num <= 0.0) {
+if (num == 0.0)
+printf(""You entered 0."");
+else
+printf(""You entered a negative number."");
+}
+else
+printf(""You entered a positive number."");
+return 0;
+}",259,"#include <stdio.h>
+int main() {
+double num;
+printf(""Enter a number: "");
+scanf(""%lf"", &num);
+if (num <= 0.0) {
+if (num == 0.0)
+printf(""You entered 0."");
+else
+printf(""You entered a negative number."");
+}
+else
+printf(""You entered a positive number."");
+return 0;
+}"
+16,C Program to Check Whether a Character is an Alphabet or not,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+In C programming, a character variable holds an ASCII value (an integer number between 0 and 127) rather than that character itself.
+The ASCII value of the lowercase alphabet is from 97 to 122. And, the ASCII value of the uppercase alphabet is from 65 to 90.
+If the ASCII value of the character entered by the user lies in the range of 97 to 122 or from 65 to 90, that number is an alphabet.
+
+In the program, 'a' is used instead of 97 and 'z' is used instead of 122. Similarly, 'A' is used instead of 65 and 'Z' is used instead of 90.
+Note: It is recommended we use the https://www.programiz.com/c-programming/library-function/ctype.h/isalpha function to check whether a character is an alphabet or not.
+
+if (isalpha(c))
+    printf(""%c is an alphabet."", c);
+else
+    printf(""%c is not an alphabet."", c);",,"#include <stdio.h>
+int main() {
+char c;
+printf(""Enter a character: "");
+scanf(""%c"", &c);
+if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+printf(""%c is an alphabet."", c);
+else
+printf(""%c is not an alphabet."", c);
+return 0;
+}",228,"#include <stdio.h>
+int main() {
+char c;
+printf(""Enter a character: "");
+scanf(""%c"", &c);
+if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+printf(""%c is an alphabet."", c);
+else
+printf(""%c is not an alphabet."", c);
+return 0;
+}"
+17,C Program to Calculate the Sum of Natural Numbers,49,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-do-while-loops
+The positive numbers 1, 2, 3... are known as natural numbers. The sum of natural numbers up to 10 is:
+
+sum = 1 + 2 + 3 + ... + 10
+
+The above program takes input from the user and stores it in the variable n. Then, for loop is used to calculate the sum up to n.
+
+the loop is iterated n number of times. And, in each iteration, the value of i is added to sum and i is incremented by 1.
+
+Though both programs are technically correct, it is better to use for loop in this case. It's because the number of iterations is known.
+The above programs don't work properly if the user enters a negative integer. Here is a little modification to the above program where we keep taking input from the user until a positive integer is entered.",,"#include <stdio.h>
+int main() {
+int n, i, sum = 0;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+i = 1;
+while (i <= n) {
+sum += i;
+++i;
+}
+printf(""Sum = %d"", sum);
+return 0;
+}",183,"#include <stdio.h>
+int main() {
+int n, i, sum = 0;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+i = 1;
+while (i <= n) {
+sum += i;
+++i;
+}
+printf(""Sum = %d"", sum);
+return 0;
+}"
+18,C Program to Find Factorial of a Number,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-for-loop
+The factorial of a positive number n is given by:
+
+factorial of n (n!) = 1 * 2 * 3 * 4....n
+
+The factorial of a negative number doesn't exist. And, the factorial of 0 is 1.
+
+This program takes a positive integer from the user and computes the factorial using for loop.
+
+Since the factorial of a number may be very large, the type of factorial variable is declared as unsigned long long.
+If the user enters a negative number, the program displays a custom error message.
+You can also find the https://www.programiz.com/c-programming/examples/factorial-recursion.",,"#include <stdio.h>
+int main() {
+int n, i;
+unsigned long long fact = 1;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+// shows error if the user enters a negative integer
+if (n < 0)
+printf(""Error! Factorial of a negative number doesn't exist."");
+else {
+for (i = 1; i <= n; ++i) {
+fact *= i;
+}
+printf(""Factorial of %d = %llu"", n, fact);
+}
+return 0;
+}",349,"#include <stdio.h>
+int main() {
+int n, i;
+unsigned long long fact = 1;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+if (n < 0)
+printf(""Error! Factorial of a negative number doesn't exist."");
+else {
+for (i = 1; i <= n; ++i) {
+fact *= i;
+}
+printf(""Factorial of %d = %llu"", n, fact);
+}
+return 0;
+}"
+19,C Program to Generate Multiplication Table,42,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-for-loop
+The program below takes an integer input from the user and generates the multiplication tables up to 10.
+
+Here, the user input is stored in the int variable n. Then, we use a for loop to print the multiplication table up to 10.
+
+for (i = 1; i <= 10; ++i) {
+  printf(""%d * %d = %d \n"", n, i, n * i);
+}
+The loop runs from i = 1 to i = 10. In each iteration of the loop, n * i is printed.",,"#include <stdio.h>
+int main() {
+int n;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+for (int i = 1; i <= 10; ++i) {
+printf(""%d * %d = %d \n"", n, i, n * i);
+}
+return 0;
+}",171,"#include <stdio.h>
+int main() {
+int n;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+for (int i = 1; i <= 10; ++i) {
+printf(""%d * %d = %d \n"", n, i, n * i);
+}
+return 0;
+}"
+20,C Program to Display Fibonacci Sequence,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-do-while-loops
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-break-continue-statement
+The Fibonacci sequence is a sequence where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+
+The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+Visit this page to learn about https://www.mathsisfun.com/numbers/fibonacci-sequence.html.
+
+Let us suppose n = 10. First, we have printed the first two terms of the Fibonacci sequence before using a for loop to print the next n terms.
+L",,"#include <stdio.h>
+int main() {
+int i, n;
+// initialize first and second terms
+int t1 = 0, t2 = 1;
+// initialize the next term (3rd term)
+int nextTerm = t1 + t2;
+// get no. of terms from user
+printf(""Enter the number of terms: "");
+scanf(""%d"", &n);
+// print the first two terms t1 and t2
+printf(""Fibonacci Series: %d, %d, "", t1, t2);
+// print 3rd to nth terms
+for (i = 3; i <= n; ++i) {
+printf(""%d, "", nextTerm);
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+}
+return 0;
+}",469,"#include <stdio.h>
+int main() {
+int i, n;
+int t1 = 0, t2 = 1;
+int nextTerm = t1 + t2;
+printf(""Enter the number of terms: "");
+scanf(""%d"", &n);
+printf(""Fibonacci Series: %d, %d, "", t1, t2);
+for (i = 3; i <= n; ++i) {
+printf(""%d, "", nextTerm);
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+}
+return 0;
+}"
+21,C Program to Find GCD of two Numbers,36,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-do-while-loops
+The HCF or GCD of two integers is the largest integer that can exactly divide both numbers (without a remainder).
+There are many ways to find the greatest common divisor in C programming.
+
+In this program, two integers entered by the user are stored in variable n1 and n2.Then, for loop is iterated until i is less than n1 and n2.
+In each iteration, if both n1 and n2 are exactly divisible by i, the value of i is assigned to gcd.
+When the for loop is completed, the greatest common divisor of two numbers is stored in variable gcd.",,"#include <stdio.h>
+int main()
+{
+int n1, n2, i, gcd;
+printf(""Enter two integers: "");
+scanf(""%d %d"", &n1, &n2);
+for(i=1; i <= n1 && i <= n2; ++i)
+{
+// Checks if i is factor of both integers
+if(n1%i==0 && n2%i==0)
+gcd = i;
+}
+printf(""G.C.D of %d and %d is %d"", n1, n2, gcd);
+return 0;
+}",282,"#include <stdio.h>
+int main()
+{
+int n1, n2, i, gcd;
+printf(""Enter two integers: "");
+scanf(""%d %d"", &n1, &n2);
+for(i=1; i <= n1 && i <= n2; ++i)
+{
+if(n1%i==0 && n2%i==0)
+gcd = i;
+}
+printf(""G.C.D of %d and %d is %d"", n1, n2, gcd);
+return 0;
+}"
+22,C Program to Find LCM of two Numbers,36,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-do-while-loops
+The LCM of two integers n1 and n2 is the smallest positive integer that is perfectly divisible by both n1 and n2 (without a remainder). For example, the LCM of 72 and 120 is 360.
+
+In this program, the integers entered by the user are stored in variable n1 and n2 respectively.
+The largest number among n1 and n2 is stored in max. The LCM of two numbers cannot be less than max.
+The test expression of while loop is always true.
+
+In each iteration, we check whether max is perfectly divisible by n1 and n2.
+
+if ((max % n1 == 0) && (max % n2 == 0)) {
+    // code
+}
+If this test condition is not true, max is incremented by 1 and the iteration continues until the test expression of the if statement is true.",,"#include <stdio.h>
+int main() {
+int n1, n2, max;
+printf(""Enter two positive integers: "");
+scanf(""%d %d"", &n1, &n2);
+// maximum number between n1 and n2 is stored in max
+max = (n1 > n2) ? n1 : n2;
+while (1) {
+if ((max % n1 == 0) && (max % n2 == 0)) {
+printf(""The LCM of %d and %d is %d."", n1, n2, max);
+break;
+}
+++max;
+}
+return 0;
+}",331,"#include <stdio.h>
+int main() {
+int n1, n2, max;
+printf(""Enter two positive integers: "");
+scanf(""%d %d"", &n1, &n2);
+max = (n1 > n2) ? n1 : n2;
+while (1) {
+if ((max % n1 == 0) && (max % n2 == 0)) {
+printf(""The LCM of %d and %d is %d."", n1, n2, max);
+break;
+}
+++max;
+}
+return 0;
+}"
+23,C Program to Display Characters from A to Z Using Loop,54,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-do-while-loops
+
+In this program, the for loop is used to display the English alphabet in uppercase.
+
+Here's a little modification of the above program. The program displays the English alphabet in either uppercase or lowercase depending upon the input given by the user.",,"#include <stdio.h>
+int main() {
+char c;
+for (c = 'A'; c <= 'Z'; ++c)
+printf(""%c "", c);
+return 0;
+}",98,"#include <stdio.h>
+int main() {
+    char c;
+    for (c = 'A'; c <= 'Z'; ++c)
+        printf(""%c "", c);
+    return 0;
+}"
+24,C Program to Count Number of Digits in an Integer,49,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Operators
+C while and do...while Loop
+This program takes an integer from the user and calculates the number of digits. For example: If the user enters 2319, the output of the program will be 4.
+
+The integer entered by the user is stored in variable n. Then the do...while https://www.programiz.com/c-programming/c-do-while-loops is iterated until the test expression n! = 0 is evaluated to 0 (false).
+• After the first iteration, the value of n will be 345 and the count is incremented to 1.
+• After the second iteration, the value of n will be 34 and the count is incremented to 2.
+• After the third iteration, the value of n will be 3 and the count is incremented to 3.
+• After the fourth iteration, the value of n will be 0 and the count is incremented to 4.
+• Then the test expression of the loop is evaluated to false and the loop terminates.
+Note: We have used a do...while loop to ensure that we get the correct digit count when the user enters 0.",,"#include <stdio.h>
+int main() {
+long long n;
+int count = 0;
+printf(""Enter an integer: "");
+scanf(""%lld"", &n);
+// iterate at least once, then until n becomes 0
+// remove last digit from n in each iteration
+// increase count by 1 in each iteration
+do {
+n /= 10;
+++count;
+} while (n != 0);
+printf(""Number of digits: %d"", count);
+}",326,"#include <stdio.h>
+int main() {
+  long long n;
+  int count = 0;
+  printf(""Enter an integer: "");
+  scanf(""%lld"", &n);
+ 
+  do {
+    n /= 10;
+    ++count;
+  } while (n != 0);
+
+  printf(""Number of digits: %d"", count);
+}"
+25,C Program to Reverse a Number,29,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Operators
+C while and do...while Loop
+
+This program takes integer input from the user. Then the while loop is used until n != 0 is false (0).
+In each iteration of the loop, the remainder when n is divided by 10 is calculated and the value of n is reduced by 10 times.
+Inside the loop, the reversed number is computed using:
+
+reverse = reverse * 10 + remainder;
+Let us see how the while loop works when n = 2345.",,"#include <stdio.h>
+int main() {
+int n, reverse = 0, remainder;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+while (n != 0) {
+remainder = n % 10;
+reverse = reverse * 10 + remainder;
+n /= 10;
+}
+printf(""Reversed number = %d"", reverse);
+return 0;
+}",246,"#include <stdio.h>
+int main() {
+int n, reverse = 0, remainder;
+printf(""Enter an integer: "");
+scanf(""%d"", &n);
+while (n != 0) {
+remainder = n % 10;
+reverse = reverse * 10 + remainder;
+n /= 10;
+}
+printf(""Reversed number = %d"", reverse);
+return 0;
+}"
+26,C Program to Calculate the Power of a Number,44,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Operators
+C while and do...while Loop
+The program below takes two integers from the user (a base number and an exponent) and calculates the power.
+
+For example: In the case of 23
+
+2 is the base number
+3 is the exponent
+And, the power is equal to 2*2*2
+
+We can also use the pow() function to calculate the power of a number.",,"#include <stdio.h>
+int main() {
+    int base, exp;
+    long double result = 1.0;
+    printf(""Enter a base number: "");
+    scanf(""%d"", &base);
+    printf(""Enter an exponent: "");
+    scanf(""%d"", &exp);
+
+    while (exp != 0) {
+        result *= base;
+        --exp;
+    }
+    printf(""Answer = %.0Lf"", result);
+    return 0;
+}",322,"#include <stdio.h>
+int main() {
+    int base, exp;
+    long double result = 1.0;
+    printf(""Enter a base number: "");
+    scanf(""%d"", &base);
+    printf(""Enter an exponent: "");
+    scanf(""%d"", &exp);
+
+    while (exp != 0) {
+        result *= base;
+        --exp;
+    }
+    printf(""Answer = %.0Lf"", result);
+    return 0;
+}"
+27,C Program to Check Whether a Number is Palindrome or Not,56,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Operators
+C if...else Statement
+C while and do...while Loop
+An integer is a palindrome if the reverse of that number is equal to the original number.
+
+Here, the user is asked to enter an integer. The number is stored in variable n.
+
+We then assigned this number to another variable orignal. Then, the reverse of n is found and stored in reversed.
+If original is equal to reversed, the number entered by the user is a palindrome.",,"#include <stdio.h>
+int main() {
+  int n, reversed = 0, remainder, original;
+    printf(""Enter an integer: "");
+    scanf(""%d"", &n);
+    original = n;
+
+    // reversed integer is stored in reversed variable
+    while (n != 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignal and reversed are equal
+    if (original == reversed)
+        printf(""%d is a palindrome."", original);
+    else
+        printf(""%d is not a palindrome."", original);
+
+    return 0;
+}",533,"#include <stdio.h>
+int main() {
+  int n, reversed = 0, remainder, original;
+    printf(""Enter an integer: "");
+    scanf(""%d"", &n);
+    original = n;
+
+    while (n != 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+
+    if (original == reversed)
+        printf(""%d is a palindrome."", original);
+    else
+        printf(""%d is not a palindrome."", original);
+
+    return 0;
+}"
+28,C Program to Check Whether a Number is Prime or Not,51,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C if...else Statement
+C for Loop
+C break and continue
+A prime number is a positive integer that is divisible only by 1 and itself. For example: 2, 3, 5, 7, 11, 13, 17.
+
+In the program, a for loop is iterated from i = 2 to i < n/2.
+In each iteration, whether n is perfectly divisible by i is checked using:
+
+if (n % i == 0) {
+  flag = 1;
+  break;
+}
+
+If n is perfectly divisible by i, n is not a prime number. In this case, flag is set to 1, and the loop is terminated using the break statement.
+Notice that we have initialized flag as 0 during the start of our program.
+So, if n is a prime number after the loop, flag will still be 0. However, if n is a non-prime number, flag will be 1.",,"#include <stdio.h>
+int main() {
+int n, i, flag = 0;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+// 0 and 1 are not prime numbers
+// change flag to 1 for non-prime number
+if (n == 0 || n == 1)
+flag = 1;
+for (i = 2; i <= n / 2; ++i) {
+// if n is divisible by i, then n is not prime
+// change flag to 1 for non-prime number
+if (n % i == 0) {
+flag = 1;
+break;
+}
+}
+// flag is 0 for prime numbers
+if (flag == 0)
+printf(""%d is a prime number."", n);
+else
+printf(""%d is not a prime number."", n);
+return 0;
+}",509,"#include <stdio.h>
+
+int main() {
+
+  int n, i, flag = 0;
+  printf(""Enter a positive integer: "");
+  scanf(""%d"", &n);
+
+  if (n == 0 || n == 1)
+    flag = 1;
+
+  for (i = 2; i <= n / 2; ++i) {
+    if (n % i == 0) {
+      flag = 1;
+      break;
+    }
+  }
+
+  if (flag == 0)
+    printf(""%d is a prime number."", n);
+  else
+    printf(""%d is not a prime number."", n);
+
+  return 0;
+}"
+29,C Program to Display Prime Numbers Between Two Intervals,56,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C if...else Statement
+C for Loop
+C break and continue
+
+In this program, the while loop is iterated ( high-low-1) times.
+In each iteration, whether low is a prime number or not is checked, and the value of low is incremented by 1 until low is equal to high.
+
+Visit this page to learn more about how to https://www.programiz.com/c-programming/examples/prime-number.
+If the user enters the larger number first, the above program doesn't work as intended. You can solve this issue by https://www.programiz.com/c-programming/examples/swapping.",,"#include <stdio.h>
+int main() {
+int low, high, i, flag;
+printf(""Enter two numbers(intervals): "");
+scanf(""%d %d"", &low, &high);
+printf(""Prime numbers between %d and %d are: "", low, high);
+// iteration until low is not equal to high
+while (low < high) {
+flag = 0;
+// ignore numbers less than 2
+if (low <= 1) {
+++low;
+continue;
+}
+// if low is a non-prime number, flag will be 1
+for (i = 2; i <= low / 2; ++i) {
+if (low % i == 0) {
+flag = 1;
+break;
+}
+}
+if (flag == 0)
+printf(""%d "", low);
+// to check prime for the next number
+// increase low by 1
+++low;
+}
+return 0;
+}",563,"#include <stdio.h>
+
+int main() {
+   int low, high, i, flag;
+   printf(""Enter two numbers(intervals): "");
+   scanf(""%d %d"", &low, &high);
+   printf(""Prime numbers between %d and %d are: "");
+
+   while (low < high) {
+      flag = 0;
+
+      if (low <= 1) {
+         ++low;
+         continue;
+      }
+
+      for (i = 2; i <= low / 2; ++i) {
+
+         if (low % i == 0) {
+            flag = 1;
+            break;
+         }
+      }
+
+      if (flag == 0)
+         printf(""%d "", low);
+
+      ++low;
+   }
+
+   return 0;
+}"
+30,C Program to Check Armstrong Number,35,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C if...else Statement
+C while and do...while Loop
+A positive integer is called an Armstrong number (of order n) if
+
+abcd... = an + bn + cn + dn + 
+In the case of an Armstrong number of 3 digits, the sum of cubes of each digit is equal to the number itself. For example, 153 is an Armstrong number because
+
+153 = 1*1*1 + 5*5*5 + 3*3*3
+
+In this program, the number of digits of an integer is calculated first and stored in n. And, the pow() function is used to compute the power of individual digits in each iteration of the second for loop.",,"#include <stdio.h>
+int main() {
+int num, originalNum, remainder, result = 0;
+printf(""Enter a three-digit integer: "");
+scanf(""%d"", &num);
+originalNum = num;
+while (originalNum != 0) {
+// remainder contains the last digit
+remainder = originalNum % 10;
+result += remainder * remainder * remainder;
+// removing last digit from the orignal number
+originalNum /= 10;
+}
+if (result == num)
+printf(""%d is an Armstrong number."", num);
+else
+printf(""%d is not an Armstrong number."", num);
+return 0;
+}",488,"#include <stdio.h>
+int main() {
+int num, originalNum, remainder, result = 0;
+printf(""Enter a three-digit integer: "");
+scanf(""%d"", &num);
+originalNum = num;
+while (originalNum != 0) {
+remainder = originalNum % 10;
+result += remainder * remainder * remainder;
+originalNum /= 10;
+}
+if (result == num)
+printf(""%d is an Armstrong number."", num);
+else
+printf(""%d is not an Armstrong number."", num);
+return 0;
+}"
+31,C Program to Display Armstrong Number Between Two Intervals,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-for-loop
+A positive integer is called an Armstrong number (of order n) if
+
+abcd... = an + bn + cn + dn + 
+
+In the case of an Armstrong number of 3 digits, the sum of cubes of each digit is equal to the number itself. For example, 153 is an Armstrong number because
+
+153 = 1*1*1 + 5*5*5 + 3*3*3
+
+In this program, we will print all the Armstrong numbers between two integers. This means that the two integers will not be part of the range, but only those integers that are between them.
+For example, suppose we want to print all Armstrong numbers between 153 and 371. Both of these numbers are also Armstrong numbers.
+
+Then, this program prints all Armstrong numbers that are greater than 153 and less than 371 i.e. 153 and 371 won't be printed even though they are Armstrong numbers.
+Tip: Before trying this program, learn how to https://www.programiz.com/c-programming/examples/check-armstrong-number.
+
+In the program, the outer loop is iterated from (low+ 1) to (high - 1). In each iteration, it's checked whether number is an Armstrong number or not.
+Inside the outer loop, the number of digits of an integer is calculated first and stored in count. And, the sum of the power of individual digits is stored in the result variable.
+If number is equal to result, the number is an Armstrong number.
+Notes:
+• You need to swap low and high if the user input for high is less than that of low. To learn more, check our example on https://www.programiz.com/c-programming/examples/swapping.
+• You need to reset count and result to 0 in each iteration of the outer loop.",,"#include <math.h>
+#include <stdio.h>
+int main() {
+int low, high, number, originalNumber, rem, count = 0;
+double result = 0.0;
+printf(""Enter two numbers(intervals): "");
+scanf(""%d %d"", &low, &high);
+printf(""Armstrong numbers between %d and %d are: "", low, high);
+// swap numbers if high < low
+if (high < low) {
+high += low;
+low = high - low;
+high -= low;
+}
+// iterate number from (low + 1) to (high - 1)
+// In each iteration, check if number is Armstrong
+for (number = low + 1; number < high; ++number) {
+originalNumber = number;
+// number of digits calculation
+while (originalNumber != 0) {
+originalNumber /= 10;
+++count;
+}
+originalNumber = number;
+// result contains sum of nth power of individual digits
+while (originalNumber != 0) {
+rem = originalNumber % 10;
+result += pow(rem, count);
+originalNumber /= 10;
+}
+// check if number is equal to the sum of nth power of individual digits
+if ((int)result == number) {
+printf(""%d "", number);
+}
+// resetting the values
+count = 0;
+result = 0;
+}
+return 0;
+}",1000,"#include <math.h>
+#include <stdio.h>
+int main() {
+  int low, high, number, originalNumber, rem, count = 0;
+  double result = 0.0;
+  printf(""Enter two numbers(intervals): "");
+  scanf(""%d %d"", &low, &high);
+  printf(""Armstrong numbers between %d and %d are: "", low, high);
+
+  if (high < low) {
+    high += low;
+    low = high - low;
+    high -= low;
+  }
+   
+  for (number = low + 1; number < high; ++number) {
+    originalNumber = number;
+
+    while (originalNumber != 0) {
+      originalNumber /= 10;
+      ++count;
+    }
+
+    originalNumber = number;
+
+    while (originalNumber != 0) {
+      rem = originalNumber % 10;
+      result += pow(rem, count);
+      originalNumber /= 10;
+    }
+
+    if ((int)result == number) {
+      printf(""%d "", number);
+    }
+
+    count = 0;
+    result = 0;
+  }
+
+  return 0;
+}"
+32,C Program to Display Factors of a Number,40,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-for-loop
+This program takes a positive integer from the user and displays all the positive factors of that number.
+
+In the program, a positive integer entered by the user is stored in num.
+
+The for loop is iterated until i is false.
+In each iteration, whether num is exactly divisible by i is checked. It is the condition for i to be a factor of num.
+
+if (num % i == 0) {
+            printf(""%d "", i);
+}
+
+Then the value of i is incremented by 1.",,"#include <stdio.h>
+int main() {
+int num, i;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &num);
+printf(""Factors of %d are: "", num);
+for (i = 1; i <= num; ++i) {
+if (num % i == 0) {
+printf(""%d "", i);
+}
+}
+return 0;
+}",219,"#include <stdio.h>
+int main() {
+    int num, i;
+    printf(""Enter a positive integer: "");
+    scanf(""%d"", &num);
+    printf(""Factors of %d are: "", num);
+    for (i = 1; i <= num; ++i) {
+        if (num % i == 0) {
+            printf(""%d "", i);
+        }
+    }
+    return 0;
+}"
+33,C Program to Make a Simple Calculator Using switch...case,57,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-switch-case-statement
+• https://www.programiz.com/c-programming/c-break-continue-statement
+This program takes an arithmetic operator +, -, *, / and two operands from the user. Then, it performs the calculation on the two operands depending upon the operator entered by the user.
+
+The * operator entered by the user is stored in op. And, the two operands, 1.5 and 4.5 are stored in first and second respectively.
+Since the operator * matches case '*':, the control of the program jumps to
+
+printf(""%.1lf * %.1lf = %.1lf"", first, second, first * second);
+
+
+This statement calculates the product and displays it on the screen.
+To make our output look cleaner, we have simply limited the output to one decimal place using the code %.1lf.
+Finally, the break; statement ends the switch statement.","Enter an operator (+, -, *,): *
+Enter two operands: 1.5
+4.5
+1.5 * 4.5 = 6.8","#include <stdio.h>
+
+int main() {
+
+  char op;
+  double first, second;
+  printf(""Enter an operator (+, -, *, /): "");
+  scanf(""%c"", &op);
+  printf(""Enter two operands: "");
+  scanf(""%lf %lf"", &first, &second);
+
+  switch (op) {
+    case '+':
+      printf(""%.1lf + %.1lf = %.1lf"", first, second, first + second);
+      break;
+    case '-':
+      printf(""%.1lf - %.1lf = %.1lf"", first, second, first - second);
+      break;
+    case '*':
+      printf(""%.1lf * %.1lf = %.1lf"", first, second, first * second);
+      break;
+    case '/':
+      printf(""%.1lf / %.1lf = %.1lf"", first, second, first / second);
+      break;
+    // operator doesn't match any case constant
+    default:
+      printf(""Error! operator is not correct"");
+  }
+
+  return 0;
+}",738,"#include <stdio.h>
+int main() {
+char op;
+double first, second;
+printf(""Enter an operator (+, -, , /): "");
+scanf(""%c"", &op);
+printf(""Enter two operands: "");
+scanf(""%lf %lf"", &first, &second);
+switch (op) {
+case '+':
+printf(""%.1lf + %.1lf = %.1lf"", first, second, first + second);
+break;
+case '-':
+printf(""%.1lf - %.1lf = %.1lf"", first, second, first - second);
+break;
+case '':
+printf(""%.1lf * %.1lf = %.1lf"", first, second, first * second);
+break;
+case '/':
+printf(""%.1lf / %.1lf = %.1lf"", first, second, first / second);
+break;
+default:
+printf(""Error! operator is not correct"");
+}
+return 0;
+}"
+34,C Program to Display Prime Numbers Between Intervals Using Function,67,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C for Loop
+C break and continue
+C Functions
+C User-defined functions
+Make sure you visit these tutorials before looking at this example:
+
+Check Whether a Number is Prime or Not
+Swap Two Numbers
+
+Explanation
+1. In this program, we print all the prime numbers between n1 and n2. If n1 is greater than n2, we https://www.programiz.com/c-programming/examples/swapping#example2:
+
+if (n1 > n2) {
+  n1 = n1 + n2;
+  n2 = n1 - n2;
+  n1 = n1 - n2;
+}
+2. Then, we run a for loop from i = n1 + 1 to i = n2 - 1.
+
+In each iteration of the loop, we check if i is a prime number using the checkPrimeNumber() function.
+If i is prime, we print it.
+
+for (i = n1 + 1; i < n2; ++i) {
+  flag = checkPrimeNumber(i);
+  if (flag == 1)
+    printf(""%d "", i);
+  }
+}
+
+3. The checkPrimeNumber() function contains the code to https://www.programiz.com/c-programming/examples/prime-number.
+
+int checkPrimeNumber(int n) {
+  int j, flag = 1;
+  for (j = 2; j <= n / 2; ++j) {
+    if (n % j == 0) {
+      flag = 0;
+      break;
+    }
+  }
+  return flag;
+}","Enter two positive integers: 12
+30
+Prime numbers between 12 and 30 are: 13 17 19 23 29","#include <stdio.h>
+int checkPrimeNumber(int n);
+int main() {
+
+  int n1, n2, i, flag;
+
+  printf(""Enter two positive integers: "");
+  scanf(""%d %d"", &n1, &n2);
+
+  // swap n1 and n2 if n1 > n2
+  if (n1 > n2) {
+    n1 = n1 + n2;
+    n2 = n1 - n2;
+    n1 = n1 - n2;
+  }
+
+  printf(""Prime numbers between %d and %d are: "", n1, n2);
+  for (i = n1 + 1; i < n2; ++i) {
+
+    // flag will be equal to 1 if i is prime
+    flag = checkPrimeNumber(i);
+
+    if (flag == 1) {
+      printf(""%d "", i);
+    }
+  }
+  
+  return 0;
+}
+
+// user-defined function to check prime number
+int checkPrimeNumber(int n) {
+  int j, flag = 1;
+
+  for (j = 2; j <= n / 2; ++j) {
+
+    if (n % j == 0) {
+      flag = 0;
+      break;
+    }
+  }
+
+  return flag;
+}",719,"#include <stdio.h>
+int checkPrimeNumber(int n);
+int main() {
+
+  int n1, n2, i, flag;
+
+  printf(""Enter two positive integers: "");
+  scanf(""%d %d"", &n1, &n2);
+
+  if (n1 > n2) {
+    n1 = n1 + n2;
+    n2 = n1 - n2;
+    n1 = n1 - n2;
+  }
+
+  printf(""Prime numbers between %d and %d are: "", n1, n2);
+  for (i = n1 + 1; i < n2; ++i) {
+    flag = checkPrimeNumber(i);
+
+    if (flag == 1) {
+      printf(""%d "", i);
+    }
+  }
+  
+  return 0;
+}
+
+int checkPrimeNumber(int n) {
+  int j, flag = 1;
+
+  for (j = 2; j <= n / 2; ++j) {
+    if (n % j == 0) {
+      flag = 0;
+      break;
+    }
+  }
+
+  return flag;
+}"
+35,C Program to Check Prime or Armstrong Number Using User-defined Function,72,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C for Loop
+C while and do...while Loop
+C break and continue
+C Functions
+Types of User-defined Functions in C Programming
+Visit these pages to learn to check whether a number is
+
+a prime number or not
+an Armstrong number or not
+
+In this program, two user-defined functions checkPrimeNumber() and checkArmstrongNumber() are created.
+The checkPrimeNumber() function returns:
+• 1 if the number entered by the user is a prime number.
+• 0 if the number entered by the user is not a prime number.
+
+Similarly, checkArmstrongNumber() function returns:
+• 1 if the number entered by the user is an Armstrong number.
+• 0 if the number entered by the user is not an Armstrong number.
+Note: In checkPrimeNumber() and checkArmstrongNumber() functions, the flag variables are the return value of the functions.
+In main(), the flag variable stores the values returned by checkPrimeNumber() and checkArmstrongNumber().","Enter a positive integer: 407
+407 is not a prime number.
+407 is an Armstrong number.","#include <math.h>
+#include <stdio.h>
+int checkPrimeNumber(int n);
+int checkArmstrongNumber(int n);
+int main() {
+int n, flag;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+// check prime number
+flag = checkPrimeNumber(n);
+if (flag == 1)
+printf(""%d is a prime number.\n"", n);
+else
+printf(""%d is not a prime number.\n"", n);
+// check Armstrong number
+flag = checkArmstrongNumber(n);
+if (flag == 1)
+printf(""%d is an Armstrong number."", n);
+else
+printf(""%d is not an Armstrong number."", n);
+return 0;
+}
+// function to check prime number
+int checkPrimeNumber(int n) {
+int i, flag = 1, squareRoot;
+// computing the square root
+squareRoot = sqrt(n);
+for (i = 2; i <= squareRoot; ++i) {
+// condition for non-prime number
+if (n % i == 0) {
+flag = 0;
+break;
+}
+}
+return flag;
+}
+// function to check Armstrong number
+int checkArmstrongNumber(int num) {
+int originalNum, remainder, n = 0, flag;
+double result = 0.0;
+// store the number of digits of num in n
+for (originalNum = num; originalNum != 0; ++n) {
+originalNum /= 10;
+}
+for (originalNum = num; originalNum != 0; originalNum /= 10) {
+remainder = originalNum % 10;
+// store the sum of the power of individual digits in result
+result += pow(remainder, n);
+}
+// condition for Armstrong number
+if (round(result) == num)
+flag = 1;
+else
+flag = 0;
+return flag;
+}",1306,"#include <math.h>
+#include <stdio.h>
+int checkPrimeNumber(int n);
+int checkArmstrongNumber(int n);
+int main() {
+int n, flag;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+flag = checkPrimeNumber(n);
+if (flag == 1)
+printf(""%d is a prime number.\n"", n);
+else
+printf(""%d is not a prime number.\n"", n);
+flag = checkArmstrongNumber(n);
+if (flag == 1)
+printf(""%d is an Armstrong number."", n);
+else
+printf(""%d is not an Armstrong number."", n);
+return 0;
+}
+int checkPrimeNumber(int n) {
+int i, flag = 1, squareRoot;
+squareRoot = sqrt(n);
+for (i = 2; i <= squareRoot; ++i) {
+if (n % i == 0) {
+flag = 0;
+break;
+}
+}
+return flag;
+}
+int checkArmstrongNumber(int num) {
+int originalNum, remainder, n = 0, flag;
+double result = 0.0;
+for (originalNum = num; originalNum != 0; ++n) {
+originalNum /= 10;
+}
+for (originalNum = num; originalNum != 0; originalNum /= 10) {
+remainder = originalNum % 10;
+result += pow(remainder, n);
+}
+if (round(result) == num)
+flag = 1;
+else
+flag = 0;
+return flag;
+}"
+36,C Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers,80,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-if-else-statement
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+This program takes a positive integer from the user and checks whether that number can be expressed as the sum of two prime numbers.
+If the number can be expressed as the sum of two prime numbers, the output shows the combination of the prime numbers.
+To perform this task, a user-defined function is created to https://www.programiz.com/c-programming/examples/prime-number.
+
+In this program, we use the checkPrime() function to check whether a number is prime or not.
+In main(), we take a number from the user and store it in the variable n.
+We also initialize the int variable flag to 0. We use this variable to determine whether the input number can be expressed as the sum of two prime numbers.
+
+We then iterate a loop from i = 2 to i = n/2. In each iteration, we check whether i is a prime number or not.
+If i is a prime, we check whether n - i is prime or not.
+If n - i is also a prime, then we know that n can be expressed as the sum of two prime numbers i and n - i.
+So, we print the result on the screen and change the value of flag to 1. Otherwise, flag remains 0.
+This process continues until the loop ends.
+If flag is still 0, then we know that n can't be expressed as the sum of two primes, and we print that message on the screen.","Enter a positive integer: 34
+34 = 3 + 31
+34 = 5 + 29
+34 = 11 + 23
+34 = 17 + 17","#include <stdio.h>
+int checkPrime(int n);
+int main() {
+int n, i, flag = 0;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+for (i = 2; i <= n / 2; ++i) {
+// condition for i to be a prime number
+if (checkPrime(i) == 1) {
+// condition for n-i to be a prime number
+if (checkPrime(n - i) == 1) {
+printf(""%d = %d + %d\n"", n, i, n - i);
+flag = 1;
+}
+}
+}
+if (flag == 0)
+printf(""%d cannot be expressed as the sum of two prime numbers."", n);
+return 0;
+}
+// function to check prime number
+int checkPrime(int n) {
+int i, isPrime = 1;
+// 0 and 1 are not prime numbers
+if (n == 0 || n == 1) {
+isPrime = 0;
+}
+else {
+for(i = 2; i <= n/2; ++i) {
+if(n % i == 0) {
+isPrime = 0;
+break;
+}
+}
+}
+return isPrime;
+}",696,"#include <stdio.h>
+int checkPrime(int n);
+int main() {
+int n, i, flag = 0;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &n);
+for (i = 2; i <= n / 2; ++i) {
+if (checkPrime(i) == 1) {
+if (checkPrime(n - i) == 1) {
+printf(""%d = %d + %d\n"", n, i, n - i);
+flag = 1;
+}
+}
+}
+if (flag == 0)
+printf(""%d cannot be expressed as the sum of two prime numbers."", n);
+return 0;
+}
+int checkPrime(int n) {
+int i, isPrime = 1;
+if (n == 0 || n == 1) {
+isPrime = 0;
+}
+else {
+for(i = 2; i <= n/2; ++i) {
+if(n % i == 0) {
+isPrime = 0;
+break;
+}
+}
+}
+return isPrime;
+}"
+37,C Program to Find the Sum of Natural Numbers using Recursion,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-user-defined-functions
+• https://www.programiz.com/c-programming/c-recursion
+The positive numbers 1, 2, 3... are known as natural numbers. The program below takes a positive integer from the user and calculates the sum up to the given number.
+Visit this page to https://www.programiz.com/c-programming/examples/sum-natural-numbers.
+
+Suppose the user entered 20.
+
+Initially, addNumbers() is called from main() with 20 passed as an argument.
+The number 20 is added to the result of addNumbers(19).
+In the next function call from addNumbers() to addNumbers(), 19 is passed which is added to the result of addNumbers(18). This process continues until n is equal to 0.
+When n is equal to 0, there is no recursive call. This returns the sum of integers ultimately to the main() function.","Enter a positive integer: 20
+Sum = 210","#include <stdio.h>
+int addNumbers(int n);
+int main() {
+int num;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &num);
+printf(""Sum = %d"", addNumbers(num));
+return 0;
+}
+int addNumbers(int n) {
+if (n != 0)
+return n + addNumbers(n - 1);
+else
+return n;
+}",252,"#include <stdio.h>
+int addNumbers(int n);
+int main() {
+int num;
+printf(""Enter a positive integer: "");
+scanf(""%d"", &num);
+printf(""Sum = %d"", addNumbers(num));
+return 0;
+}
+int addNumbers(int n) {
+if (n != 0)
+return n + addNumbers(n - 1);
+else
+return n;
+}"
+38,C Program to Find Factorial of a Number Using Recursion,55,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+• https://www.programiz.com/c-programming/c-recursion
+The factorial of a positive number n is given by:
+
+factorial of n (n!) = 1 * 2 * 3 * 4 *...  * n
+
+The factorial of a negative number doesn't exist. And the factorial of 0 is 1.
+You will learn to find the factorial of a number using recursion in this example. Visit this page to learn how you can find the https://www.programiz.com/c-programming/examples/factorial.
+
+Suppose the user entered 6.
+Initially, multiplyNumbers() is called from main() with 6 passed as an argument.
+Then, 5 is passed to multiplyNumbers() from the same function (recursive call). In each recursive call, the value of argument n is decreased by 1.
+When the value of n is less than 1, there is no recursive call and the factorial is returned ultimately to the main() function.","r a positive integer: 6
+Factorial of 6 = 720","#include<stdio.h>
+long int multiplyNumbers(int n);
+int main() {
+int n;
+printf(""Enter a positive integer: "");
+scanf(""%d"",&n);
+printf(""Factorial of %d = %ld"", n, multiplyNumbers(n));
+return 0;
+}
+long int multiplyNumbers(int n) {
+if (n>=1)
+return n*multiplyNumbers(n-1);
+else
+return 1;
+}",284,"#include<stdio.h>
+long int multiplyNumbers(int n);
+int main() {
+int n;
+printf(""Enter a positive integer: "");
+scanf(""%d"",&n);
+printf(""Factorial of %d = %ld"", n, multiplyNumbers(n));
+return 0;
+}
+long int multiplyNumbers(int n) {
+if (n>=1)
+return n*multiplyNumbers(n-1);
+else
+return 1;
+}"
+39,C Program to Find G.C.D Using Recursion,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+• https://www.programiz.com/c-programming/c-recursion
+This program takes two positive integers as input from the user and calculates GCD using recursion.
+Visit this page to learn how you can https://www.programiz.com/c-programming/examples/hcf-gcd.
+
+In this program, recursive calls are made until the value of n2 is equal to 0.","Enter two positive integers: 366
+60
+G.C.D of 366 and 60 is 6.","#include <stdio.h>
+int hcf(int n1, int n2);
+int main() {
+int n1, n2;
+printf(""Enter two positive integers: "");
+scanf(""%d %d"", &n1, &n2);
+printf(""G.C.D of %d and %d is %d."", n1, n2, hcf(n1, n2));
+return 0;
+}
+int hcf(int n1, int n2) {
+if (n2 != 0)
+return hcf(n2, n1 % n2);
+else
+return n1;
+}",287,"#include <stdio.h>
+int hcf(int n1, int n2);
+int main() {
+int n1, n2;
+printf(""Enter two positive integers: "");
+scanf(""%d %d"", &n1, &n2);
+printf(""G.C.D of %d and %d is %d."", n1, n2, hcf(n1, n2));
+return 0;
+}
+int hcf(int n1, int n2) {
+if (n2 != 0)
+return hcf(n2, n1 % n2);
+else
+return n1;
+}"
+40,C Program to Convert Binary Number to Decimal and vice-versa,60,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Functions
+C User-defined functions
+
+In the program, we have included the header file math.h to perform mathematical operations in the program.
+We ask the user to enter a binary number and pass it to the convert() function to convert it decimal.
+Suppose n = 1101. Let's see how the while loop in the convert() function works.n != 0rem = n % 10n /= 10idec += rem * pow(2, i)1101 != 01101 % 10 = 11101 / 10 = 11000 + 1 * pow (2, 0) = 1110 != 0110 % 10 = 0110 / 10 = 1111 + 0 * pow (2, 1) = 110 != 011 % 10 = 111 /10 = 121 + 1 * pow (2, 2) = 51 != 01 % 10 = 11 / 10 = 035 + 1 * pow (2, 3) = 130 != 0---Loop terminates
+So, 1101 in binary is 13 in decimal.","Enter a binary number: 1101
+1101 in binary = 13 in decimal","// convert binary to decimal
+
+#include <stdio.h>
+#include <math.h>
+
+// function prototype
+int convert(long long);
+
+int main() {
+
+  long long n;
+
+  printf(""Enter a binary number: "");
+  scanf(""%lld"", &n);
+
+  printf(""%lld in binary = %d in decimal"", n, convert(n));
+
+  return 0;
+}
+
+// function definition
+int convert(long long n) {
+
+  int dec = 0, i = 0, rem;
+
+  while (n != 0) {
+
+    // get remainder of n divided by 10
+    rem = n % 10;
+
+    // divide n by 10
+    n /= 10;
+
+    // multiply rem by (2 ^ i)
+    // add the product to dec
+    dec += rem * pow(2, i);
+
+    // increment i
+    ++i;
+  }
+
+  return dec;
+}",611,"#include <stdio.h>
+#include <math.h>
+
+int convert(long long);
+
+int main() {
+
+  long long n;
+
+  printf(""Enter a binary number: "");
+  scanf(""%lld"", &n);
+
+  printf(""%lld in binary = %d in decimal"", n, convert(n));
+
+  return 0;
+}
+
+int convert(long long n) {
+
+  int dec = 0, i = 0, rem;
+
+  while (n != 0) {
+    rem = n % 10;
+    n /= 10;
+    dec += rem * pow(2, i);
+    ++i;
+  }
+
+  return dec;
+}"
+41,C Program to Convert Octal Number to Decimal and vice-versa,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions","Enter a decimal number: 78
+78 in decimal = 116 in octal","#include <stdio.h>
+#include <math.h>
+
+// function prototype
+int convertDecimalToOctal(int decimalNumber);
+
+int main() {
+
+    int decimalNumber;
+
+    printf(""Enter a decimal number: "");
+    scanf(""%d"", &decimalNumber);
+
+    printf(""%d in decimal = %d in octal"", decimalNumber, convertDecimalToOctal(decimalNumber));
+
+    return 0;
+}
+
+// function to convert decimalNumber to octal
+int convertDecimalToOctal(int decimalNumber) {
+    int octalNumber = 0, i = 1;
+
+    while (decimalNumber != 0) {
+        octalNumber += (decimalNumber % 8) * i;
+        decimalNumber /= 8;
+        i *= 10;
+    }
+
+    return octalNumber;
+}",617,"#include <stdio.h>
+#include <math.h>
+
+int convertDecimalToOctal(int decimalNumber);
+
+int main() {
+
+    int decimalNumber;
+
+    printf(""Enter a decimal number: "");
+    scanf(""%d"", &decimalNumber);
+
+    printf(""%d in decimal = %d in octal"", decimalNumber, convertDecimalToOctal(decimalNumber));
+
+    return 0;
+}
+
+int convertDecimalToOctal(int decimalNumber) {
+    int octalNumber = 0, i = 1;
+
+    while (decimalNumber != 0) {
+        octalNumber += (decimalNumber % 8) * i;
+        decimalNumber /= 8;
+        i *= 10;
+    }
+
+    return octalNumber;
+}"
+42,C Program to Convert Binary Number to Octal and vice-versa,58,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+Program to Convert Binary to Octal
+In this program, we will first convert a binary number to decimal. Then, the decimal number is converted to octal.","Enter a binary number: 101001
+101001 in binary = 51 in octal","#include <math.h>
+#include <stdio.h>
+int convert(long long bin);
+int main() {
+    long long bin;
+    printf(""Enter a binary number: "");
+    scanf(""%lld"", &bin);
+    printf(""%lld in binary = %d in octal"", bin, convert(bin));
+    return 0;
+}
+
+int convert(long long bin) {
+    int oct = 0, dec = 0, i = 0;
+
+    // converting binary to decimal
+    while (bin != 0) {
+        dec += (bin % 10) * pow(2, i);
+        ++i;
+        bin /= 10;
+    }
+    i = 1;
+
+    // converting to decimal to octal
+    while (dec != 0) {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+    return oct;
+}",601,"#include <math.h>
+#include <stdio.h>
+
+int convert(long long bin);
+
+int main() {
+    long long bin;
+    printf(""Enter a binary number: "");
+    scanf(""%lld"", &bin);
+    printf(""%lld in binary = %d in octal"", bin, convert(bin));
+    return 0;
+}
+
+int convert(long long bin) {
+    int oct = 0, dec = 0, i = 0;
+
+    while (bin != 0) {
+        dec += (bin % 10) * pow(2, i);
+        ++i;
+        bin /= 10;
+    }
+    i = 1;
+
+    while (dec != 0) {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+    return oct;
+}"
+43,C Program to Reverse a Sentence Using Recursion,47,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+• https://www.programiz.com/c-programming/c-recursion
+
+This program first prints Enter a sentence: . Then, the reverseSentence() function is called.
+This function stores the first letter entered by the user in c. If the variable is any character other than \n (newline), reverseSentence() is called again.
+This process goes on until the user hits enter.
+When the user hits enter, the reverseSentence() function starts printing characters from last.","Enter a sentence: margorp emosewa
+awesome program","#include <stdio.h>
+void reverseSentence();
+int main() {
+    printf(""Enter a sentence: "");
+    reverseSentence();
+    return 0;
+}
+
+void reverseSentence() {
+    char c;
+    scanf(""%c"", &c);
+    if (c != '\n') {
+        reverseSentence();
+        printf(""%c"", c);
+    }
+}",268,"#include <stdio.h>
+void reverseSentence();
+int main() {
+    printf(""Enter a sentence: "");
+    reverseSentence();
+    return 0;
+}
+
+void reverseSentence() {
+    char c;
+    scanf(""%c"", &c);
+    if (c != '\n') {
+        reverseSentence();
+        printf(""%c"", c);
+    }
+}"
+44,C program to calculate the power using recursion,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-functions
+• https://www.programiz.com/c-programming/c-user-defined-functions
+• https://www.programiz.com/c-programming/c-recursion
+
+You can also https://www.programiz.com/c-programming/examples/power-number.
+
+If you need to calculate the power of a number raised to a decimal value, you can use the https://www.programiz.com/c-programming/library-function/math.h/pow.","Enter base number: 3
+Enter power number(positive integer): 4
+3^4 = 81","#include <stdio.h>
+int power(int n1, int n2);
+int main() {
+int base, a, result;
+printf(""Enter base number: "");
+scanf(""%d"", &base);
+printf(""Enter power number(positive integer): "");
+scanf(""%d"", &a);
+result = power(base, a);
+printf(""%d^%d = %d"", base, a, result);
+return 0;
+}
+int power(int base, int a) {
+if (a != 0)
+return (base * power(base, a - 1));
+else
+return 1;
+}",367,"#include <stdio.h>
+int power(int n1, int n2);
+int main() {
+int base, a, result;
+printf(""Enter base number: "");
+scanf(""%d"", &base);
+printf(""Enter power number(positive integer): "");
+scanf(""%d"", &a);
+result = power(base, a);
+printf(""%d^%d = %d"", base, a, result);
+return 0;
+}
+int power(int base, int a) {
+if (a != 0)
+return (base * power(base, a - 1));
+else
+return 1;
+}"
+45,C Program to Calculate Average Using Arrays,43,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-do-while-loops
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-arrays
+
+Here, the user is first asked to enter the number of elements. This number is assigned to n.
+If the user entered integer is greater less than 1 or greater than 100, the user is asked to enter the number again. This is done using a while loop.
+
+Then, we have iterated a for loop from i = 0 to i . In each iteration of the loop, the user is asked to enter numbers to calculate the average. These numbers are stored in the num[] array.
+
+scanf(""%f"", &num[i]);
+
+And, the sum of each entered element is computed.
+
+sum += num[i];
+
+Once the for loop is completed, the average is calculated and printed on the screen.","Enter the numbers of elements: 6
+1. Enter number: 45.3
+2. Enter number: 67.5
+3. Enter number: -45.6
+4. Enter number: 20.34
+5. Enter number: 33
+6. Enter number: 45.6
+Average = 27.69","#include <stdio.h>
+int main() {
+int n, i;
+float num[100], sum = 0.0, avg;
+printf(""Enter the numbers of elements: "");
+scanf(""%d"", &n);
+while (n > 100 || n < 1) {
+printf(""Error! number should in range of (1 to 100).\n"");
+printf(""Enter the number again: "");
+scanf(""%d"", &n);
+}
+for (i = 0; i < n; ++i) {
+printf(""%d. Enter number: "", i + 1);
+scanf(""%f"", &num[i]);
+sum += num[i];
+}
+avg = sum / n;
+printf(""Average = %.2f"", avg);
+return 0;
+}",433,"#include <stdio.h>
+int main() {
+int n, i;
+float num[100], sum = 0.0, avg;
+printf(""Enter the numbers of elements: "");
+scanf(""%d"", &n);
+while (n > 100 || n < 1) {
+printf(""Error! number should in range of (1 to 100).\n"");
+printf(""Enter the number again: "");
+scanf(""%d"", &n);
+}
+for (i = 0; i < n; ++i) {
+printf(""%d. Enter number: "", i + 1);
+scanf(""%f"", &num[i]);
+sum += num[i];
+}
+avg = sum / n;
+printf(""Average = %.2f"", avg);
+return 0;
+}"
+46,C Program to Find Largest Element in an Array,45,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-arrays
+
+This program takes n number of elements from the user and stores it in the arr array.
+
+To find the largest element,
+• the first two elements of array are checked and the largest of these two elements are placed in arr[0]
+• the first and third elements are checked and largest of these two elements is placed in arr[0].
+• this process continues until the first and last elements are checked
+• the largest number will be stored in the arr[0] position
+
+// storing the largest number at arr[0]
+for (int i = 1; i < n; ++i) {
+  if (arr[0] < arr[i]) {
+    arr[0] = arr[i];
+  }
+}","Enter the number of elements (1 to 100): 5
+Enter number1: 34.5
+Enter number2: 2.4
+Enter number3: -35.5
+Enter number4: 38.7
+Enter number5: 24.5
+Largest element = 38.70","#include <stdio.h>
+int main() {
+  int n;
+  double arr[100];
+  printf(""Enter the number of elements (1 to 100): "");
+  scanf(""%d"", &n);
+
+  for (int i = 0; i < n; ++i) {
+    printf(""Enter number%d: "", i + 1);
+    scanf(""%lf"", &arr[i]);
+  }
+
+  // storing the largest number to arr[0]
+  for (int i = 1; i < n; ++i) {
+    if (arr[0] < arr[i]) {
+      arr[0] = arr[i];
+    }
+  }
+
+  printf(""Largest element = %.2lf"", arr[0]);
+
+  return 0;
+}",432,"#include <stdio.h>
+int main() {
+  int n;
+  double arr[100];
+  printf(""Enter the number of elements (1 to 100): "");
+  scanf(""%d"", &n);
+
+  for (int i = 0; i < n; ++i) {
+    printf(""Enter number%d: "", i + 1);
+    scanf(""%lf"", &arr[i]);
+  }
+
+  for (int i = 1; i < n; ++i) {
+    if (arr[0] < arr[i]) {
+      arr[0] = arr[i];
+    }
+  }
+
+  printf(""Largest element = %.2lf"", arr[0]);
+
+  return 0;
+}"
+47,C Program to Calculate Standard Deviation,41,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-arrays
+• https://www.programiz.com/c-programming/c-arrays-functions
+This program calculates the standard deviation of an individual series using arrays. Visit this page to learn about https://www.mathsisfun.com/data/standard-deviation.html.
+To calculate the standard deviation, we have created a function named calculateSD().
+
+Here, the array containing 10 elements is passed to the calculateSD() function. The function calculates the standard deviation using mean and returns it.
+Note: The program calculates the standard deviation of a population. If you need to find the standard deviation of a sample, the formula is slightly different.","Enter 10 elements: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Standard Deviation = 2.872281","// SD of a population
+#include <math.h>
+#include <stdio.h>
+float calculateSD(float data[]);
+int main() {
+int i;
+float data[10];
+printf(""Enter 10 elements: "");
+for (i = 0; i < 10; ++i)
+scanf(""%f"", &data[i]);
+printf(""\nStandard Deviation = %.6f"", calculateSD(data));
+return 0;
+}
+float calculateSD(float data[]) {
+float sum = 0.0, mean, SD = 0.0;
+int i;
+for (i = 0; i < 10; ++i) {
+sum += data[i];
+}
+mean = sum / 10;
+for (i = 0; i < 10; ++i) {
+SD += pow(data[i] - mean, 2);
+}
+return sqrt(SD / 10);
+}",495,"#include <math.h>
+#include <stdio.h>
+float calculateSD(float data[]);
+
+int main() {
+    int i;
+    float data[10];
+    printf(""Enter 10 elements: "");
+    for (i = 0; i < 10; ++i)
+        scanf(""%f"", &data[i]);
+    printf(""\nStandard Deviation = %.6f"", calculateSD(data));
+    return 0;
+}
+
+float calculateSD(float data[]) {
+    float sum = 0.0, mean, SD = 0.0;
+    int i;
+    for (i = 0; i < 10; ++i) {
+        sum += data[i];
+    }
+    mean = sum / 10;
+    for (i = 0; i < 10; ++i) {
+        SD += pow(data[i] - mean, 2);
+    }
+    return sqrt(SD / 10);
+}"
+48,C Program to Add Two Matrices Using Multi-dimensional Arrays,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-arrays
+• https://www.programiz.com/c-programming/c-multi-dimensional-arrays
+
+In this program, the user is asked to enter the number of rows r and columns c. Then, the user is asked to enter the elements of the two matrices (of order rxc).
+
+We then added corresponding elements of two matrices and saved it in another matrix (two-dimensional array). Finally, the result is printed on the screen.","Enter the number of rows (between 1 and 100): 2
+Enter the number of columns (between 1 and 100): 3
+
+Enter elements of 1st matrix:
+Enter element a11: 2
+Enter element a12: 3
+Enter element a13: 4
+Enter element a21: 5
+Enter element a22: 2
+Enter element a23: 3
+Enter elements of 2nd matrix:
+Enter element b11: -4
+Enter element b12: 5
+Enter element b13: 3
+Enter element b21: 5
+Enter element b22: 6
+Enter element b23: 3
+
+Sum of two matrices: 
+-2   8   7","#include <stdio.h>
+int main() {
+  int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+  printf(""Enter the number of rows (between 1 and 100): "");
+  scanf(""%d"", &r);
+  printf(""Enter the number of columns (between 1 and 100): "");
+  scanf(""%d"", &c);
+
+  printf(""\nEnter elements of 1st matrix:\n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""Enter element a%d%d: "", i + 1, j + 1);
+      scanf(""%d"", &a[i][j]);
+    }
+
+  printf(""Enter elements of 2nd matrix:\n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""Enter element b%d%d: "", i + 1, j + 1);
+      scanf(""%d"", &b[i][j]);
+    }
+
+  // adding two matrices
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+
+  // printing the result
+  printf(""\nSum of two matrices: \n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""%d   "", sum[i][j]);
+      if (j == c - 1) {
+        printf(""\n\n"");
+      }
+    }
+
+  return 0;
+}",990,"#include <stdio.h>
+int main() {
+  int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+  printf(""Enter the number of rows (between 1 and 100): "");
+  scanf(""%d"", &r);
+  printf(""Enter the number of columns (between 1 and 100): "");
+  scanf(""%d"", &c);
+
+  printf(""\nEnter elements of 1st matrix:\n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""Enter element a%d%d: "", i + 1, j + 1);
+      scanf(""%d"", &a[i][j]);
+    }
+
+  printf(""Enter elements of 2nd matrix:\n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""Enter element b%d%d: "", i + 1, j + 1);
+      scanf(""%d"", &b[i][j]);
+    }
+
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+
+  printf(""\nSum of two matrices: \n"");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf(""%d   "", sum[i][j]);
+      if (j == c - 1) {
+        printf(""\n\n"");
+      }
+    }
+
+  return 0;
+}"
+49,C Program to Multiply Two Matrices Using Multi-dimensional Arrays,65,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Multidimensional Arrays
+This program asks the user to enter the size (rows and columns) of two matrices.
+
+To multiply two matrices, the number of columns of the first matrix should be equal to the number of rows of the second matrix.
+
+The program below asks for the number of rows and columns of two matrices until the above condition is satisfied.
+
+Then, the multiplication of two matrices is performed, and the result is displayed on the screen.
+
+To perform this, we have created three functions:
+
+getMatrixElements() - to take matrix elements input from the user.
+multiplyMatrices() - to multiply two matrices.
+display() - to display the resultant matrix after multiplication.",,"#include <stdio.h>
+
+// function to get matrix elements entered by the user
+void getMatrixElements(int matrix[][10], int row, int column) {
+
+   printf(""\nEnter elements: \n"");
+
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""Enter a%d%d: "", i + 1, j + 1);
+         scanf(""%d"", &matrix[i][j]);
+      }
+   }
+}
+
+// function to multiply two matrices
+void multiplyMatrices(int first[][10],
+                      int second[][10],
+                      int result[][10],
+                      int r1, int c1, int r2, int c2) {
+
+   // Initializing elements of matrix mult to 0.
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         result[i][j] = 0;
+      }
+   }
+
+   // Multiplying first and second matrices and storing it in result
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         for (int k = 0; k < c1; ++k) {
+            result[i][j] += first[i][k] * second[k][j];
+         }
+      }
+   }
+}
+
+// function to display the matrix
+void display(int result[][10], int row, int column) {
+
+   printf(""\nOutput Matrix:\n"");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""%d  "", result[i][j]);
+         if (j == column - 1)
+            printf(""\n"");
+      }
+   }
+}
+
+int main() {
+   int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
+   printf(""Enter rows and column for the first matrix: "");
+   scanf(""%d %d"", &r1, &c1);
+   printf(""Enter rows and column for the second matrix: "");
+   scanf(""%d %d"", &r2, &c2);
+
+   // Taking input until
+   // 1st matrix columns is not equal to 2nd matrix row
+   while (c1 != r2) {
+      printf(""Error! Enter rows and columns again.\n"");
+      printf(""Enter rows and columns for the first matrix: "");
+      scanf(""%d%d"", &r1, &c1);
+      printf(""Enter rows and columns for the second matrix: "");
+      scanf(""%d%d"", &r2, &c2);
+   }
+
+   // get elements of the first matrix
+   getMatrixElements(first, r1, c1);
+
+   // get elements of the second matrix
+   getMatrixElements(second, r2, c2);
+
+   // multiply two matrices.
+   multiplyMatrices(first, second, result, r1, c1, r2, c2);
+
+   // display the result
+   display(result, r1, c2);
+
+   return 0;
+}",2228,"#include <stdio.h>
+
+void getMatrixElements(int matrix[][10], int row, int column) {
+   printf(""\nEnter elements:\n"");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""Enter a%d%d: "", i + 1, j + 1);
+         scanf(""%d"", &matrix[i][j]);
+      }
+   }
+}
+
+void multiplyMatrices(int first[][10], int second[][10], int result[][10], int r1, int c1, int r2, int c2) {
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         result[i][j] = 0;
+      }
+   }
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         for (int k = 0; k < c1; ++k) {
+            result[i][j] += first[i][k] * second[k][j];
+         }
+      }
+   }
+}
+
+void display(int result[][10], int row, int column) {
+   printf(""\nOutput Matrix:\n"");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""%d  "", result[i][j]);
+         if (j == column - 1)
+            printf(""\n"");
+      }
+   }
+}
+
+int main() {
+   int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
+   printf(""Enter rows and columns for the first matrix: "");
+   scanf(""%d %d"", &r1, &c1);
+   printf(""Enter rows and columns for the second matrix: "");
+   scanf(""%d %d"", &r2, &c2);
+
+   while (c1 != r2) {
+      printf(""Error! Enter rows and columns again.\n"");
+      printf(""Enter rows and columns for the first matrix: "");
+      scanf(""%d%d"", &r1, &c1);
+      printf(""Enter rows and columns for the second matrix: "");
+      scanf(""%d%d"", &r2, &c2);
+   }
+
+   getMatrixElements(first, r1, c1);
+   getMatrixElements(second, r2, c2);
+   multiplyMatrices(first, second, result, r1, c1, r2, c2);
+   display(result, r1, c2);
+
+   return 0;
+}"
+50,C Program to Find Transpose of a Matrix,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-arrays
+• https://www.programiz.com/c-programming/c-multi-dimensional-arrays
+The transpose of a matrix is a new matrix that is obtained by exchanging the rows and columns.
+In this program, the user is asked to enter the number of rows r and columns c. Their values should be less than 10 in this program.
+Then, the user is asked to enter the elements of the matrix (of order r*c).
+
+The program below then computes the transpose of the matrix and prints it on the screen.","Enter rows and columns: 2
+3
+
+Enter matrix elements:
+Enter element a11: 1
+Enter element a12: 4
+Enter element a13: 0
+Enter element a21: -5
+Enter element a22: 2
+Enter element a23: 7
+
+Entered matrix:
+1  4  0
+-5  2  7
+
+Transpose of the matrix:
+1  -5
+4  2
+0  7","#include <stdio.h>
+int main() {
+  int a[10][10], transpose[10][10], r, c;
+  printf(""Enter rows and columns: "");
+  scanf(""%d %d"", &r, &c);
+
+  // asssigning elements to the matrix
+  printf(""\nEnter matrix elements:\n"");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf(""Enter element a%d%d: "", i + 1, j + 1);
+    scanf(""%d"", &a[i][j]);
+  }
+
+  // printing the matrix a[][]
+  printf(""\nEntered matrix: \n"");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf(""%d  "", a[i][j]);
+    if (j == c - 1)
+    printf(""\n"");
+  }
+
+  // computing the transpose
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    transpose[j][i] = a[i][j];
+  }
+
+  // printing the transpose
+  printf(""\nTranspose of the matrix:\n"");
+  for (int i = 0; i < c; ++i)
+  for (int j = 0; j < r; ++j) {
+    printf(""%d  "", transpose[i][j]);
+    if (j == r - 1)
+    printf(""\n"");
+  }
+  return 0;
+}",913,"#include <stdio.h>
+int main() {
+  int a[10][10], transpose[10][10], r, c;
+  printf(""Enter rows and columns: "");
+  scanf(""%d %d"", &r, &c);
+
+  printf(""\nEnter matrix elements:\n"");
+  for (int i = 0; i < r; ++i)
+    for (int j = 0; j < c; ++j) {
+      printf(""Enter element a%d%d: "", i + 1, j + 1);
+      scanf(""%d"", &a[i][j]);
+    }
+
+  printf(""\nEntered matrix: \n"");
+  for (int i = 0; i < r; ++i)
+    for (int j = 0; j < c; ++j) {
+      printf(""%d  "", a[i][j]);
+      if (j == c - 1)
+        printf(""\n"");
+    }
+
+  for (int i = 0; i < r; ++i)
+    for (int j = 0; j < c; ++j) {
+      transpose[j][i] = a[i][j];
+    }
+
+  printf(""\nTranspose of the matrix:\n"");
+  for (int i = 0; i < c; ++i)
+    for (int j = 0; j < r; ++j) {
+      printf(""%d  "", transpose[i][j]);
+      if (j == r - 1)
+        printf(""\n"");
+    }
+  return 0;
+}"
+51,C Program to Multiply two Matrices by Passing Matrix to a Function,66,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Multidimensional Arrays
+Pass arrays to a function in C
+This program asks the user to enter the size of the matrix (rows and column).
+
+Then, it asks the user to enter the elements of those matrices and finally adds and displays the result.
+
+To perform this task three functions are made:
+
+To takes matrix elements from user enterData()
+To multiply two matrix multiplyMatrices()
+To display the resultant matrix after multiplication display()","Enter rows and column for first matrix: 3
+2
+Enter rows and column for second matrix: 3
+2
+Error! column of first matrix not equal to row of second.
+
+Enter rows and column for first matrix: 2
+3
+Enter rows and column for second matrix: 3
+2
+
+Enter elements of matrix 1:
+Enter elements a11: 3
+Enter elements a12: -2
+Enter elements a13: 5
+Enter elements a21: 3
+Enter elements a22: 0
+Enter elements a23: 4
+
+Enter elements of matrix 2:
+Enter elements b11: 2
+Enter elements b12: 3
+Enter elements b21: -9
+Enter elements b22: 0
+Enter elements b31: 0
+Enter elements b32: 4
+
+Output Matrix:
+24  29","#include <stdio.h>
+
+void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
+void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int multResult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
+void display(int mult[][10], int rowFirst, int columnSecond);
+
+int main()
+{
+	int firstMatrix[10][10], secondMatrix[10][10], mult[10][10], rowFirst, columnFirst, rowSecond, columnSecond, i, j, k;
+
+	printf(""Enter rows and column for first matrix: "");
+	scanf(""%d %d"", &rowFirst, &columnFirst);
+
+	printf(""Enter rows and column for second matrix: "");
+	scanf(""%d %d"", &rowSecond, &columnSecond);
+
+	// If colum of first matrix in not equal to row of second matrix, asking user to enter the size of matrix again.
+	while (columnFirst != rowSecond)
+	{
+		printf(""Error! column of first matrix not equal to row of second.\n"");
+		printf(""Enter rows and column for first matrix: "");
+		scanf(""%d%d"", &rowFirst, &columnFirst);
+		printf(""Enter rows and column for second matrix: "");
+		scanf(""%d%d"", &rowSecond, &columnSecond);
+	}
+
+	// Function to take matrices data
+        enterData(firstMatrix, secondMatrix, rowFirst, columnFirst, rowSecond, columnSecond);
+
+        // Function to multiply two matrices.
+        multiplyMatrices(firstMatrix, secondMatrix, mult, rowFirst, columnFirst, rowSecond, columnSecond);
+
+        // Function to display resultant matrix after multiplication.
+        display(mult, rowFirst, columnSecond);
+
+	return 0;
+}
+
+void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond)
+{
+	int i, j;
+	printf(""\nEnter elements of matrix 1:\n"");
+	for(i = 0; i < rowFirst; ++i)
+	{
+		for(j = 0; j < columnFirst; ++j)
+		{
+			printf(""Enter elements a%d%d: "", i + 1, j + 1);
+			scanf(""%d"", &firstMatrix[i][j]);
+		}
+	}
+
+	printf(""\nEnter elements of matrix 2:\n"");
+	for(i = 0; i < rowSecond; ++i)
+	{
+		for(j = 0; j < columnSecond; ++j)
+		{
+			printf(""Enter elements b%d%d: "", i + 1, j + 1);
+			scanf(""%d"", &secondMatrix[i][j]);
+		}
+	}
+}
+
+void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int mult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond)
+{
+	int i, j, k;
+
+	// Initializing elements of matrix mult to 0.
+	for(i = 0; i < rowFirst; ++i)
+	{
+		for(j = 0; j < columnSecond; ++j)
+		{
+			mult[i][j] = 0;
+		}
+	}
+
+	// Multiplying matrix firstMatrix and secondMatrix and storing in array mult.
+	for(i = 0; i < rowFirst; ++i)
+	{
+		for(j = 0; j < columnSecond; ++j)
+		{
+			for(k=0; k<columnFirst; ++k)
+			{
+				mult[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+			}
+		}
+	}
+}
+
+void display(int mult[][10], int rowFirst, int columnSecond)
+{
+	int i, j;
+	printf(""\nOutput Matrix:\n"");
+	for(i = 0; i < rowFirst; ++i)
+	{
+		for(j = 0; j < columnSecond; ++j)
+		{
+			printf(""%d  "", mult[i][j]);
+			if(j == columnSecond - 1)
+				printf(""\n\n"");
+		}
+	}
+}",2945,"#include <stdio.h>
+
+void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
+void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int multResult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
+void display(int mult[][10], int rowFirst, int columnSecond);
+
+int main() {
+    int firstMatrix[10][10], secondMatrix[10][10], mult[10][10], rowFirst, columnFirst, rowSecond, columnSecond, i, j, k;
+
+    printf(""Enter rows and columns for the first matrix: "");
+    scanf(""%d %d"", &rowFirst, &columnFirst);
+
+    printf(""Enter rows and columns for the second matrix: "");
+    scanf(""%d %d"", &rowSecond, &columnSecond);
+
+    while (columnFirst != rowSecond) {
+        printf(""Error! Column of the first matrix is not equal to the row of the second matrix.\n"");
+        printf(""Enter rows and columns for the first matrix: "");
+        scanf(""%d%d"", &rowFirst, &columnFirst);
+        printf(""Enter rows and columns for the second matrix: "");
+        scanf(""%d%d"", &rowSecond, &columnSecond);
+    }
+
+    enterData(firstMatrix, secondMatrix, rowFirst, columnFirst, rowSecond, columnSecond);
+
+    multiplyMatrices(firstMatrix, secondMatrix, mult, rowFirst, columnFirst, rowSecond, columnSecond);
+
+    display(mult, rowFirst, columnSecond);
+
+    return 0;
+}
+
+void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond) {
+    int i, j;
+    printf(""\nEnter elements of the first matrix:\n"");
+    for (i = 0; i < rowFirst; ++i) {
+        for (j = 0; j < columnFirst; ++j) {
+            printf(""Enter element a%d%d: "", i + 1, j + 1);
+            scanf(""%d"", &firstMatrix[i][j]);
+        }
+    }
+
+    printf(""\nEnter elements of the second matrix:\n"");
+    for (i = 0; i < rowSecond; ++i) {
+        for (j = 0; j < columnSecond; ++j) {
+            printf(""Enter element b%d%d: "", i + 1, j + 1);
+            scanf(""%d"", &secondMatrix[i][j]);
+        }
+    }
+}
+
+void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int mult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond) {
+    int i, j, k;
+    for (i = 0; i < rowFirst; ++i) {
+        for (j = 0; j < columnSecond; ++j) {
+            mult[i][j] = 0;
+        }
+    }
+
+    for (i = 0; i < rowFirst; ++i) {
+        for (j = 0; j < columnSecond; ++j) {
+            for (k = 0; k < columnFirst; ++k) {
+                mult[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+            }
+        }
+    }
+}
+
+void display(int mult[][10], int rowFirst, int columnSecond) {
+    int i, j;
+    printf(""\nOutput Matrix:\n"");
+    for (i = 0; i < rowFirst; ++i) {
+        for (j = 0; j < columnSecond; ++j) {
+            printf(""%d  "", mult[i][j]);
+            if (j == columnSecond - 1) {
+                printf(""\n\n"");
+            }
+        }
+    }
+}"
+52,C Program to Access Array Elements Using Pointer,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-arrays
+• https://www.programiz.com/c-programming/c-pointers
+• https://www.programiz.com/c-programming/c-pointers-arrays
+
+In this program, the elements are stored in the integer array data[].
+
+Then, the elements of the array are accessed using the pointer notation. By the way,
+• data[0] is equivalent to *data and &data[0] is equivalent to data
+• data[1] is equivalent to *(data + 1) and &data[1] is equivalent to data + 1
+• data[2] is equivalent to *(data + 2) and &data[2] is equivalent to data + 2
+• ...
+• data[i] is equivalent to *(data + i) and &data[i] is equivalent to data + i
+Visit this page to learn about the https://www.programiz.com/c-programming/c-pointers-arrays.","Enter elements: 1
+2
+3
+5
+4
+You entered: 
+1
+2
+3
+5
+4","#include <stdio.h>
+int main() {
+int data[5];
+printf(""Enter elements: "");
+for (int i = 0; i < 5; ++i)
+scanf(""%d"", data + i);
+printf(""You entered: \n"");
+for (int i = 0; i < 5; ++i)
+printf(""%d\n"", *(data + i));
+return 0;
+}",219,"#include <stdio.h>
+int main() {
+    int data[5];
+
+    printf(""Enter elements: "");
+    for (int i = 0; i < 5; ++i)
+        scanf(""%d"", data + i);
+
+    printf(""You entered: \n"");
+    for (int i = 0; i < 5; ++i)
+        printf(""%d\n"", *(data + i));
+    return 0;
+}"
+53,C Program Swap Numbers in Cyclic Order Using Call by Reference,62,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Pointers
+C Pass Addresses and Pointers
+
+Here, the three numbers entered by the user are stored in variables a, b and c respectively. The addresses of these numbers are passed to the cyclicSwap() function.
+
+cyclicSwap(&a, &b, &c);
+
+In the function definition of cyclicSwap(), we have assigned these addresses to pointers.
+
+cyclicSwap(int *n1, int *n2, int *n3) {
+    ...
+}
+
+
+When n1, n2 and n3 inside cyclicSwap() are changed, the values of a, b and c inside main() are also changed.
+Note: The cyclicSwap() function is not returning anything.","Enter a, b and c respectively: 1
+2
+3
+Value before swapping:
+a = 1 
+b = 2 
+c = 3
+Value after swapping:
+a = 3 
+b = 1 
+c = 2","#include <stdio.h>
+void cyclicSwap(int *a, int *b, int *c);
+int main() {
+int a, b, c;
+printf(""Enter a, b and c respectively: "");
+scanf(""%d %d %d"", &a, &b, &c);
+printf(""Value before swapping:\n"");
+printf(""a = %d \nb = %d \nc = %d\n"", a, b, c);
+cyclicSwap(&a, &b, &c);
+printf(""Value after swapping:\n"");
+printf(""a = %d \nb = %d \nc = %d"", a, b, c);
+return 0;
+}
+void cyclicSwap(int *n1, int *n2, int *n3) {
+int temp;
+// swapping in cyclic order
+temp = *n2;
+*n2 = *n1;
+*n1 = *n3;
+*n3 = temp;
+}",489,"#include <stdio.h>
+void cyclicSwap(int *a, int *b, int *c);
+int main() {
+    int a, b, c;
+
+    printf(""Enter a, b and c respectively: "");
+    scanf(""%d %d %d"", &a, &b, &c);
+
+    printf(""Value before swapping:\n"");
+    printf(""a = %d \nb = %d \nc = %d\n"", a, b, c);
+
+    cyclicSwap(&a, &b, &c);
+
+    printf(""Value after swapping:\n"");
+    printf(""a = %d \nb = %d \nc = %d"", a, b, c);
+
+    return 0;
+}
+
+void cyclicSwap(int *n1, int *n2, int *n3) {
+    int temp;
+    temp = *n2;
+    *n2 = *n1;
+    *n1 = *n3;
+    *n3 = temp;
+}"
+54,C Program to Find Largest Number Using Dynamic Memory Allocation,64,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Pointers
+C Dynamic Memory Allocation
+C for Loop
+
+Explanation
+In the program, we have asked the user to enter the total number of elements which is stored in the variable n. Then, we have allocated memory for n number of double values.
+
+// Allocating memory for n double values
+data = (double *)calloc(n, sizeof(double));
+
+Then, we used a for loop to take n number of data from the user.
+
+// Storing elements
+for (int i = 0; i < n; ++i) {
+  printf(""Enter Number%d: "", i + 1);
+  scanf(""%lf"", data + i);
+}
+
+Finally, we used another for loop to compute the largest number.
+
+// Computing the largest number
+for (int i = 1; i < n; ++i) {
+  if (*data < *(data + i))
+    *data = *(data + i);
+  }
+}
+
+Note: Instead of calloc(), it's also possible to solve this problem using the https://www.programiz.com/c-programming/c-dynamic-memory-allocation function.","Enter the total number of elements: 5
+Enter number1: 3.4
+Enter number2: 2.4
+Enter number3: -5
+Enter number4: 24.2
+Enter number5: 6.7
+Largest number = 24.20","#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  int n;
+  double *data;
+  printf(""Enter the total number of elements: "");
+  scanf(""%d"", &n);
+
+  // Allocating memory for n elements
+  data = (double *)calloc(n, sizeof(double));
+  if (data == NULL) {
+    printf(""Error!!! memory not allocated."");
+    exit(0);
+  }
+
+  // Storing numbers entered by the user.
+  for (int i = 0; i < n; ++i) {
+    printf(""Enter number%d: "", i + 1);
+    scanf(""%lf"", data + i);
+  }
+
+  // Finding the largest number
+  for (int i = 1; i < n; ++i) {
+    if (*data < *(data + i)) {
+      *data = *(data + i);
+    }
+  }
+  printf(""Largest number = %.2lf"", *data);
+
+  free(data);
+
+  return 0;
+}",669,"#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int n;
+  double *data;
+  printf(""Enter the total number of elements: "");
+  scanf(""%d"", &n);
+
+  data = (double *)calloc(n, sizeof(double));
+  if (data == NULL) {
+    printf(""Error!!! memory not allocated."");
+    exit(0);
+  }
+
+  for (int i = 0; i < n; ++i) {
+    printf(""Enter number%d: "", i + 1);
+    scanf(""%lf"", data + i);
+  }
+
+  for (int i = 1; i < n; ++i) {
+    if (*data < *(data + i)) {
+      *data = *(data + i);
+    }
+  }
+  printf(""Largest number = %.2lf"", *data);
+
+  free(data);
+
+  return 0;
+}"
+55,C Program to Find the Frequency of Characters in a String,57,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Programming Strings
+
+In this program, the string entered by the user is stored in str.
+Then, the user is asked to enter the character whose frequency is to be found. This is stored in variable ch.
+
+Then, a for loop is used to iterate over characters of the string. In each iteration, if the character in the string is equal to the ch, count is increased by 1.
+Finally, the frequency stored in the count variable is printed.
+Note: This program is case-sensitive i.e. it treats uppercase and lowercase versions of the same alphabet as different characters.","Enter a string: This website is awesome.
+Enter a character to find its frequency: e
+Frequency of e = 4","#include <stdio.h>
+int main() {
+    char str[1000], ch;
+    int count = 0;
+
+    printf(""Enter a string: "");
+    fgets(str, sizeof(str), stdin);
+
+    printf(""Enter a character to find its frequency: "");
+    scanf(""%c"", &ch);
+
+    for (int i = 0; str[i] != '\0'; ++i) {
+        if (ch == str[i])
+            ++count;
+    }
+
+    printf(""Frequency of %c = %d"", ch, count);
+    return 0;
+}",384,"#include <stdio.h>
+int main() {
+    char str[1000], ch;
+    int count = 0;
+
+    printf(""Enter a string: "");
+    fgets(str, sizeof(str), stdin);
+
+    printf(""Enter a character to find its frequency: "");
+    scanf(""%c"", &ch);
+
+    for (int i = 0; str[i] != '\0'; ++i) {
+        if (ch == str[i])
+            ++count;
+    }
+
+    printf(""Frequency of %c = %d"", ch, count);
+    return 0;
+}"
+56,"C Program to Count the Number of Vowels, Consonants and so on",61,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Programming Strings
+
+Here, the string entered by the user is stored in the line variable.
+Initially, the variables vowel, consonant, digit, and space are initialized to 0.
+
+Then, a for loop is used to iterate over the characters of the string. In each iteration, we:
+• convert the character to lowercase using the tolower() function
+• check whether the character is a vowel, a consonant, a digit, or an empty space. Suppose the character is a consonant. Then, the consonant variable is increased by 1.
+When the loop ends, the number of vowels, consonants, digits, and white spaces are stored in variables vowel, consonant, digit, and space respectively.
+Note: We have used the https://www.programiz.com/c-programming/library-function/ctype.h/tolower to simplify our program. To use this function, we need to import the https://www.programiz.com/c-programming/library-function/ctype.h header file.","Enter a line of string: C++ 20 is the latest version of C++ yet.
+Vowels: 9
+Consonants: 16
+Digits: 2
+White spaces: 8","#include <stdio.h>
+int main() {
+char line[150];
+int vowels, consonant, digit, space;
+// initialize all variables to 0
+vowels = consonant = digit = space = 0;
+// get full line of string input
+printf(""Enter a line of string: "");
+fgets(line, sizeof(line), stdin);
+// loop through each character of the string
+for (int i = 0; line[i] != '\0'; ++i) {
+// convert character to lowercase
+line[i] = tolower(line[i]);
+// check if the character is a vowel
+if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
+line[i] == 'o' || line[i] == 'u') {
+// increment value of vowels by 1
+++vowels;
+}
+// if it is not a vowel and if it is an alphabet, it is a consonant
+else if ((line[i] >= 'a' && line[i] <= 'z')) {
+++consonant;
+}
+// check if the character is a digit
+else if (line[i] >= '0' && line[i] <= '9') {
+++digit;
+}
+// check if the character is an empty space
+else if (line[i] == ' ') {
+++space;
+}
+}
+printf(""Vowels: %d"", vowels);
+printf(""\nConsonants: %d"", consonant);
+printf(""\nDigits: %d"", digit);
+printf(""\nWhite spaces: %d"", space);
+return 0;
+}",1040,"#include <stdio.h>
+int main() {
+
+  char line[150];
+  int vowels, consonant, digit, space;
+
+  vowels = consonant = digit = space = 0;
+
+  printf(""Enter a line of string: "");
+  fgets(line, sizeof(line), stdin);
+
+  for (int i = 0; line[i] != '\0'; ++i) {
+    line[i] = tolower(line[i]);
+    if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
+        line[i] == 'o' || line[i] == 'u') {
+      ++vowels;
+    }
+    else if ((line[i] >= 'a' && line[i] <= 'z')) {
+      ++consonant;
+    }
+    else if (line[i] >= '0' && line[i] <= '9') {
+      ++digit;
+    }
+    else if (line[i] == ' ') {
+      ++space;
+    }
+  }
+
+  printf(""Vowels: %d"", vowels);
+  printf(""\nConsonants: %d"", consonant);
+  printf(""\nDigits: %d"", digit);
+  printf(""\nWhite spaces: %d"", space);
+
+  return 0;
+}"
+57,C Program to Remove all Characters in a String Except Alphabets,63,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Programming Strings
+C for Loop
+C while and do...while Loop
+
+This program takes a string input from the user and stores in the line variable. Then, a for loop is used to iterate over characters of the string.
+
+If the character in a string is not an alphabet, it is removed from the string and the position of the remaining characters are shifted to the left by 1 position.","Enter a string: p2'r-o@gram84iz./
+Output String: programiz","#include <stdio.h>
+int main() {
+char line[150];
+printf(""Enter a string: "");
+fgets(line, sizeof(line), stdin); // take input
+for (int i = 0, j; line[i] != '\0'; ++i) {
+// enter the loop if the character is not an alphabet
+// and not the null character
+while (!(line[i] >= 'a' && line[i] <= 'z') && !(line[i] >= 'A' && line[i] <= 'Z') && !(line[i] == '\0')) {
+for (j = i; line[j] != '\0'; ++j) {
+// if jth element of line is not an alphabet,
+// assign the value of (j+1)th element to the jth element
+line[j] = line[j + 1];
+}
+line[j] = '\0';
+}
+}
+printf(""Output String: "");
+puts(line);
+return 0;
+}",593,"#include <stdio.h>
+int main() {
+char line[150];
+printf(""Enter a string: "");
+fgets(line, sizeof(line), stdin);
+for (int i = 0, j; line[i] != '\0'; ++i) {
+while (!(line[i] >= 'a' && line[i] <= 'z') && !(line[i] >= 'A' && line[i] <= 'Z') && !(line[i] == '\0')) {
+for (j = i; line[j] != '\0'; ++j) {
+line[j] = line[j + 1];
+}
+line[j] = '\0';
+}
+}
+printf(""Output String: "");
+puts(line);
+return 0;
+}"
+58,C Program to Find the Length of a String,40,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Strings
+String Manipulations In C Programming Using Library Functions
+C for Loop
+As you know, the best way to find the length of a string is by using the strlen() function. However, in this example, we will find the length of a string manually.
+
+Here, using a for loop, we have iterated over characters of the string from i = 0 to until '\0' (null character) is encountered. In each iteration, the value of i is increased by 1.
+When the loop ends, the length of the string will be stored in the i variable.
+Note: Here, the array s[] has 19 elements. The last element s[18] is the null character '\0'. But our loop does not count this character as it terminates upon encountering it.","Length of the string: 18
+","#include <stdio.h>
+int main() {
+    char s[] = ""Programming is fun"";
+    int i;
+
+    for (i = 0; s[i] != '\0'; ++i);
+    
+    printf(""Length of the string: %d"", i);
+    return 0;
+}",180,"#include <stdio.h>
+int main() {
+    char s[] = ""Programming is fun"";
+    int i;
+
+    for (i = 0; s[i] != '\0'; ++i);
+    
+    printf(""Length of the string: %d"", i);
+    return 0;
+}"
+59,C Program to Concatenate Two Strings,36,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Programming Strings
+C for Loop
+As you know, the best way to concatenate two strings in C programming is by using the strcat() function. However, in this example, we will concatenate two strings manually.
+
+Here, two strings s1 and s2 and concatenated and the result is stored in s1.
+It's important to note that the length of s1 should be sufficient to hold the string after concatenation. If not, you may get unexpected output.",After concatenation: programming is awesome,"#include <stdio.h>
+int main() {
+char s1[100] = ""programming "", s2[] = ""is awesome"";
+int length, j;
+// store length of s1 in the length variable
+length = 0;
+while (s1[length] != '\0') {
+++length;
+}
+// concatenate s2 to s1
+for (j = 0; s2[j] != '\0'; ++j, ++length) {
+s1[length] = s2[j];
+}
+// terminating the s1 string
+s1[length] = '\0';
+printf(""After concatenation: "");
+puts(s1);
+return 0;
+}",389,"#include <stdio.h>
+int main() {
+  char s1[100] = ""programming "", s2[] = ""is awesome"";
+  int length, j;
+
+  length = 0;
+  while (s1[length] != '\0') {
+    ++length;
+  }
+
+  for (j = 0; s2[j] != '\0'; ++j, ++length) {
+    s1[length] = s2[j];
+  }
+
+  s1[length] = '\0';
+
+  printf(""After concatenation: "");
+  puts(s1);
+
+  return 0;
+}"
+60,C Program to Copy String Without Using strcpy(),47,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Programming Strings
+C for Loop
+As you know, the best way to copy a string is by using the strcpy() function. However, in this example, we will copy a string manually without using the strcpy() function.
+
+The above program copies the content of string s1 to string s2 manually.","Enter string s1: Hey fellow programmer.
+String s2: Hey fellow programmer.","#include <stdio.h>
+int main() {
+    char s1[100], s2[100], i;
+    printf(""Enter string s1: "");
+    fgets(s1, sizeof(s1), stdin);
+
+    for (i = 0; s1[i] != '\0'; ++i) {
+        s2[i] = s1[i];
+    }
+
+    s2[i] = '\0';
+    printf(""String s2: %s"", s2);
+    return 0;
+}",264,"#include <stdio.h>
+int main() {
+    char s1[100], s2[100], i;
+    printf(""Enter string s1: "");
+    fgets(s1, sizeof(s1), stdin);
+
+    for (i = 0; s1[i] != '\0'; ++i) {
+        s2[i] = s1[i];
+    }
+
+    s2[i] = '\0';
+    printf(""String s2: %s"", s2);
+    return 0;
+}"
+61,C Program to Sort Elements in Lexicographical Order (Dictionary Order),70,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-multi-dimensional-arrays
+• https://www.programiz.com/c-programming/c-strings
+• https://www.programiz.com/c-programming/string-handling-functions
+
+To solve this program, a two-dimensional string named str is created. The string can hold a maximum of 5 strings and each string can have a maximum of 50 characters (including the null character).
+
+In the program, we have used two library functions:
+• https://www.programiz.com/c-programming/library-function/string.h/strcmp - to compare strings
+• https://www.programiz.com/c-programming/library-function/string.h/strcpy - to copy strings
+These functions are used to compare strings and sort them in the correct order.","Enter 5 words: R programming
+JavaScript
+Java
+C programming
+C++ programming
+
+In the lexicographical order:
+C programming
+C++ programming
+Java
+JavaScript
+R programming","#include <stdio.h>
+#include <string.h>
+int main() {
+char str[5][50], temp[50];
+printf(""Enter 5 words: "");
+// Getting strings input
+for (int i = 0; i < 5; ++i) {
+fgets(str[i], sizeof(str[i]), stdin);
+}
+// storing strings in the lexicographical order
+for (int i = 0; i < 5; ++i) {
+for (int j = i + 1; j < 5; ++j) {
+// swapping strings if they are not in the lexicographical order
+if (strcmp(str[i], str[j]) > 0) {
+strcpy(temp, str[i]);
+strcpy(str[i], str[j]);
+strcpy(str[j], temp);
+}
+}
+}
+printf(""\nIn the lexicographical order: \n"");
+for (int i = 0; i < 5; ++i) {
+fputs(str[i], stdout);
+}
+return 0;
+}",598,"#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char str[5][50], temp[50];
+   printf(""Enter 5 words: "");
+
+   for (int i = 0; i < 5; ++i) {
+      fgets(str[i], sizeof(str[i]), stdin);
+   }
+
+   for (int i = 0; i < 5; ++i) {
+      for (int j = i + 1; j < 5; ++j) {
+         if (strcmp(str[i], str[j]) > 0) {
+            strcpy(temp, str[i]);
+            strcpy(str[i], str[j]);
+            strcpy(str[j], temp);
+         }
+      }
+   }
+
+   printf(""\nIn the lexicographical order: \n"");
+   for (int i = 0; i < 5; ++i) {
+      fputs(str[i], stdout);
+   }
+   return 0;
+}"
+62,C Program to Store Information of a Student Using Structure,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-structures
+
+In this program, a structure student is created. The structure has three members: name (string), roll (integer) and marks (float).
+
+Then, a structure variable s is created to store information and display it on the screen.","Enter information:
+Enter name: Jack
+Enter roll number: 23
+Enter marks: 34.5
+Displaying Information:
+Name: Jack
+Roll number: 23
+Marks: 34.5","#include <stdio.h>
+struct student {
+    char name[50];
+    int roll;
+    float marks;
+} s;
+
+int main() {
+    printf(""Enter information:\n"");
+    printf(""Enter name: "");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf(""Enter roll number: "");
+    scanf(""%d"", &s.roll);
+    printf(""Enter marks: "");
+    scanf(""%f"", &s.marks);
+
+    printf(""Displaying Information:\n"");
+    printf(""Name: "");
+    printf(""%s"", s.name);
+    printf(""Roll number: %d\n"", s.roll);
+    printf(""Marks: %.1f\n"", s.marks);
+
+    return 0;
+}",514,"#include <stdio.h>
+struct student {
+    char name[50];
+    int roll;
+    float marks;
+} s;
+
+int main() {
+    printf(""Enter information:\n"");
+    printf(""Enter name: "");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf(""Enter roll number: "");
+    scanf(""%d"", &s.roll);
+    printf(""Enter marks: "");
+    scanf(""%f"", &s.marks);
+
+    printf(""Displaying Information:\n"");
+    printf(""Name: "");
+    printf(""%s"", s.name);
+    printf(""Roll number: %d\n"", s.roll);
+    printf(""Marks: %.1f\n"", s.marks);
+
+    return 0;
+}"
+63,C Program to Add Two Distances (in inch-feet system) using Structures,69,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C struct
+If you do not know, 12 inches is 1 foot.
+
+In this program, a structure Distance is defined. The structure has two members:
+• feet - an integer
+• inch - a float
+Two variables d1 and d2 of type struct Distance are created. These variables store distances in the feet and inches.
+Then, the sum of these two distances are computed and stored in the result variable. Finally, result is printed on the screen.","Enter 1st distance
+Enter feet: 23
+Enter inch: 8.6
+
+Enter 2nd distance
+Enter feet: 34
+Enter inch: 2.4
+
+Sum of distances = 57'-11.0""","#include <stdio.h>
+
+struct Distance {
+   int feet;
+   float inch;
+} d1, d2, result;
+
+int main() {
+   // take first distance input
+   printf(""Enter 1st distance\n"");
+   printf(""Enter feet: "");
+   scanf(""%d"", &d1.feet);
+   printf(""Enter inch: "");
+   scanf(""%f"", &d1.inch);
+ 
+   // take second distance input
+   printf(""\nEnter 2nd distance\n"");
+   printf(""Enter feet: "");
+   scanf(""%d"", &d2.feet);
+   printf(""Enter inch: "");
+   scanf(""%f"", &d2.inch);
+   
+   // adding distances
+   result.feet = d1.feet + d2.feet;
+   result.inch = d1.inch + d2.inch;
+
+   // convert inches to feet if greater than 12
+   while (result.inch >= 12.0) {
+      result.inch = result.inch - 12.0;
+      ++result.feet;
+   }
+   printf(""\nSum of distances = %d\'-%.1f\"""", result.feet, result.inch);
+   return 0;
+}",783,"#include <stdio.h>
+
+struct Distance {
+   int feet;
+   float inch;
+} d1, d2, result;
+
+int main() {
+   printf(""Enter 1st distance\n"");
+   printf(""Enter feet: "");
+   scanf(""%d"", &d1.feet);
+   printf(""Enter inch: "");
+   scanf(""%f"", &d1.inch);
+ 
+   printf(""\nEnter 2nd distance\n"");
+   printf(""Enter feet: "");
+   scanf(""%d"", &d2.feet);
+   printf(""Enter inch: "");
+   scanf(""%f"", &d2.inch);
+   
+   result.feet = d1.feet + d2.feet;
+   result.inch = d1.inch + d2.inch;
+
+   while (result.inch >= 12.0) {
+      result.inch = result.inch - 12.0;
+      ++result.feet;
+   }
+   printf(""\nSum of distances = %d\'-%.1f\"""", result.feet, result.inch);
+   return 0;
+}"
+64,C Program to Add Two Complex Numbers by Passing Structure to a Function,71,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-structures
+• https://www.programiz.com/c-programming/c-structure-function
+
+In this program, a structure namedcomplex is declared. It has two members: real and imag. We then created two variables n1 and n2 from this structure.
+
+These two structure variables are passed to the add() function. The function computes the sum and returns the structure containing the sum.
+Finally, the sum of complex numbers is printed from the main() function.","For 1st complex number
+Enter the real and imaginary parts: 2.1
+-2.3
+
+For 2nd complex number
+Enter the real and imaginary parts: 5.6
+23.2
+Sum = 7.7 + 20.9i","#include <stdio.h>
+typedef struct complex {
+    float real;
+    float imag;
+} complex;
+
+complex add(complex n1, complex n2);
+
+int main() {
+    complex n1, n2, result;
+
+    printf(""For 1st complex number \n"");
+    printf(""Enter the real and imaginary parts: "");
+    scanf(""%f %f"", &n1.real, &n1.imag);
+    printf(""\nFor 2nd complex number \n"");
+    printf(""Enter the real and imaginary parts: "");
+    scanf(""%f %f"", &n2.real, &n2.imag);
+
+    result = add(n1, n2);
+
+    printf(""Sum = %.1f + %.1fi"", result.real, result.imag);
+    return 0;
+}
+
+complex add(complex n1, complex n2) {
+    complex temp;
+    temp.real = n1.real + n2.real;
+    temp.imag = n1.imag + n2.imag;
+    return (temp);
+}",687,"#include <stdio.h>
+typedef struct complex {
+    float real;
+    float imag;
+} complex;
+
+complex add(complex n1, complex n2);
+
+int main() {
+    complex n1, n2, result;
+
+    printf(""For 1st complex number \n"");
+    printf(""Enter the real and imaginary parts: "");
+    scanf(""%f %f"", &n1.real, &n1.imag);
+    printf(""\nFor 2nd complex number \n"");
+    printf(""Enter the real and imaginary parts: "");
+    scanf(""%f %f"", &n2.real, &n2.imag);
+
+    result = add(n1, n2);
+
+    printf(""Sum = %.1f + %.1fi"", result.real, result.imag);
+    return 0;
+}
+
+complex add(complex n1, complex n2) {
+    complex temp;
+    temp.real = n1.real + n2.real;
+    temp.imag = n1.imag + n2.imag;
+    return (temp);
+}"
+65,C Program to Calculate Difference Between Two Time Periods,58,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C User-defined functions
+C struct
+C Structure and Function
+C structs and Pointers
+
+In this program, the user is asked to enter two time periods and these two periods are stored in structure variables startTime and stopTime respectively.
+
+Then, the function differenceBetweenTimePeriod() calculates the difference between the time periods. The result is displayed from the main() function without returning it (using call by reference technique).","Enter the start time.
+Enter hours, minutes and seconds: 13
+34
+55
+Enter the stop time.
+Enter hours, minutes and seconds: 8
+12
+15
+
+Time Difference: 13:34:55 - 8:12:15 = 5:22:40","#include <stdio.h>
+struct TIME {
+   int seconds;
+   int minutes;
+   int hours;
+};
+
+void differenceBetweenTimePeriod(struct TIME t1,
+                                 struct TIME t2,
+                                 struct TIME *diff);
+
+int main() {
+   struct TIME startTime, stopTime, diff;
+
+   printf(""Enter the start time. \n"");
+   printf(""Enter hours, minutes and seconds: "");
+   scanf(""%d %d %d"", &startTime.hours,
+         &startTime.minutes,
+         &startTime.seconds);
+
+   printf(""Enter the stop time. \n"");
+   printf(""Enter hours, minutes and seconds: "");
+   scanf(""%d %d %d"", &stopTime.hours,
+         &stopTime.minutes,
+         &stopTime.seconds);
+
+   // Difference between start and stop time
+   differenceBetweenTimePeriod(startTime, stopTime, &diff);
+   printf(""\nTime Difference: %d:%d:%d - "", startTime.hours,
+          startTime.minutes,
+          startTime.seconds);
+   printf(""%d:%d:%d "", stopTime.hours,
+          stopTime.minutes,
+          stopTime.seconds);
+   printf(""= %d:%d:%d\n"", diff.hours,
+          diff.minutes,
+          diff.seconds);
+   return 0;
+}
+
+// Computes difference between time periods
+void differenceBetweenTimePeriod(struct TIME start,
+                                 struct TIME stop,
+                                 struct TIME *diff) {
+   while (stop.seconds > start.seconds) {
+      --start.minutes;
+      start.seconds += 60;
+   }
+   diff->seconds = start.seconds - stop.seconds;
+   while (stop.minutes > start.minutes) {
+      --start.hours;
+      start.minutes += 60;
+   }
+   diff->minutes = start.minutes - stop.minutes;
+   diff->hours = start.hours - stop.hours;
+}",1620,"#include <stdio.h>
+struct TIME {
+   int seconds;
+   int minutes;
+   int hours;
+};
+
+void differenceBetweenTimePeriod(struct TIME t1,
+                                 struct TIME t2,
+                                 struct TIME *diff);
+
+int main() {
+   struct TIME startTime, stopTime, diff;
+
+   printf(""Enter the start time. \n"");
+   printf(""Enter hours, minutes and seconds: "");
+   scanf(""%d %d %d"", &startTime.hours,
+         &startTime.minutes,
+         &startTime.seconds);
+
+   printf(""Enter the stop time. \n"");
+   printf(""Enter hours, minutes and seconds: "");
+   scanf(""%d %d %d"", &stopTime.hours,
+         &stopTime.minutes,
+         &stopTime.seconds);
+
+   differenceBetweenTimePeriod(startTime, stopTime, &diff);
+   printf(""\nTime Difference: %d:%d:%d - "", startTime.hours,
+          startTime.minutes,
+          startTime.seconds);
+   printf(""%d:%d:%d "", stopTime.hours,
+          stopTime.minutes,
+          stopTime.seconds);
+   printf(""= %d:%d:%d\n"", diff.hours,
+          diff.minutes,
+          diff.seconds);
+   return 0;
+}
+
+void differenceBetweenTimePeriod(struct TIME start,
+                                 struct TIME stop,
+                                 struct TIME *diff) {
+   while (stop.seconds > start.seconds) {
+      --start.minutes;
+      start.seconds += 60;
+   }
+   diff->seconds = start.seconds - stop.seconds;
+   while (stop.minutes > start.minutes) {
+      --start.hours;
+      start.minutes += 60;
+   }
+   diff->minutes = start.minutes - stop.minutes;
+   diff->hours = start.hours - stop.hours;
+}"
+66,C Program to Store Information of Students Using Structure,58,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C struct
+
+In this program, a structure student is created. The structure has three members: name (string), roll (integer) and marks (float).
+
+Then, we created an array of structures s having 5 elements to store information of 5 students.
+Using a for loop, the program takes the information of 5 students from the user and stores it in the array of structure. Then using another for loop, the information entered by the user is displayed on the screen.","Enter information of students: 
+
+For roll number1,
+Enter name: Tom
+Enter marks: 98
+
+For roll number2,
+Enter name: Jerry
+Enter marks: 89
+.
+.
+.
+Displaying Information:
+
+Roll number: 1
+Name: Tom
+Marks: 98
+.
+.
+.","#include <stdio.h>
+struct student {
+    char firstName[50];
+    int roll;
+    float marks;
+} s[5];
+
+int main() {
+    int i;
+    printf(""Enter information of students:\n"");
+
+    // storing information
+    for (i = 0; i < 5; ++i) {
+        s[i].roll = i + 1;
+        printf(""\nFor roll number%d,\n"", s[i].roll);
+        printf(""Enter first name: "");
+        scanf(""%s"", s[i].firstName);
+        printf(""Enter marks: "");
+        scanf(""%f"", &s[i].marks);
+    }
+    printf(""Displaying Information:\n\n"");
+
+    // displaying information
+    for (i = 0; i < 5; ++i) {
+        printf(""\nRoll number: %d\n"", i + 1);
+        printf(""First name: "");
+        puts(s[i].firstName);
+        printf(""Marks: %.1f"", s[i].marks);
+        printf(""\n"");
+    }
+    return 0;
+}",756,"#include <stdio.h>
+struct student {
+    char firstName[50];
+    int roll;
+    float marks;
+} s[5];
+
+int main() {
+    int i;
+    printf(""Enter information of students:\n"");
+
+    for (i = 0; i < 5; ++i) {
+        s[i].roll = i + 1;
+        printf(""\nFor roll number%d,\n"", s[i].roll);
+        printf(""Enter first name: "");
+        scanf(""%s"", s[i].firstName);
+        printf(""Enter marks: "");
+        scanf(""%f"", &s[i].marks);
+    }
+    printf(""Displaying Information:\n\n"");
+
+    for (i = 0; i < 5; ++i) {
+        printf(""\nRoll number: %d\n"", i + 1);
+        printf(""First name: "");
+        puts(s[i].firstName);
+        printf(""Marks: %.1f"", s[i].marks);
+        printf(""\n"");
+    }
+    return 0;
+}"
+67,C Program to Store Data in Structures Dynamically,49,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Pointers
+C Dynamic Memory Allocation
+C struct
+This program asks the user to store the value of noOfRecords and allocates the memory for the noOfRecords structure variables dynamically using the malloc() function.","Enter the number of records: 2
+Enter subject and marks:
+Science 82
+Enter subject and marks:
+DSA 73
+
+Displaying Information:
+Science     82
+DSA     73","#include <stdio.h>
+#include <stdlib.h>
+struct course {
+  int marks;
+  char subject[30];
+};
+
+int main() {
+  struct course *ptr;
+  int noOfRecords;
+  printf(""Enter the number of records: "");
+  scanf(""%d"", &noOfRecords);
+
+  // Memory allocation for noOfRecords structures
+  ptr = (struct course *)malloc(noOfRecords * sizeof(struct course));
+  for (int i = 0; i < noOfRecords; ++i) {
+    printf(""Enter subject and marks:\n"");
+    scanf(""%s %d"", (ptr + i)->subject, &(ptr + i)->marks);
+  }
+
+  printf(""Displaying Information:\n"");
+  for (int i = 0; i < noOfRecords; ++i) {
+    printf(""%s\t%d\n"", (ptr + i)->subject, (ptr + i)->marks);
+  }
+
+  free(ptr);
+
+  return 0;
+}",662,"#include <stdio.h>
+#include <stdlib.h>
+struct course {
+  int marks;
+  char subject[30];
+};
+
+int main() {
+  struct course *ptr;
+  int noOfRecords;
+  printf(""Enter the number of records: "");
+  scanf(""%d"", &noOfRecords);
+
+  ptr = (struct course *)malloc(noOfRecords * sizeof(struct course));
+  for (int i = 0; i < noOfRecords; ++i) {
+    printf(""Enter subject and marks:\n"");
+    scanf(""%s %d"", (ptr + i)->subject, &(ptr + i)->marks);
+  }
+
+  printf(""Displaying Information:\n"");
+  for (int i = 0; i < noOfRecords; ++i) {
+    printf(""%s\t%d\n"", (ptr + i)->subject, (ptr + i)->marks);
+  }
+
+  free(ptr);
+
+  return 0;
+}"
+68,C Program to Write a Sentence to a File,39,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C File Handling
+C Standard Library Functions
+This program stores a sentence entered by the user in a file.
+
+In the program, the sentence entered by the user is stored in the sentence variable.
+
+Then, a file named program.txt is opened in writing mode. If the file does not exist, it will be created.
+Finally, the string entered by the user will be written to this file using the fprintf() function and the file is closed.","Enter a sentence: C Programming is fun
+
+Here, a file named program.txt is created. The file will contain C programming is fun text.","#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char sentence[1000];
+
+    // creating file pointer to work with files
+    FILE *fptr;
+
+    // opening file in writing mode
+    fptr = fopen(""program.txt"", ""w"");
+
+    // exiting program 
+    if (fptr == NULL) {
+        printf(""Error!"");
+        exit(1);
+    }
+    printf(""Enter a sentence:\n"");
+    fgets(sentence, sizeof(sentence), stdin);
+    fprintf(fptr, ""%s"", sentence);
+    fclose(fptr);
+    return 0;
+}",465,"#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char sentence[1000];
+    FILE *fptr;
+    fptr = fopen(""program.txt"", ""w"");
+
+    if (fptr == NULL) {
+        printf(""Error!"");
+        exit(1);
+    }
+    printf(""Enter a sentence:\n"");
+    fgets(sentence, sizeof(sentence), stdin);
+    fprintf(fptr, ""%s"", sentence);
+    fclose(fptr);
+    return 0;
+}"
+69,C Program to Read the First Line From a File,44,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C File Handling
+C Programming Strings
+
+If the file is found, the program saves the content of the file to a string c until '\n' newline is encountered.
+Suppose the program.txt file contains the following text in the current directory.
+
+C programming is awesome.
+I love C programming.
+How are you doing? 
+
+
+The output of the program will be:
+
+Data from the file:
+C programming is awesome.
+
+If the file program.txt is not found, the program prints the error message.",,"#include <stdio.h>
+#include <stdlib.h> // For exit() function
+int main() {
+    char c[1000];
+    FILE *fptr;
+    if ((fptr = fopen(""program.txt"", ""r"")) == NULL) {
+        printf(""Error! File cannot be opened."");
+        // Program exits if the file pointer returns NULL.
+        exit(1);
+    }
+
+    // reads text until newline is encountered
+    fscanf(fptr, ""%[^\n]"", c);
+    printf(""Data from the file:\n%s"", c);
+    fclose(fptr);
+
+    return 0;",447,"#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char c[1000];
+    FILE *fptr;
+    
+    if ((fptr = fopen(""program.txt"", ""r"")) == NULL) {
+        printf(""Error! File cannot be opened."");
+        exit(1);
+    }
+
+    fscanf(fptr, ""%[^\n]"", c);
+    printf(""Data from the file:\n%s"", c);
+    fclose(fptr);
+
+    return 0;
+}"
+70,C Program to Display its own Source Code as Output,50,"To understand this example, you should have the knowledge of the following C programming topics:
+
+C Preprocessor and Macros
+C File Handling
+Though this problem seems complex, the concept behind this program is straightforward; display the content from the same file you are writing the source code.
+
+Procedure to display its own source code in C programming
+In C programming, there is a predefined macro named __FILE__ that gives the name of the current input file.
+
+#include <stdio.h>
+int main() {
+
+   // location the current input file.
+   printf(""%s"",__FILE__);
+}",,"#include <stdio.h>
+int main() {
+    FILE *fp;
+    int c;
+   
+    // open the current input file
+    fp = fopen(__FILE__,""r"");
+
+    do {
+         c = getc(fp);   // read character 
+         putchar(c);     // display character
+    }
+    while(c != EOF);  // loop until the end of file is reached
+    
+    fclose(fp);
+    return 0;
+}",331,"#include <stdio.h>
+int main() {
+    FILE *fp;
+    int c;
+   
+    fp = fopen(__FILE__, ""r"");
+
+    do {
+        c = getc(fp);
+        putchar(c);
+    } while (c != EOF);
+    
+    fclose(fp);
+    return 0;
+}"
+,,50.91428571,,,,546.1285714,
