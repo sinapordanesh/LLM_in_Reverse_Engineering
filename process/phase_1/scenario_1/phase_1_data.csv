@@ -1,5 +1,5 @@
-﻿id,problem_name,,explanation,output,original_code,13,comment_less_code
-1,"C ""Hello, World!"" Program",25,"How ""Hello, World!"" program works?
+﻿id,problem_name,explanation,output,original_code,comment_less_code
+1,"C ""Hello, World!"" Program","How ""Hello, World!"" program works?
 The #include is a preprocessor command that tells the compiler to include the contents of stdio.h (standard input and output) file in the program.
 The stdio.h file contains functions such as scanf() and printf() to take input and display output respectively.
 If you use the printf() function without writing #include <stdio.h>, the program will not compile.
@@ -10,12 +10,12 @@ int main() {
    // printf() displays the string inside quotation
    printf(""Hello, World!"");
    return 0;
-}",126,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 printf(""Hello, World!"");
 return 0;
 }"
-2,C Program to Print an Integer (Entered by the User),51,"In this program, an integer variable number is declared.
+2,C Program to Print an Integer (Entered by the User),"In this program, an integer variable number is declared.
 
 int number;
 
@@ -36,7 +36,7 @@ scanf(""%d"", &number);
 // displays output
 printf(""You entered: %d"", number);
 return 0;
-}",187,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int number;
 printf(""Enter an integer: "");
@@ -44,7 +44,7 @@ scanf(""%d"", &number);
 printf(""You entered: %d"", number);
 return 0;
 }"
-3,C Program to Add Two Integers,29,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+3,C Program to Add Two Integers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-input-output
@@ -66,7 +66,7 @@ scanf(""%d %d"", &number1, &number2);
 sum = number1 + number2;
 printf(""%d + %d = %d"", number1, number2, sum);
 return 0;
-}",231,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int number1, number2;
 printf(""Enter two integers: "");
@@ -75,7 +75,7 @@ int sum = number1 + number2;
 printf(""%d + %d = %d"", number1, number2, sum);
 return 0;
 }"
-4,C Program to Multiply Two Floating-Point Numbers,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+4,C Program to Multiply Two Floating-Point Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-input-output
@@ -104,7 +104,7 @@ product = a * b;
 // %.2lf displays number up to 2 decimal point
 printf(""Product = %.2lf"", product);
 return 0;
-}",245,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 double a, b;
 printf(""Enter two numbers: "");
@@ -113,7 +113,7 @@ double product = a * b;
 printf(""Product = %.2lf"", product);
 return 0;
 }"
-5,C Program to Find ASCII Value of a Character,44,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+5,C Program to Find ASCII Value of a Character,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-input-output
@@ -134,7 +134,7 @@ scanf(""%c"", &c);
 // %c displays the actual character
 printf(""ASCII value of %c = %d"", c, c);
 return 0;
-}",223,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 char c;
 printf(""Enter a character: "");
@@ -142,7 +142,7 @@ scanf(""%c"", &c);
 printf(""ASCII value of %c = %d"", c, c);
 return 0;
 }"
-6,C Program to Compute Quotient and Remainder,43,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+6,C Program to Compute Quotient and Remainder,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-input-output
@@ -183,7 +183,7 @@ remainder = dividend % divisor;
 printf(""Quotient = %d\n"", quotient);
 printf(""Remainder = %d"", remainder);
 return 0;
-}",369,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int dividend, divisor, quotient, remainder;
 printf(""Enter dividend: "");
@@ -196,7 +196,7 @@ printf(""Quotient = %d\n"", quotient);
 printf(""Remainder = %d"", remainder);
 return 0;
 }"
-7,"C Program to Find the Size of int, float, double and char",57,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+7,"C Program to Find the Size of int, float, double and char","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-input-output
@@ -215,7 +215,7 @@ printf(""Size of float: %zu bytes\n"", sizeof(floatType));
 printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
 printf(""Size of char: %zu byte\n"", sizeof(charType));
 return 0;
-}",372,"#include<stdio.h>
+}","#include<stdio.h>
 int main() {
 int intType;
 float floatType;
@@ -227,7 +227,7 @@ printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
 printf(""Size of char: %zu byte\n"", sizeof(charType));
 return 0;
 }"
-8,C Program to Demonstrate the Working of Keyword long,52,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+8,C Program to Demonstrate the Working of Keyword long,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-input-output
@@ -249,7 +249,7 @@ printf(""Size of long long int = %zu bytes\n"", sizeof(c));
 printf(""Size of double = %zu bytes\n"", sizeof(e));
 printf(""Size of long double = %zu bytes\n"", sizeof(f));
 return 0;
-}",426,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int a;
 long b;
@@ -263,7 +263,7 @@ printf(""Size of double = %zu bytes\n"", sizeof(e));
 printf(""Size of long double = %zu bytes\n"", sizeof(f));
 return 0;
 }"
-9,C Program to Swap Two Numbers,29,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+9,C Program to Swap Two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-input-output
@@ -288,7 +288,7 @@ second = temp;
 printf(""\nAfter swapping, first number = %.2lf\n"", first);
 printf(""After swapping, second number = %.2lf"", second);
 return 0;
-}",531,"#include<stdio.h>
+}","#include<stdio.h>
 int main() {
 double first, second, temp;
 printf(""Enter first number: "");
@@ -302,7 +302,7 @@ printf(""\nAfter swapping, first number = %.2lf\n"", first);
 printf(""After swapping, second number = %.2lf"", second);
 return 0;
 }"
-10,C Program to Check Whether a Number is Even or Odd,50,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+10,C Program to Check Whether a Number is Even or Odd,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 An even number is an integer that is exactly divisible by 2. For example: 0, 8, -24
@@ -323,7 +323,7 @@ printf(""%d is even."", num);
 else
 printf(""%d is odd."", num);
 return 0;
-}",221,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int num;
 printf(""Enter an integer: "");
@@ -334,7 +334,7 @@ else
 printf(""%d is odd."", num);
 return 0;
 }"
-11,C Program to Check Whether a Character is a Vowel or Consonant,62,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+11,C Program to Check Whether a Character is a Vowel or Consonant,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-do-while-loops
@@ -362,7 +362,7 @@ printf(""%c is a vowel."", c);
 else
 printf(""%c is a consonant."", c);
 return 0;
-}",547,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 char c;
 int lowercase_vowel, uppercase_vowel;
@@ -376,7 +376,7 @@ else
 printf(""%c is a consonant."", c);
 return 0;
 }"
-12,C Program to Find the Largest Number Among Three Numbers,56,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+12,C Program to Find the Largest Number Among Three Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 
@@ -405,7 +405,7 @@ int main() {
     printf(""%.2f is the largest number."", n3);
 
   return 0;
-}",565,"#include <stdio.h>
+}","#include <stdio.h>
 
 int main() {
 
@@ -425,7 +425,7 @@ int main() {
 
   return 0;
 }"
-13,C Program to Find the Roots of a Quadratic Equation,51,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+13,C Program to Find the Roots of a Quadratic Equation,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 The standard form of a quadratic equation is:
@@ -464,7 +464,7 @@ imagPart = sqrt(-discriminant) / (2 * a);
 printf(""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"", realPart, imagPart, realPart, imagPart);
 }
 return 0;
-}",788,"#include <math.h>
+}","#include <math.h>
 #include <stdio.h>
 int main() {
 double a, b, c, discriminant, root1, root2, realPart, imagPart;
@@ -487,7 +487,7 @@ printf(""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"", realPart, imagPart, real
 }
 return 0;
 }"
-14,C Program to Check Leap Year,28,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+14,C Program to Check Leap Year,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 A leap year is exactly divisible by 4 except for century years (years ending with 00). The century year is a leap year only if it is perfectly divisible by 400.
@@ -518,7 +518,7 @@ else {
 printf(""%d is not a leap year."", year);
 }
 return 0;
-}",550,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int year;
 printf(""Enter a year: "");
@@ -537,7 +537,7 @@ printf(""%d is not a leap year."", year);
 }
 return 0;
 }"
-15,C Program to Check Whether a Number is Positive or Negative,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+15,C Program to Check Whether a Number is Positive or Negative,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 This program takes a number from the user and checks whether that number is either positive or negative or zero.",,"#include <stdio.h>
@@ -554,7 +554,7 @@ printf(""You entered a negative number."");
 else
 printf(""You entered a positive number."");
 return 0;
-}",259,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 double num;
 printf(""Enter a number: "");
@@ -569,7 +569,7 @@ else
 printf(""You entered a positive number."");
 return 0;
 }"
-16,C Program to Check Whether a Character is an Alphabet or not,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+16,C Program to Check Whether a Character is an Alphabet or not,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 In C programming, a character variable holds an ASCII value (an integer number between 0 and 127) rather than that character itself.
@@ -592,7 +592,7 @@ printf(""%c is an alphabet."", c);
 else
 printf(""%c is not an alphabet."", c);
 return 0;
-}",228,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 char c;
 printf(""Enter a character: "");
@@ -603,7 +603,7 @@ else
 printf(""%c is not an alphabet."", c);
 return 0;
 }"
-17,C Program to Calculate the Sum of Natural Numbers,49,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+17,C Program to Calculate the Sum of Natural Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-do-while-loops
 The positive numbers 1, 2, 3... are known as natural numbers. The sum of natural numbers up to 10 is:
@@ -627,7 +627,7 @@ sum += i;
 }
 printf(""Sum = %d"", sum);
 return 0;
-}",183,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n, i, sum = 0;
 printf(""Enter a positive integer: "");
@@ -640,7 +640,7 @@ sum += i;
 printf(""Sum = %d"", sum);
 return 0;
 }"
-18,C Program to Find Factorial of a Number,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+18,C Program to Find Factorial of a Number,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -671,7 +671,7 @@ fact *= i;
 printf(""Factorial of %d = %llu"", n, fact);
 }
 return 0;
-}",349,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n, i;
 unsigned long long fact = 1;
@@ -687,7 +687,7 @@ printf(""Factorial of %d = %llu"", n, fact);
 }
 return 0;
 }"
-19,C Program to Generate Multiplication Table,42,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+19,C Program to Generate Multiplication Table,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-for-loop
 The program below takes an integer input from the user and generates the multiplication tables up to 10.
@@ -706,7 +706,7 @@ for (int i = 1; i <= 10; ++i) {
 printf(""%d * %d = %d \n"", n, i, n * i);
 }
 return 0;
-}",171,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n;
 printf(""Enter an integer: "");
@@ -716,7 +716,7 @@ printf(""%d * %d = %d \n"", n, i, n * i);
 }
 return 0;
 }"
-20,C Program to Display Fibonacci Sequence,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+20,C Program to Display Fibonacci Sequence,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-do-while-loops
 • https://www.programiz.com/c-programming/c-for-loop
@@ -748,7 +748,7 @@ t2 = nextTerm;
 nextTerm = t1 + t2;
 }
 return 0;
-}",469,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int i, n;
 int t1 = 0, t2 = 1;
@@ -764,7 +764,7 @@ nextTerm = t1 + t2;
 }
 return 0;
 }"
-21,C Program to Find GCD of two Numbers,36,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+21,C Program to Find GCD of two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -788,7 +788,7 @@ gcd = i;
 }
 printf(""G.C.D of %d and %d is %d"", n1, n2, gcd);
 return 0;
-}",282,"#include <stdio.h>
+}","#include <stdio.h>
 int main()
 {
 int n1, n2, i, gcd;
@@ -802,7 +802,7 @@ gcd = i;
 printf(""G.C.D of %d and %d is %d"", n1, n2, gcd);
 return 0;
 }"
-22,C Program to Find LCM of two Numbers,36,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+22,C Program to Find LCM of two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-do-while-loops
@@ -832,7 +832,7 @@ break;
 ++max;
 }
 return 0;
-}",331,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n1, n2, max;
 printf(""Enter two positive integers: "");
@@ -847,7 +847,7 @@ break;
 }
 return 0;
 }"
-23,C Program to Display Characters from A to Z Using Loop,54,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+23,C Program to Display Characters from A to Z Using Loop,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-do-while-loops
 
@@ -859,14 +859,14 @@ char c;
 for (c = 'A'; c <= 'Z'; ++c)
 printf(""%c "", c);
 return 0;
-}",98,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     char c;
     for (c = 'A'; c <= 'Z'; ++c)
         printf(""%c "", c);
     return 0;
 }"
-24,C Program to Count Number of Digits in an Integer,49,"To understand this example, you should have the knowledge of the following C programming topics:
+24,C Program to Count Number of Digits in an Integer,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
 C while and do...while Loop
@@ -892,7 +892,7 @@ n /= 10;
 ++count;
 } while (n != 0);
 printf(""Number of digits: %d"", count);
-}",326,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   long long n;
   int count = 0;
@@ -906,7 +906,7 @@ int main() {
 
   printf(""Number of digits: %d"", count);
 }"
-25,C Program to Reverse a Number,29,"To understand this example, you should have the knowledge of the following C programming topics:
+25,C Program to Reverse a Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
 C while and do...while Loop
@@ -928,7 +928,7 @@ n /= 10;
 }
 printf(""Reversed number = %d"", reverse);
 return 0;
-}",246,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n, reverse = 0, remainder;
 printf(""Enter an integer: "");
@@ -941,7 +941,7 @@ n /= 10;
 printf(""Reversed number = %d"", reverse);
 return 0;
 }"
-26,C Program to Calculate the Power of a Number,44,"To understand this example, you should have the knowledge of the following C programming topics:
+26,C Program to Calculate the Power of a Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
 C while and do...while Loop
@@ -968,7 +968,7 @@ int main() {
     }
     printf(""Answer = %.0Lf"", result);
     return 0;
-}",322,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     int base, exp;
     long double result = 1.0;
@@ -984,7 +984,7 @@ int main() {
     printf(""Answer = %.0Lf"", result);
     return 0;
 }"
-27,C Program to Check Whether a Number is Palindrome or Not,56,"To understand this example, you should have the knowledge of the following C programming topics:
+27,C Program to Check Whether a Number is Palindrome or Not,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
 C if...else Statement
@@ -1015,7 +1015,7 @@ int main() {
         printf(""%d is not a palindrome."", original);
 
     return 0;
-}",533,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   int n, reversed = 0, remainder, original;
     printf(""Enter an integer: "");
@@ -1035,7 +1035,7 @@ int main() {
 
     return 0;
 }"
-28,C Program to Check Whether a Number is Prime or Not,51,"To understand this example, you should have the knowledge of the following C programming topics:
+28,C Program to Check Whether a Number is Prime or Not,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
 C for Loop
@@ -1075,7 +1075,7 @@ printf(""%d is a prime number."", n);
 else
 printf(""%d is not a prime number."", n);
 return 0;
-}",509,"#include <stdio.h>
+}","#include <stdio.h>
 
 int main() {
 
@@ -1100,7 +1100,7 @@ int main() {
 
   return 0;
 }"
-29,C Program to Display Prime Numbers Between Two Intervals,56,"To understand this example, you should have the knowledge of the following C programming topics:
+29,C Program to Display Prime Numbers Between Two Intervals,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
 C for Loop
@@ -1138,7 +1138,7 @@ printf(""%d "", low);
 ++low;
 }
 return 0;
-}",563,"#include <stdio.h>
+}","#include <stdio.h>
 
 int main() {
    int low, high, i, flag;
@@ -1170,7 +1170,7 @@ int main() {
 
    return 0;
 }"
-30,C Program to Check Armstrong Number,35,"To understand this example, you should have the knowledge of the following C programming topics:
+30,C Program to Check Armstrong Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
 C while and do...while Loop
@@ -1199,7 +1199,7 @@ printf(""%d is an Armstrong number."", num);
 else
 printf(""%d is not an Armstrong number."", num);
 return 0;
-}",488,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int num, originalNum, remainder, result = 0;
 printf(""Enter a three-digit integer: "");
@@ -1216,7 +1216,7 @@ else
 printf(""%d is not an Armstrong number."", num);
 return 0;
 }"
-31,C Program to Display Armstrong Number Between Two Intervals,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+31,C Program to Display Armstrong Number Between Two Intervals,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-for-loop
 A positive integer is called an Armstrong number (of order n) if
@@ -1277,7 +1277,7 @@ count = 0;
 result = 0;
 }
 return 0;
-}",1000,"#include <math.h>
+}","#include <math.h>
 #include <stdio.h>
 int main() {
   int low, high, number, originalNumber, rem, count = 0;
@@ -1318,7 +1318,7 @@ int main() {
 
   return 0;
 }"
-32,C Program to Display Factors of a Number,40,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+32,C Program to Display Factors of a Number,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-for-loop
@@ -1345,7 +1345,7 @@ printf(""%d "", i);
 }
 }
 return 0;
-}",219,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     int num, i;
     printf(""Enter a positive integer: "");
@@ -1358,7 +1358,7 @@ int main() {
     }
     return 0;
 }"
-33,C Program to Make a Simple Calculator Using switch...case,57,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+33,C Program to Make a Simple Calculator Using switch...case,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-switch-case-statement
 • https://www.programiz.com/c-programming/c-break-continue-statement
 This program takes an arithmetic operator +, -, *, / and two operands from the user. Then, it performs the calculation on the two operands depending upon the operator entered by the user.
@@ -1404,7 +1404,7 @@ int main() {
   }
 
   return 0;
-}",738,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 char op;
 double first, second;
@@ -1430,7 +1430,7 @@ printf(""Error! operator is not correct"");
 }
 return 0;
 }"
-34,C Program to Display Prime Numbers Between Intervals Using Function,67,"To understand this example, you should have the knowledge of the following C programming topics:
+34,C Program to Display Prime Numbers Between Intervals Using Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C for Loop
 C break and continue
@@ -1517,7 +1517,7 @@ int checkPrimeNumber(int n) {
   }
 
   return flag;
-}",719,"#include <stdio.h>
+}","#include <stdio.h>
 int checkPrimeNumber(int n);
 int main() {
 
@@ -1556,7 +1556,7 @@ int checkPrimeNumber(int n) {
 
   return flag;
 }"
-35,C Program to Check Prime or Armstrong Number Using User-defined Function,72,"To understand this example, you should have the knowledge of the following C programming topics:
+35,C Program to Check Prime or Armstrong Number Using User-defined Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C for Loop
 C while and do...while Loop
@@ -1634,7 +1634,7 @@ flag = 1;
 else
 flag = 0;
 return flag;
-}",1306,"#include <math.h>
+}","#include <math.h>
 #include <stdio.h>
 int checkPrimeNumber(int n);
 int checkArmstrongNumber(int n);
@@ -1681,7 +1681,7 @@ else
 flag = 0;
 return flag;
 }"
-36,C Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers,80,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+36,C Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-functions
@@ -1739,7 +1739,7 @@ break;
 }
 }
 return isPrime;
-}",696,"#include <stdio.h>
+}","#include <stdio.h>
 int checkPrime(int n);
 int main() {
 int n, i, flag = 0;
@@ -1772,7 +1772,7 @@ break;
 }
 return isPrime;
 }"
-37,C Program to Find the Sum of Natural Numbers using Recursion,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+37,C Program to Find the Sum of Natural Numbers using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
 The positive numbers 1, 2, 3... are known as natural numbers. The program below takes a positive integer from the user and calculates the sum up to the given number.
@@ -1798,7 +1798,7 @@ if (n != 0)
 return n + addNumbers(n - 1);
 else
 return n;
-}",252,"#include <stdio.h>
+}","#include <stdio.h>
 int addNumbers(int n);
 int main() {
 int num;
@@ -1813,7 +1813,7 @@ return n + addNumbers(n - 1);
 else
 return n;
 }"
-38,C Program to Find Factorial of a Number Using Recursion,55,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+38,C Program to Find Factorial of a Number Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
@@ -1842,7 +1842,7 @@ if (n>=1)
 return n*multiplyNumbers(n-1);
 else
 return 1;
-}",284,"#include<stdio.h>
+}","#include<stdio.h>
 long int multiplyNumbers(int n);
 int main() {
 int n;
@@ -1857,7 +1857,7 @@ return n*multiplyNumbers(n-1);
 else
 return 1;
 }"
-39,C Program to Find G.C.D Using Recursion,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+39,C Program to Find G.C.D Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
@@ -1880,7 +1880,7 @@ if (n2 != 0)
 return hcf(n2, n1 % n2);
 else
 return n1;
-}",287,"#include <stdio.h>
+}","#include <stdio.h>
 int hcf(int n1, int n2);
 int main() {
 int n1, n2;
@@ -1895,7 +1895,7 @@ return hcf(n2, n1 % n2);
 else
 return n1;
 }"
-40,C Program to Convert Binary Number to Decimal and vice-versa,60,"To understand this example, you should have the knowledge of the following C programming topics:
+40,C Program to Convert Binary Number to Decimal and vice-versa,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Functions
 C User-defined functions
@@ -1946,7 +1946,7 @@ int convert(long long n) {
   }
 
   return dec;
-}",611,"#include <stdio.h>
+}","#include <stdio.h>
 #include <math.h>
 
 int convert(long long);
@@ -1976,7 +1976,7 @@ int convert(long long n) {
 
   return dec;
 }"
-41,C Program to Convert Octal Number to Decimal and vice-versa,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+41,C Program to Convert Octal Number to Decimal and vice-versa,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions","Enter a decimal number: 78
 78 in decimal = 116 in octal","#include <stdio.h>
@@ -2008,7 +2008,7 @@ int convertDecimalToOctal(int decimalNumber) {
     }
 
     return octalNumber;
-}",617,"#include <stdio.h>
+}","#include <stdio.h>
 #include <math.h>
 
 int convertDecimalToOctal(int decimalNumber);
@@ -2036,7 +2036,7 @@ int convertDecimalToOctal(int decimalNumber) {
 
     return octalNumber;
 }"
-42,C Program to Convert Binary Number to Octal and vice-versa,58,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+42,C Program to Convert Binary Number to Octal and vice-versa,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
 Program to Convert Binary to Octal
@@ -2070,7 +2070,7 @@ int convert(long long bin) {
         i *= 10;
     }
     return oct;
-}",601,"#include <math.h>
+}","#include <math.h>
 #include <stdio.h>
 
 int convert(long long bin);
@@ -2100,7 +2100,7 @@ int convert(long long bin) {
     }
     return oct;
 }"
-43,C Program to Reverse a Sentence Using Recursion,47,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+43,C Program to Reverse a Sentence Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
@@ -2124,7 +2124,7 @@ void reverseSentence() {
         reverseSentence();
         printf(""%c"", c);
     }
-}",268,"#include <stdio.h>
+}","#include <stdio.h>
 void reverseSentence();
 int main() {
     printf(""Enter a sentence: "");
@@ -2140,7 +2140,7 @@ void reverseSentence() {
         printf(""%c"", c);
     }
 }"
-44,C program to calculate the power using recursion,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+44,C program to calculate the power using recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
@@ -2166,7 +2166,7 @@ if (a != 0)
 return (base * power(base, a - 1));
 else
 return 1;
-}",367,"#include <stdio.h>
+}","#include <stdio.h>
 int power(int n1, int n2);
 int main() {
 int base, a, result;
@@ -2184,7 +2184,7 @@ return (base * power(base, a - 1));
 else
 return 1;
 }"
-45,C Program to Calculate Average Using Arrays,43,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+45,C Program to Calculate Average Using Arrays,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-do-while-loops
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-arrays
@@ -2226,7 +2226,7 @@ sum += num[i];
 avg = sum / n;
 printf(""Average = %.2f"", avg);
 return 0;
-}",433,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 int n, i;
 float num[100], sum = 0.0, avg;
@@ -2246,7 +2246,7 @@ avg = sum / n;
 printf(""Average = %.2f"", avg);
 return 0;
 }"
-46,C Program to Find Largest Element in an Array,45,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+46,C Program to Find Largest Element in an Array,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-arrays
 
@@ -2291,7 +2291,7 @@ int main() {
   printf(""Largest element = %.2lf"", arr[0]);
 
   return 0;
-}",432,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   int n;
   double arr[100];
@@ -2313,7 +2313,7 @@ int main() {
 
   return 0;
 }"
-47,C Program to Calculate Standard Deviation,41,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+47,C Program to Calculate Standard Deviation,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-arrays-functions
 This program calculates the standard deviation of an individual series using arrays. Visit this page to learn about https://www.mathsisfun.com/data/standard-deviation.html.
@@ -2355,7 +2355,7 @@ for (i = 0; i < 10; ++i) {
 SD += pow(data[i] - mean, 2);
 }
 return sqrt(SD / 10);
-}",495,"#include <math.h>
+}","#include <math.h>
 #include <stdio.h>
 float calculateSD(float data[]);
 
@@ -2381,7 +2381,7 @@ float calculateSD(float data[]) {
     }
     return sqrt(SD / 10);
 }"
-48,C Program to Add Two Matrices Using Multi-dimensional Arrays,60,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+48,C Program to Add Two Matrices Using Multi-dimensional Arrays,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
 
@@ -2445,7 +2445,7 @@ int main() {
     }
 
   return 0;
-}",990,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   int r, c, a[100][100], b[100][100], sum[100][100], i, j;
   printf(""Enter the number of rows (between 1 and 100): "");
@@ -2483,7 +2483,7 @@ int main() {
 
   return 0;
 }"
-49,C Program to Multiply Two Matrices Using Multi-dimensional Arrays,65,"To understand this example, you should have the knowledge of the following C programming topics:
+49,C Program to Multiply Two Matrices Using Multi-dimensional Arrays,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Multidimensional Arrays
@@ -2580,7 +2580,7 @@ int main() {
    display(result, r1, c2);
 
    return 0;
-}",2228,"#include <stdio.h>
+}","#include <stdio.h>
 
 void getMatrixElements(int matrix[][10], int row, int column) {
    printf(""\nEnter elements:\n"");
@@ -2640,7 +2640,7 @@ int main() {
 
    return 0;
 }"
-50,C Program to Find Transpose of a Matrix,39,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+50,C Program to Find Transpose of a Matrix,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
 The transpose of a matrix is a new matrix that is obtained by exchanging the rows and columns.
@@ -2703,7 +2703,7 @@ int main() {
     printf(""\n"");
   }
   return 0;
-}",913,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   int a[10][10], transpose[10][10], r, c;
   printf(""Enter rows and columns: "");
@@ -2738,7 +2738,7 @@ int main() {
     }
   return 0;
 }"
-51,C Program to Multiply two Matrices by Passing Matrix to a Function,66,"To understand this example, you should have the knowledge of the following C programming topics:
+51,C Program to Multiply two Matrices by Passing Matrix to a Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Multidimensional Arrays
@@ -2880,7 +2880,7 @@ void display(int mult[][10], int rowFirst, int columnSecond)
 				printf(""\n\n"");
 		}
 	}
-}",2945,"#include <stdio.h>
+}","#include <stdio.h>
 
 void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
 void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int multResult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
@@ -2960,7 +2960,7 @@ void display(int mult[][10], int rowFirst, int columnSecond) {
         }
     }
 }"
-52,C Program to Access Array Elements Using Pointer,48,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+52,C Program to Access Array Elements Using Pointer,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-pointers
@@ -2994,7 +2994,7 @@ printf(""You entered: \n"");
 for (int i = 0; i < 5; ++i)
 printf(""%d\n"", *(data + i));
 return 0;
-}",219,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     int data[5];
 
@@ -3007,7 +3007,7 @@ int main() {
         printf(""%d\n"", *(data + i));
     return 0;
 }"
-53,C Program Swap Numbers in Cyclic Order Using Call by Reference,62,"To understand this example, you should have the knowledge of the following C programming topics:
+53,C Program Swap Numbers in Cyclic Order Using Call by Reference,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
 C Pass Addresses and Pointers
@@ -3054,7 +3054,7 @@ temp = *n2;
 *n2 = *n1;
 *n1 = *n3;
 *n3 = temp;
-}",489,"#include <stdio.h>
+}","#include <stdio.h>
 void cyclicSwap(int *a, int *b, int *c);
 int main() {
     int a, b, c;
@@ -3080,7 +3080,7 @@ void cyclicSwap(int *n1, int *n2, int *n3) {
     *n1 = *n3;
     *n3 = temp;
 }"
-54,C Program to Find Largest Number Using Dynamic Memory Allocation,64,"To understand this example, you should have the knowledge of the following C programming topics:
+54,C Program to Find Largest Number Using Dynamic Memory Allocation,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
 C Dynamic Memory Allocation
@@ -3149,7 +3149,7 @@ int main() {
   free(data);
 
   return 0;
-}",669,"#include <stdio.h>
+}","#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -3180,7 +3180,7 @@ int main() {
 
   return 0;
 }"
-55,C Program to Find the Frequency of Characters in a String,57,"To understand this example, you should have the knowledge of the following C programming topics:
+55,C Program to Find the Frequency of Characters in a String,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Programming Strings
@@ -3210,7 +3210,7 @@ int main() {
 
     printf(""Frequency of %c = %d"", ch, count);
     return 0;
-}",384,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     char str[1000], ch;
     int count = 0;
@@ -3229,7 +3229,7 @@ int main() {
     printf(""Frequency of %c = %d"", ch, count);
     return 0;
 }"
-56,"C Program to Count the Number of Vowels, Consonants and so on",61,"To understand this example, you should have the knowledge of the following C programming topics:
+56,"C Program to Count the Number of Vowels, Consonants and so on","To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Programming Strings
@@ -3282,7 +3282,7 @@ printf(""\nConsonants: %d"", consonant);
 printf(""\nDigits: %d"", digit);
 printf(""\nWhite spaces: %d"", space);
 return 0;
-}",1040,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 
   char line[150];
@@ -3317,7 +3317,7 @@ int main() {
 
   return 0;
 }"
-57,C Program to Remove all Characters in a String Except Alphabets,63,"To understand this example, you should have the knowledge of the following C programming topics:
+57,C Program to Remove all Characters in a String Except Alphabets,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Programming Strings
@@ -3347,7 +3347,7 @@ line[j] = '\0';
 printf(""Output String: "");
 puts(line);
 return 0;
-}",593,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
 char line[150];
 printf(""Enter a string: "");
@@ -3364,7 +3364,7 @@ printf(""Output String: "");
 puts(line);
 return 0;
 }"
-58,C Program to Find the Length of a String,40,"To understand this example, you should have the knowledge of the following C programming topics:
+58,C Program to Find the Length of a String,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Strings
 String Manipulations In C Programming Using Library Functions
@@ -3383,7 +3383,7 @@ int main() {
     
     printf(""Length of the string: %d"", i);
     return 0;
-}",180,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     char s[] = ""Programming is fun"";
     int i;
@@ -3393,7 +3393,7 @@ int main() {
     printf(""Length of the string: %d"", i);
     return 0;
 }"
-59,C Program to Concatenate Two Strings,36,"To understand this example, you should have the knowledge of the following C programming topics:
+59,C Program to Concatenate Two Strings,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Programming Strings
@@ -3419,7 +3419,7 @@ s1[length] = '\0';
 printf(""After concatenation: "");
 puts(s1);
 return 0;
-}",389,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
   char s1[100] = ""programming "", s2[] = ""is awesome"";
   int length, j;
@@ -3440,7 +3440,7 @@ int main() {
 
   return 0;
 }"
-60,C Program to Copy String Without Using strcpy(),47,"To understand this example, you should have the knowledge of the following C programming topics:
+60,C Program to Copy String Without Using strcpy(),"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C Programming Strings
@@ -3461,7 +3461,7 @@ int main() {
     s2[i] = '\0';
     printf(""String s2: %s"", s2);
     return 0;
-}",264,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     char s1[100], s2[100], i;
     printf(""Enter string s1: "");
@@ -3475,7 +3475,7 @@ int main() {
     printf(""String s2: %s"", s2);
     return 0;
 }"
-61,C Program to Sort Elements in Lexicographical Order (Dictionary Order),70,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+61,C Program to Sort Elements in Lexicographical Order (Dictionary Order),"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
 • https://www.programiz.com/c-programming/c-strings
 • https://www.programiz.com/c-programming/string-handling-functions
@@ -3521,7 +3521,7 @@ for (int i = 0; i < 5; ++i) {
 fputs(str[i], stdout);
 }
 return 0;
-}",598,"#include <stdio.h>
+}","#include <stdio.h>
 #include <string.h>
 
 int main() {
@@ -3548,7 +3548,7 @@ int main() {
    }
    return 0;
 }"
-62,C Program to Store Information of a Student Using Structure,59,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+62,C Program to Store Information of a Student Using Structure,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-structures
 
 In this program, a structure student is created. The structure has three members: name (string), roll (integer) and marks (float).
@@ -3584,7 +3584,7 @@ int main() {
     printf(""Marks: %.1f\n"", s.marks);
 
     return 0;
-}",514,"#include <stdio.h>
+}","#include <stdio.h>
 struct student {
     char name[50];
     int roll;
@@ -3609,7 +3609,7 @@ int main() {
 
     return 0;
 }"
-63,C Program to Add Two Distances (in inch-feet system) using Structures,69,"To understand this example, you should have the knowledge of the following C programming topics:
+63,C Program to Add Two Distances (in inch-feet system) using Structures,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C struct
 If you do not know, 12 inches is 1 foot.
@@ -3659,7 +3659,7 @@ int main() {
    }
    printf(""\nSum of distances = %d\'-%.1f\"""", result.feet, result.inch);
    return 0;
-}",783,"#include <stdio.h>
+}","#include <stdio.h>
 
 struct Distance {
    int feet;
@@ -3689,7 +3689,7 @@ int main() {
    printf(""\nSum of distances = %d\'-%.1f\"""", result.feet, result.inch);
    return 0;
 }"
-64,C Program to Add Two Complex Numbers by Passing Structure to a Function,71,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+64,C Program to Add Two Complex Numbers by Passing Structure to a Function,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-structures
 • https://www.programiz.com/c-programming/c-structure-function
 
@@ -3732,7 +3732,7 @@ complex add(complex n1, complex n2) {
     temp.real = n1.real + n2.real;
     temp.imag = n1.imag + n2.imag;
     return (temp);
-}",687,"#include <stdio.h>
+}","#include <stdio.h>
 typedef struct complex {
     float real;
     float imag;
@@ -3762,7 +3762,7 @@ complex add(complex n1, complex n2) {
     temp.imag = n1.imag + n2.imag;
     return (temp);
 }"
-65,C Program to Calculate Difference Between Two Time Periods,58,"To understand this example, you should have the knowledge of the following C programming topics:
+65,C Program to Calculate Difference Between Two Time Periods,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C User-defined functions
 C struct
@@ -3835,7 +3835,7 @@ void differenceBetweenTimePeriod(struct TIME start,
    }
    diff->minutes = start.minutes - stop.minutes;
    diff->hours = start.hours - stop.hours;
-}",1620,"#include <stdio.h>
+}","#include <stdio.h>
 struct TIME {
    int seconds;
    int minutes;
@@ -3889,7 +3889,7 @@ void differenceBetweenTimePeriod(struct TIME start,
    diff->minutes = start.minutes - stop.minutes;
    diff->hours = start.hours - stop.hours;
 }"
-66,C Program to Store Information of Students Using Structure,58,"To understand this example, you should have the knowledge of the following C programming topics:
+66,C Program to Store Information of Students Using Structure,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
 C struct
@@ -3947,7 +3947,7 @@ int main() {
         printf(""\n"");
     }
     return 0;
-}",756,"#include <stdio.h>
+}","#include <stdio.h>
 struct student {
     char firstName[50];
     int roll;
@@ -3977,7 +3977,7 @@ int main() {
     }
     return 0;
 }"
-67,C Program to Store Data in Structures Dynamically,49,"To understand this example, you should have the knowledge of the following C programming topics:
+67,C Program to Store Data in Structures Dynamically,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
 C Dynamic Memory Allocation
@@ -4018,7 +4018,7 @@ int main() {
   free(ptr);
 
   return 0;
-}",662,"#include <stdio.h>
+}","#include <stdio.h>
 #include <stdlib.h>
 struct course {
   int marks;
@@ -4046,7 +4046,7 @@ int main() {
 
   return 0;
 }"
-68,C Program to Write a Sentence to a File,39,"To understand this example, you should have the knowledge of the following C programming topics:
+68,C Program to Write a Sentence to a File,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C File Handling
 C Standard Library Functions
@@ -4079,7 +4079,7 @@ int main() {
     fprintf(fptr, ""%s"", sentence);
     fclose(fptr);
     return 0;
-}",465,"#include <stdio.h>
+}","#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -4097,7 +4097,7 @@ int main() {
     fclose(fptr);
     return 0;
 }"
-69,C Program to Read the First Line From a File,44,"To understand this example, you should have the knowledge of the following C programming topics:
+69,C Program to Read the First Line From a File,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C File Handling
 C Programming Strings
@@ -4131,7 +4131,7 @@ int main() {
     printf(""Data from the file:\n%s"", c);
     fclose(fptr);
 
-    return 0;",447,"#include <stdio.h>
+    return 0;","#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -4149,7 +4149,7 @@ int main() {
 
     return 0;
 }"
-70,C Program to Display its own Source Code as Output,50,"To understand this example, you should have the knowledge of the following C programming topics:
+70,C Program to Display its own Source Code as Output,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Preprocessor and Macros
 C File Handling
@@ -4179,7 +4179,7 @@ int main() {
     
     fclose(fp);
     return 0;
-}",331,"#include <stdio.h>
+}","#include <stdio.h>
 int main() {
     FILE *fp;
     int c;
@@ -4194,5 +4194,3 @@ int main() {
     fclose(fp);
     return 0;
 }"
-,,50.91428571,,,,546.1285714,
-,,,,,,2945,
