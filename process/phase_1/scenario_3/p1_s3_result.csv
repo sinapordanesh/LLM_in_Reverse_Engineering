@@ -1,4 +1,4 @@
-﻿id,problem_name,explanation,output,original_code,comment_less_code
+id,problem_name,explanation,output,original_code,comment_less_code,decompiled,response_decompiled,bleu_score
 1,"C ""Hello, World!"" Program","How ""Hello, World!"" program works?
 The #include is a preprocessor command that tells the compiler to include the contents of stdio.h (standard input and output) file in the program.
 The stdio.h file contains functions such as scanf() and printf() to take input and display output respectively.
@@ -14,7 +14,16 @@ int main() {
 int main() {
 printf(""Hello, World!"");
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Hello, World!"");
+  return 0;
+}
+
+
+","This piece of code is a simple program in the programming language C. It begins with a function named 'entry' which returns a value of 'undefined8' type. Inside this function, there's a command '_printf' which is used to print the text ""Hello, World!"" onto your screen. After printing this, the function ends by returning a '0', signifying that the program executed successfully.",0.04107111918454476
 2,C Program to Print an Integer (Entered by the User),"In this program, an integer variable number is declared.
 
 int number;
@@ -43,7 +52,18 @@ printf(""Enter an integer: "");
 scanf(""%d"", &number);
 printf(""You entered: %d"", number);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  _printf(""You entered: %d"");
+  return 0;
+}
+
+
+","This code is a program set to run a specific task. It first prints the statement ""Enter an integer:"". Then, it waits for your input (an integer). Afterward, it displays your input back to you with the statement ""You entered: [your number]"". Lastly, it concludes and signals successful execution by returning 0.",0.09514875428577463
 3,C Program to Add Two Integers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
@@ -74,7 +94,19 @@ scanf(""%d %d"", &number1, &number2);
 int sum = number1 + number2;
 printf(""%d + %d = %d"", number1, number2, sum);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter two integers: "");
+  _scanf(""%d %d"");
+  _printf(""%d + %d = %d"");
+  return 0;
+}
+
+
+","This program asks the user to input two integers. However, the programmer forgot to declare and assign the integers in the scanf and printf statements. Also, the function named ""entry"" returns 0, which usually suggests that the program has run successfully. However, the function is declared to return 'undefined8', which is inconsistent. Note, the underscores before 'printf' and 'scanf' are also unusual.
+",7.59769409642702e-79
 4,C Program to Multiply Two Floating-Point Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-variables-constants
 • https://www.programiz.com/c-programming/c-data-types
@@ -112,7 +144,18 @@ scanf(""%lf %lf"", &a, &b);
 double product = a * b;
 printf(""Product = %.2lf"", product);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter two numbers: "");
+  _scanf(""%lf %lf"");
+  _printf(""Product = %.2lf"");
+  return 0;
+}
+
+
+","This code is a simple program written in the C programming language. It begins by printing a prompt for the user to 'Enter two numbers'. Then it reads two decimal numbers from the user's input. It then calculates the product of these two numbers and prints the result, rounded to two decimal places. The program then ends by returning 0.",5.767324389430433e-79
 5,C Program to Find ASCII Value of a Character,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
@@ -141,7 +184,18 @@ printf(""Enter a character: "");
 scanf(""%c"", &c);
 printf(""ASCII value of %c = %d"", c, c);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter a character: "");
+  _scanf(""%c"");
+  _printf(""ASCII value of %c = %d"");
+  return 0;
+}
+
+
+","This code is a simple program that asks users to input a character. It first displays the message ""Enter a character: "" then it waits for the user to input a character. Afterward, it displays the ASCII value of the character that was inputted. The ASCII value is a unique number that represents each character in the computer's memory.",0.023985470364078217
 6,C Program to Compute Quotient and Remainder,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
@@ -195,7 +249,21 @@ remainder = dividend % divisor;
 printf(""Quotient = %d\n"", quotient);
 printf(""Remainder = %d"", remainder);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter dividend: "");
+  _scanf(""%d"");
+  _printf(""Enter divisor: "");
+  _scanf(""%d"");
+  _printf(""Quotient = %d\n"");
+  _printf(""Remainder = %d"");
+  return 0;
+}
+
+
+","This block of code is a function that asks the user to input two numbers: a dividend (a number to be divided) and a divisor (a number by which the dividend will be divided). It then attempts to calculate and print the quotient and remainder of the division operation, but it does not function correctly as essential data handling and calculation are missing.",0.012010815820868461
 7,"C Program to Find the Size of int, float, double and char","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
@@ -226,7 +294,19 @@ printf(""Size of float: %zu bytes\n"", sizeof(floatType));
 printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
 printf(""Size of char: %zu byte\n"", sizeof(charType));
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Size of int: %zu bytes\n"");
+  _printf(""Size of float: %zu bytes\n"");
+  _printf(""Size of double: %zu bytes\n"");
+  _printf(""Size of char: %zu byte\n"");
+  return 0;
+}
+
+
+","This piece of code is a function that prints out the size, in bytes, of different types of data (integers, floating point numbers, double precision numbers, and characters) in a system. The command ""_printf"" is used to print the messages on the screen. The function returns 0, indicating it has completed successfully.",1.0365416061299428e-78
 8,C Program to Demonstrate the Working of Keyword long,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-variables-constants
@@ -262,7 +342,20 @@ printf(""Size of long long int = %zu bytes\n"", sizeof(c));
 printf(""Size of double = %zu bytes\n"", sizeof(e));
 printf(""Size of long double = %zu bytes\n"", sizeof(f));
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Size of int = %zu bytes \n"");
+  _printf(""Size of long int = %zu bytes\n"");
+  _printf(""Size of long long int = %zu bytes\n"");
+  _printf(""Size of double = %zu bytes\n"");
+  _printf(""Size of long double = %zu bytes\n"");
+  return 0;
+}
+
+
+","This is a simple C program designed to print the size of various data types. The function `_printf` displays text on the screen, with `%zu` being a placeholder for a number, which will be the byte size of each specific data type ('int', 'long int', 'long long int', 'double', 'long double'). This helps understand how much memory each type requires.",1.0081205216342559e-78
 9,C Program to Swap Two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-operators
@@ -301,7 +394,21 @@ second = temp;
 printf(""\nAfter swapping, first number = %.2lf\n"", first);
 printf(""After swapping, second number = %.2lf"", second);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter first number: "");
+  _scanf(""%lf"");
+  _printf(""Enter second number: "");
+  _scanf(""%lf"");
+  _printf(""\nAfter swapping, first number = %.2lf\n"");
+  _printf(""After swapping, second number = %.2lf"");
+  return 0;
+}
+
+
+","This code is a function named 'entry' that asks the user to input two numbers. However, it seems to be incomplete. Normally, the '_scanf' function should have variables to store the input data, and the '_printf' function also should have the values to print. The intention appears to be to swap the two input numbers and print them out, but it currently doesn't fulfill this task.",1.2222375629004263e-78
 10,C Program to Check Whether a Number is Even or Odd,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -333,7 +440,25 @@ printf(""%d is even."", num);
 else
 printf(""%d is odd."", num);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  uint local_14;
+  
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  pcVar1 = ""%d is even."";
+  if ((local_14 & 1) != 0) {
+    pcVar1 = ""%d is odd."";
+  }
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code is a simple program in C that gets a number from the user and checks if it is odd or even. It first prompts the user to ""Enter an integer"" and stores it. Then, it checks the least significant bit of the number to determine if it's even or odd, and prints the relevant message.",5.575960841938104e-79
 11,C Program to Check Whether a Character is a Vowel or Consonant,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -375,7 +500,42 @@ printf(""%c is a vowel."", c);
 else
 printf(""%c is a consonant."", c);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  uint uVar2;
+  uint uVar3;
+  char *pcVar4;
+  char local_11;
+  
+  _printf(""Enter an alphabet: "");
+  _scanf(""%c"");
+  uVar2 = (int)local_11 - 0x61;
+  uVar3 = uVar2 >> 1 & 0x7f;
+  uVar2 = uVar2 * 0x80;
+  if ((uVar3 | uVar2 & 0xff) < 0xb) {
+    pcVar4 = (&PTR_s__c_is_a_vowel__100004010)[(ulong)(uVar3 | uVar2) & 0xff];
+  }
+  else {
+    pcVar4 = ""%c is a consonant."";
+  }
+  uVar2 = (int)local_11 - 0x41;
+  uVar3 = uVar2 >> 1;
+  pcVar1 = pcVar4;
+  if ((0x495U >> (ulong)(uVar3 & 0x1f) & 1) != 0) {
+    pcVar1 = ""%c is a vowel."";
+  }
+  if (10 < (uVar3 & 0x7f | uVar2 * 0x80 & 0xff)) {
+    pcVar1 = pcVar4;
+  }
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code takes an alphabet character as input and determines if it's a vowel or consonant. It first prompts the user to enter a character, then calculates its ASCII value. The ASCII value is used to calculate a number, which is compared to a fixed limit to decide if the character is a vowel or consonant. The determined result is finally printed on the screen.",0.019138200537734375
 12,C Program to Find the Largest Number Among Three Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -424,7 +584,30 @@ int main() {
     printf(""%.2f is the largest number."", n3);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  double local_28;
+  double local_20;
+  double local_18;
+  
+  _printf(""Enter three different numbers: "");
+  _scanf(""%lf %lf %lf"");
+  if (local_20 <= local_18 && local_28 <= local_18) {
+    _printf(""%.2f is the largest number."");
+  }
+  if (local_18 <= local_20 && local_28 <= local_20) {
+    _printf(""%.2f is the largest number."");
+  }
+  if (local_18 <= local_28 && local_20 <= local_28) {
+    _printf(""%.2f is the largest number."");
+  }
+  return 0;
+}
+
+
+",This simple piece of code prompts the user to enter three different numbers. Then it compares these numbers to determine the largest one. It prints out the largest number with two decimal places. The code does not return any value to the operating system as it always returns zero (0).,6.716594789142213e-79
 13,C Program to Find the Roots of a Quadratic Equation,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -486,7 +669,36 @@ imagPart = sqrt(-discriminant) / (2 * a);
 printf(""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"", realPart, imagPart, realPart, imagPart);
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  double dVar2;
+  double local_28;
+  undefined8 local_20;
+  double dStack_18;
+  
+  _printf(""Enter coefficients a, b and c: "");
+  _scanf(""%lf %lf %lf"");
+  dVar2 = (double)NEON_fmadd(local_20,local_20,dStack_18 * -4.0 * local_28);
+  if (dVar2 <= 0.0) {
+    if (dVar2 == 0.0) {
+      pcVar1 = ""root1 = root2 = %.2lf;"";
+    }
+    else {
+      pcVar1 = ""root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi"";
+    }
+  }
+  else {
+    pcVar1 = ""root1 = %.2lf and root2 = %.2lf"";
+  }
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code calculates the roots of a quadratic equation, based on coefficients a, b, and c entered by the user. It first computes the discriminant, then checks if it is positive, zero, or negative to determine the nature of the roots (real and different, real and equal, or complex), and then, depending on this, it prepares a text string which will be formatted and printed later.",0.05552124068631575
 14,C Program to Check Leap Year,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -536,7 +748,32 @@ else {
 printf(""%d is not a leap year."", year);
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  char *pcVar2;
+  uint local_14;
+  
+  _printf(""Enter a year: "");
+  _scanf(""%d"");
+  uVar1 = local_14 * -0x3d70a3d7 + 0x51eb850;
+  pcVar2 = ""%d is a leap year."";
+  if (0xa3d70a < (uVar1 >> 4 | local_14 * -0x70000000)) {
+    if ((uVar1 >> 2 | local_14 * 0x40000000) < 0x28f5c29) {
+      pcVar2 = ""%d is not a leap year."";
+    }
+    else if ((local_14 & 3) != 0) {
+      pcVar2 = ""%d is not a leap year."";
+    }
+  }
+  _printf(pcVar2);
+  return 0;
+}
+
+
+","This code performs a Leap Year check. Initially, it asks the user to enter a year and stores it in `local_14`. The code then checks if the year is divisible by 4 and not by 100, or is divisible by 400, following the rules for leap years. If the year matches these conditions, it's a leap year, otherwise, it's not.",2.3798085451188565e-78
 15,C Program to Check Whether a Number is Positive or Negative,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -568,7 +805,30 @@ printf(""You entered a negative number."");
 else
 printf(""You entered a positive number."");
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  char *pcVar2;
+  double local_18;
+  
+  _printf(""Enter a number: "");
+  _scanf(""%lf"");
+  pcVar1 = ""You entered 0."";
+  if (local_18 != 0.0) {
+    pcVar1 = ""You entered a negative number."";
+  }
+  pcVar2 = ""You entered a positive number."";
+  if (local_18 <= 0.0) {
+    pcVar2 = pcVar1;
+  }
+  _printf(pcVar2);
+  return 0;
+}
+
+
+","This code begins by asking the user to enter a number. It then reads the input. Depending on the value, the program sets a certain string message, checking if the number is not zero, negative, or positive. Then it prints out one of the prepared string messages based on these conditions. The function finishes by returning 0, which usually indicates that the program ran without errors.",5.06882035818201e-155
 16,C Program to Check Whether a Character is an Alphabet or not,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -602,7 +862,25 @@ printf(""%c is an alphabet."", c);
 else
 printf(""%c is not an alphabet."", c);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  byte local_11;
+  
+  _printf(""Enter a character: "");
+  _scanf(""%c"");
+  pcVar1 = ""%c is an alphabet."";
+  if (0x19 < (byte)((local_11 & 0xdf) + 0xbf)) {
+    pcVar1 = ""%c is not an alphabet."";
+  }
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code accepts a character from the user, then checks if the character is an alphabet letter (A-Z or a-z). If the character is not in this range, it informs the user that the character is not an alphabet. All information is displayed on the console using printf function and input is taken by scanf function.",0.016013856556060167
 17,C Program to Calculate the Sum of Natural Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-do-while-loops
@@ -639,7 +917,18 @@ sum += i;
 }
 printf(""Sum = %d"", sum);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  _printf(""Sum = %d"");
+  return 0;
+}
+
+
+","This code begins a function named 'entry' and uses _printf to prompt the user to enter a positive integer. It then uses _scanf to read the user's input. Following that, it again uses _printf to print out the phrase ""Sum = "" followed by the user's input. Finally, it ends the function by returning 0, indicating that the program has run without any errors. It's important to note this code is incomplete and will not work as expected.",8.060164564112733e-79
 18,C Program to Find Factorial of a Number,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-data-types
 • https://www.programiz.com/c-programming/c-operators
@@ -686,7 +975,49 @@ fact *= i;
 printf(""Factorial of %d = %llu"", n, fact);
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  ulong uVar2;
+  ulong uVar3;
+  ulong uVar4;
+  uint local_14;
+  
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  uVar2 = (ulong)local_14;
+  if ((int)local_14 < 0) {
+    pcVar1 = ""Error! Factorial of a negative number doesn\'t exist."";
+    goto LAB_100003f18;
+  }
+  if (local_14 != 0) {
+    if (uVar2 < 4) {
+      uVar3 = 1;
+    }
+    else {
+      uVar4 = 0;
+      uVar3 = uVar2 & 0xfffffffc;
+      do {
+        uVar4 = uVar4 + 4;
+      } while (uVar3 != uVar4);
+      if (uVar2 == uVar3) goto LAB_100003f0c;
+      uVar3 = uVar3 | 1;
+    }
+    do {
+      uVar3 = uVar3 + 1;
+    } while (uVar2 + 1 != uVar3);
+  }
+LAB_100003f0c:
+  pcVar1 = ""Factorial of %d = %llu"";
+LAB_100003f18:
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code takes an integer input from the user. If the input is less than 0, it prints an error message because factorials of negative numbers don't exist; for an input over 0, it performs operations to calculate the factorial. The code then prints the resulting factorial value.",5.3117282372563184e-79
 19,C Program to Generate Multiplication Table,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-for-loop
@@ -715,7 +1046,27 @@ for (int i = 1; i <= 10; ++i) {
 printf(""%d * %d = %d \n"", n, i, n * i);
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  _printf(""%d * %d = %d \n"");
+  return 0;
+}
+
+
+","This code is a simple program that first prints a message asking the user to enter an integer. However, the code isn't correctly implemented. It tries to use a function called 'scanf' to receive the user's input and then supposedly print out the multiplication of it, but it doesn't store or define any variables. Hence, it wouldn't work as expected.",2.6974867616908637e-155
 20,C Program to Display Fibonacci Sequence,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-do-while-loops
@@ -763,7 +1114,28 @@ t2 = nextTerm;
 nextTerm = t1 + t2;
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  int local_34;
+  
+  _printf(""Enter the number of terms: "");
+  _scanf(""%d"");
+  _printf(""Fibonacci Series: %d, %d, "");
+  if (2 < local_34) {
+    iVar1 = 2;
+    do {
+      _printf(""%d, "");
+      iVar1 = iVar1 + 1;
+    } while (iVar1 < local_34);
+  }
+  return 0;
+}
+
+
+0","This code is a simple program designed to print part of the Fibonacci series - a sequence of numbers where each number is the sum of the two preceding ones. However, the code is incomplete and contains errors, for instance, it doesn't define the Fibonacci sequence logic and it doesn't pass any variables to scanf and printf. In its current state, it will not produce the intended results.",0.05193337663623905
 21,C Program to Find GCD of two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-for-loop
@@ -801,7 +1173,31 @@ gcd = i;
 }
 printf(""G.C.D of %d and %d is %d"", n1, n2, gcd);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  uint uVar2;
+  int local_18;
+  int iStack_14;
+  
+  _printf(""Enter two integers: "");
+  _scanf(""%d %d"");
+  uVar1 = local_18 - 1U;
+  if (iStack_14 - 1U <= local_18 - 1U) {
+    uVar1 = iStack_14 - 1U;
+  }
+  uVar2 = 0xffffffff;
+  do {
+    uVar2 = uVar2 + 1;
+  } while (uVar1 != uVar2);
+  _printf(""G.C.D of %d and %d is %d"");
+  return 0;
+}
+
+
+","This code is designed to calculate the Greatest Common Divisor (GCD) of two integers. It starts by asking the user to enter two numbers. Then, the lesser of the two values minus one is selected. It then increments from zero until it matches this selected value. The last value of uVar2 gives the GCD.",0.025211503387612563
 22,C Program to Find LCM of two Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -846,7 +1242,42 @@ break;
 ++max;
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  int iVar2;
+  int local_18;
+  int iStack_14;
+  
+  _printf(""Enter two positive integers: "");
+  _scanf(""%d %d"");
+  iVar2 = iStack_14;
+  if (iStack_14 <= local_18) {
+    iVar2 = local_18;
+  }
+  do {
+    iVar1 = 0;
+    if (iStack_14 != 0) {
+      iVar1 = iVar2 / iStack_14;
+    }
+    if (iVar2 == iVar1 * iStack_14) {
+      iVar1 = 0;
+      if (local_18 != 0) {
+        iVar1 = iVar2 / local_18;
+      }
+      if (iVar2 == iVar1 * local_18) {
+        _printf(""The LCM of %d and %d is %d."");
+        return 0;
+      }
+    }
+    iVar2 = iVar2 + 1;
+  } while( true );
+}
+
+
+","This code asks the user to enter two positive integers and calculates their least common multiple (LCM). The `do-while` loop continually increments the largest of the two input values and checks if it is divisible by both numbers. The loop terminates when it finds the LCM, which it then prints out.",2.6641977677980426e-79
 23,C Program to Display Characters from A to Z Using Loop,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-do-while-loops
@@ -865,7 +1296,41 @@ int main() {
     for (c = 'A'; c <= 'Z'; ++c)
         printf(""%c "", c);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  _printf(""%c "");
+  return 0;
+}
+
+
+","This is a simple program function named 'entry' that prints a single character, represented by ""%c"", 26 times when called. Each ""_printf(""%c "");"" statement prints a character which is not specified in this snippet. The function 'entry' then ends by returning 0, indicating that it has run successfully.",3.776755105596976e-155
 24,C Program to Count Number of Digits in an Integer,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
@@ -905,7 +1370,25 @@ int main() {
   } while (n != 0);
 
   printf(""Number of digits: %d"", count);
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  ulong uVar1;
+  long local_18;
+  
+  _printf(""Enter an integer: "");
+  _scanf(""%lld"");
+  do {
+    uVar1 = local_18 + 9;
+    local_18 = local_18 / 10;
+  } while (0x12 < uVar1);
+  _printf(""Number of digits: %d"");
+  return 0;
+}
+
+
+","This program prompts the user to input an integer. The main part of the code involves a loop that keeps dividing the integer by 10 and adding 9 until it becomes less than 18. The purpose of this loop isn't clear given current program though. Finally, it prints the statement ""Number of digits: "", but does not print any specific value.",2.2975586498795255e-79
 25,C Program to Reverse a Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
@@ -940,7 +1423,27 @@ n /= 10;
 }
 printf(""Reversed number = %d"", reverse);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  int local_14;
+  
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  if (local_14 != 0) {
+    do {
+      uVar1 = local_14 + 9;
+      local_14 = local_14 / 10;
+    } while (0x12 < uVar1);
+  }
+  _printf(""Reversed number = %d"");
+  return 0;
+}
+
+
+","This code prompts the user to enter an integer. If the integer is non-zero, it enters into a loop. Inside this loop, the code adds 9 to the integer and then divides it by ten until the integer, once added to 9, is no longer higher than 18. Finally, it prints out the result - the 'reversed' number.",8.636449918194198e-79
 26,C Program to Calculate the Power of a Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
@@ -983,7 +1486,27 @@ int main() {
     }
     printf(""Answer = %.0Lf"", result);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int local_28;
+  
+  _printf(""Enter a base number: "");
+  _scanf(""%d"");
+  _printf(""Enter an exponent: "");
+  _scanf(""%d"");
+  if (local_28 != 0) {
+    do {
+      local_28 = local_28 + -1;
+    } while (local_28 != 0);
+  }
+  _printf(""Answer = %.0Lf"");
+  return 0;
+}
+
+
+","This code represents a function called ""entry"" which asks the user to input a base number and an exponent. However, it doesn't assign these inputs to any variables or use them in the program. There's also a loop that subtracts 1 from a variable (local_28) until it is zero, but this variable is uninitialized. Then it prints ""Answer = "" but doesn't calculate or display any actual result.",0.07701259475391044
 27,C Program to Check Whether a Number is Palindrome or Not,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Operators
@@ -1034,7 +1557,37 @@ int main() {
         printf(""%d is not a palindrome."", original);
 
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  int iVar2;
+  char *pcVar3;
+  int iVar4;
+  int local_14;
+  
+  _printf(""Enter an integer: "");
+  _scanf(""%d"");
+  pcVar3 = ""%d is a palindrome."";
+  if (local_14 != 0) {
+    iVar4 = 0;
+    iVar2 = local_14;
+    do {
+      iVar4 = iVar2 % 10 + iVar4 * 10;
+      uVar1 = iVar2 + 9;
+      iVar2 = iVar2 / 10;
+    } while (0x12 < uVar1);
+    if (local_14 != iVar4) {
+      pcVar3 = ""%d is not a palindrome."";
+    }
+  }
+  _printf(pcVar3);
+  return 0;
+}
+
+
+","This is a simple C program that checks if an integer is a palindrome. A palindrome is a number that remains the same when its digits are reversed. The user is prompted to enter an integer. The program then reverses the digits and compares it with the original. If they match, it is a palindrome. If not, it prints that the number is not a palindrome.",0.13199565716622222
 28,C Program to Check Whether a Number is Prime or Not,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
@@ -1099,7 +1652,41 @@ int main() {
     printf(""%d is not a prime number."", n);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  char *pcVar2;
+  uint uVar3;
+  uint local_14;
+  
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  if (3 < (int)local_14) {
+    uVar3 = 1;
+    do {
+      uVar3 = uVar3 + 1;
+      iVar1 = 0;
+      if (uVar3 != 0) {
+        iVar1 = (int)local_14 / (int)uVar3;
+      }
+      if (local_14 == iVar1 * uVar3) goto LAB_100003f20;
+    } while (local_14 >> 1 != uVar3);
+  }
+  if (local_14 < 2) {
+LAB_100003f20:
+    pcVar2 = ""%d is not a prime number."";
+  }
+  else {
+    pcVar2 = ""%d is a prime number."";
+  }
+  _printf(pcVar2);
+  return 0;
+}
+
+
+","This is a program for checking if a number is prime. It prompts the user to input a positive integer and checks if it's less than 2 or not a prime number. If true, it prints ""{number} is not a prime number"". Otherwise, it prints ""{number} is a prime number"". This process is done through simple loops and condition checks.",0.034623290791824655
 29,C Program to Display Prime Numbers Between Two Intervals,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
@@ -1169,7 +1756,43 @@ int main() {
    }
 
    return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  uint uVar2;
+  int local_28;
+  uint local_24;
+  
+  _printf(""Enter two numbers(intervals): "");
+  _scanf(""%d %d"");
+  _printf(""Prime numbers between %d and %d are: "");
+  if ((int)local_24 < local_28) {
+    do {
+      if (1 < (int)local_24) {
+        if (3 < local_24) {
+          uVar2 = 1;
+          do {
+            uVar2 = uVar2 + 1;
+            iVar1 = 0;
+            if (uVar2 != 0) {
+              iVar1 = (int)local_24 / (int)uVar2;
+            }
+            if (local_24 == iVar1 * uVar2) goto LAB_100003ee8;
+          } while (local_24 >> 1 != uVar2);
+        }
+        _printf(""%d "");
+      }
+LAB_100003ee8:
+      local_24 = local_24 + 1;
+    } while ((int)local_24 < local_28);
+  }
+  return 0;
+}
+
+
+","This is a piece of code in the C programming language that asks the user for two numbers as input, then prints out all the prime numbers in the range between these two numbers. It checks for primes by dividing each number in the range by all the numbers less than it to ensure it cannot be evenly divided, therefore confirming it is a prime number.",0.032491636289449
 30,C Program to Check Armstrong Number,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C if...else Statement
@@ -1215,7 +1838,42 @@ printf(""%d is an Armstrong number."", num);
 else
 printf(""%d is not an Armstrong number."", num);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  char *pcVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  int local_14;
+  
+  _printf(""Enter a three-digit integer: "");
+  _scanf(""%d"");
+  if (local_14 == 0) {
+    iVar5 = 0;
+  }
+  else {
+    iVar5 = 0;
+    iVar4 = local_14;
+    do {
+      iVar3 = iVar4 % 10;
+      iVar5 = iVar5 + iVar3 * iVar3 * iVar3;
+      uVar1 = iVar4 + 9;
+      iVar4 = iVar4 / 10;
+    } while (0x12 < uVar1);
+  }
+  pcVar2 = ""%d is an Armstrong number."";
+  if (iVar5 != local_14) {
+    pcVar2 = ""%d is not an Armstrong number."";
+  }
+  _printf(pcVar2);
+  return 0;
+}
+
+
+","This program checks if a three-digit number is an Armstrong number. An Armstrong number is one where the sum of its digits raised to the third power equals the original number. The user enters a number, and the program calculates this sum. If the sum equals the input number, it's an Armstrong number. If not, it's not an Armstrong number.",0.031482362064873336
 31,C Program to Display Armstrong Number Between Two Intervals,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-for-loop
@@ -1317,7 +1975,59 @@ int main() {
   }
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  ulong uVar2;
+  int iVar3;
+  int iVar4;
+  double extraout_d0;
+  double dVar5;
+  int local_68;
+  int iStack_64;
+  
+  iVar3 = local_68;
+  _printf(""Enter two numbers(intervals): "");
+  _scanf(""%d %d"");
+  uVar1 = _printf(""Armstrong numbers between %d and %d are: "");
+  uVar2 = (ulong)uVar1;
+  if (local_68 < iStack_64) {
+    local_68 = iStack_64;
+    iStack_64 = iVar3;
+  }
+  while (iStack_64 = iStack_64 + 1, iStack_64 < local_68) {
+    if (iStack_64 == 0) {
+      dVar5 = 0.0;
+    }
+    else {
+      iVar3 = 0;
+      iVar4 = iStack_64;
+      do {
+        uVar1 = iVar4 + 9;
+        iVar4 = iVar4 / 10;
+        iVar3 = iVar3 + 1;
+      } while (0x12 < uVar1);
+      dVar5 = 0.0;
+      iVar4 = iStack_64;
+      do {
+        uVar2 = _pow((double)(iVar4 % 10),(double)iVar3,uVar2);
+        dVar5 = dVar5 + extraout_d0;
+        uVar1 = iVar4 + 9;
+        iVar4 = iVar4 / 10;
+      } while (0x12 < uVar1);
+    }
+    if (iStack_64 == (int)dVar5) {
+      uVar1 = _printf(""%d "");
+      uVar2 = (ulong)uVar1;
+    }
+  }
+  return 0;
+}
+
+
+","This code is essentially used to find Armstrong numbers within a specific range. It first asks for two interval numbers as input. After sorting these intervals, it loops to check each number within. If a number is an Armstrong number (a number that is equal to the sum of its own digits each raised to the power of the number of digits), it prints this number.",0.004758895772333376
 32,C Program to Display Factors of a Number,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-operators
 • https://www.programiz.com/c-programming/c-if-else-statement
@@ -1357,7 +2067,35 @@ int main() {
         }
     }
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  int iVar2;
+  int local_24;
+  
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  _printf(""Factors of %d are: "");
+  if (0 < local_24) {
+    iVar2 = 0;
+    do {
+      iVar2 = iVar2 + 1;
+      iVar1 = 0;
+      if (iVar2 != 0) {
+        iVar1 = local_24 / iVar2;
+      }
+      if (local_24 == iVar1 * iVar2) {
+        _printf(""%d "");
+      }
+    } while (iVar2 < local_24);
+  }
+  return 0;
+}
+
+
+","This program asks the user to input a positive integer and then prints out all the factors of that number. It does this by continuously dividing the user's input by all numbers less than it, and checks if the remainder is zero (which means that this number is a factor). The loop continues until all possible factors are checked.",0.046074588909778134
 33,C Program to Make a Simple Calculator Using switch...case,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-switch-case-statement
 • https://www.programiz.com/c-programming/c-break-continue-statement
@@ -1429,7 +2167,39 @@ default:
 printf(""Error! operator is not correct"");
 }
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  undefined local_11;
+  
+  _printf(""Enter an operator (+, -, , /): "");
+  _scanf(""%c"");
+  _printf(""Enter two operands: "");
+  _scanf(""%lf %lf"");
+  switch(local_11) {
+  case 0x2a:
+    pcVar1 = ""%.1lf * %.1lf = %.1lf"";
+    break;
+  case 0x2b:
+    pcVar1 = ""%.1lf + %.1lf = %.1lf"";
+    break;
+  default:
+    pcVar1 = ""Error! operator is not correct"";
+    break;
+  case 0x2d:
+    pcVar1 = ""%.1lf - %.1lf = %.1lf"";
+    break;
+  case 0x2f:
+    pcVar1 = ""%.1lf / %.1lf = %.1lf"";
+  }
+  _printf(pcVar1);
+  return 0;
+}
+
+
+","This code is a basic calculator function. It asks the user to enter an operator (+, -, *, or /) and two numbers to perform the operation on. Depending on the chosen operator, it performs multiplication, addition, subtraction, or division. If an invalid operator is entered, it returns an error message. The result is then printed out.",0.029051053296761022
 34,C Program to Display Prime Numbers Between Intervals Using Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C for Loop
@@ -1555,7 +2325,49 @@ int checkPrimeNumber(int n) {
   }
 
   return flag;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  uint uVar2;
+  uint uVar3;
+  uint local_28;
+  uint uStack_24;
+  
+  uVar2 = local_28;
+  _printf(""Enter two positive integers: "");
+  _scanf(""%d %d"");
+  if ((int)local_28 < (int)uStack_24) {
+    local_28 = uStack_24;
+    uStack_24 = uVar2;
+  }
+  _printf(""Prime numbers between %d and %d are: "");
+joined_r0x000100003ecc:
+  do {
+    uVar2 = uStack_24 + 1;
+    if ((int)local_28 <= (int)uVar2) {
+      return 0;
+    }
+    if (2 < (int)uStack_24) {
+      uVar3 = 1;
+      do {
+        uVar3 = uVar3 + 1;
+        iVar1 = 0;
+        if (uVar3 != 0) {
+          iVar1 = (int)uVar2 / (int)uVar3;
+        }
+        uStack_24 = uVar2;
+        if (uVar2 == iVar1 * uVar3) goto joined_r0x000100003ecc;
+      } while (uVar2 >> 1 != uVar3);
+    }
+    _printf(""%d "");
+    uStack_24 = uVar2;
+  } while( true );
+}
+
+
+","This piece of code is about finding and printing all the prime numbers between two provided positive integers. The user is asked to input two numbers. The code then checks through those numbers and prints out any that are prime numbers, or numbers only divisible by 1 and themselves.",0.0019483987906118538
 35,C Program to Check Prime or Armstrong Number Using User-defined Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C for Loop
@@ -1680,7 +2492,71 @@ flag = 1;
 else
 flag = 0;
 return flag;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  char *pcVar2;
+  ulong uVar3;
+  int iVar4;
+  int iVar5;
+  double extraout_d0;
+  double dVar6;
+  int local_54;
+  
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  if ((int)SQRT((double)local_54) < 2) {
+    pcVar2 = ""%d is a prime number.\n"";
+  }
+  else {
+    iVar5 = 1;
+    pcVar2 = ""%d is a prime number.\n"";
+    do {
+      iVar5 = iVar5 + 1;
+      iVar4 = 0;
+      if (iVar5 != 0) {
+        iVar4 = local_54 / iVar5;
+      }
+      if (local_54 == iVar4 * iVar5) {
+        pcVar2 = ""%d is not a prime number.\n"";
+        break;
+      }
+    } while ((int)SQRT((double)local_54) != iVar5);
+  }
+  uVar1 = _printf(pcVar2);
+  uVar3 = (ulong)uVar1;
+  if (local_54 == 0) {
+    dVar6 = 0.0;
+  }
+  else {
+    iVar5 = 0;
+    iVar4 = local_54;
+    do {
+      uVar1 = iVar4 + 9;
+      iVar4 = iVar4 / 10;
+      iVar5 = iVar5 + 1;
+    } while (0x12 < uVar1);
+    dVar6 = 0.0;
+    iVar4 = local_54;
+    do {
+      uVar3 = _pow((double)(iVar4 % 10),(double)iVar5,uVar3);
+      dVar6 = dVar6 + extraout_d0;
+      uVar1 = iVar4 + 9;
+      iVar4 = iVar4 / 10;
+    } while (0x12 < uVar1);
+  }
+  pcVar2 = ""%d is an Armstrong number."";
+  if ((double)(long)dVar6 != (double)local_54) {
+    pcVar2 = ""%d is not an Armstrong number."";
+  }
+  _printf(pcVar2);
+  return 0;
+}
+
+
+",This code checks whether a given positive integer input is a prime number and an Armstrong number. It first asks the user to provide an input. It checks if the number is prime by seeing if it has any factors other than 1 and itself. It then checks if it's an Armstrong number - a number equal to the sum of its own digits each raised to the power of the number of digits. It prints out the results.,0.03165575991202777
 36,C Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-if-else-statement
 • https://www.programiz.com/c-programming/c-for-loop
@@ -1771,7 +2647,93 @@ break;
 }
 }
 return isPrime;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  uint uVar2;
+  bool bVar3;
+  bool bVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint uVar8;
+  int local_24;
+  
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  if (local_24 < 4) {
+LAB_100003f08:
+    _printf(""%d cannot be expressed as the sum of two prime numbers."");
+    return 0;
+  }
+  uVar6 = 2;
+  bVar4 = true;
+LAB_100003e44:
+  iVar1 = local_24;
+  if (local_24 < 0) {
+    iVar1 = local_24 + 1;
+  }
+  uVar2 = uVar6;
+  if ((int)uVar6 <= iVar1 >> 1) {
+    uVar2 = iVar1 >> 1;
+  }
+  uVar5 = local_24 - uVar6;
+  uVar8 = uVar6;
+  do {
+    if (3 < uVar8) {
+      uVar6 = 1;
+      do {
+        uVar6 = uVar6 + 1;
+        uVar7 = 0;
+        if (uVar6 != 0) {
+          uVar7 = uVar8 / uVar6;
+        }
+        if (uVar8 == uVar7 * uVar6) goto LAB_100003e64;
+      } while (uVar8 >> 1 != uVar6);
+    }
+    uVar6 = local_24 - uVar8;
+    if (1 < uVar6) {
+      if ((int)uVar6 < 4) break;
+      uVar7 = 1;
+      while( true ) {
+        uVar7 = uVar7 + 1;
+        iVar1 = 0;
+        if (uVar7 != 0) {
+          iVar1 = (int)uVar6 / (int)uVar7;
+        }
+        if (uVar6 == iVar1 * uVar7) break;
+        if (uVar5 >> 1 == uVar7) goto LAB_100003ed4;
+      }
+    }
+LAB_100003e64:
+    uVar5 = uVar5 - 1;
+    bVar3 = uVar8 == uVar2;
+    uVar8 = uVar8 + 1;
+    if (bVar3) {
+      if (!bVar4) {
+        return 0;
+      }
+      goto LAB_100003f08;
+    }
+  } while( true );
+LAB_100003ed4:
+  _printf(""%d = %d + %d\n"");
+  bVar4 = false;
+  uVar6 = uVar8 + 1;
+  iVar1 = local_24;
+  if (local_24 < 0) {
+    iVar1 = local_24 + 1;
+  }
+  if (iVar1 >> 1 <= (int)uVar8) {
+    return 0;
+  }
+  goto LAB_100003e44;
+}
+
+
+","This program checks if an inputted positive integer can be expressed as the sum of two prime numbers. It accomplishes this by systematically dividing the number into 2 parts, checking if each part is prime. If so, it prints out the original number as a sum of these two primes. If not, it answers that this number cannot be represented as the sum of two prime numbers.",0.015032645110800486
 37,C Program to Find the Sum of Natural Numbers using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-user-defined-functions
 • https://www.programiz.com/c-programming/c-recursion
@@ -1812,7 +2774,18 @@ if (n != 0)
 return n + addNumbers(n - 1);
 else
 return n;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  _printf(""Sum = %d"");
+  return 0;
+}
+
+
+","This piece of code is a function called `entry`. It sends a message asking for a positive integer. Then, it reads an integer input given by the user. After that, it prints out a message showing the ""Sum = "", followed by the output. This function returns a value of zero once it finishes.",3.4068224348021235e-79
 38,C Program to Find Factorial of a Number Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
@@ -1856,7 +2829,39 @@ if (n>=1)
 return n*multiplyNumbers(n-1);
 else
 return 1;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  bool bVar1;
+  ulong uVar2;
+  ulong uVar3;
+  uint local_14;
+  
+  _printf(""Enter a positive integer: "");
+  _scanf(""%d"");
+  uVar2 = (ulong)local_14;
+  if (0 < (int)local_14) {
+    if (3 < local_14) {
+      uVar3 = uVar2 & 0xfffffffc;
+      do {
+        uVar3 = uVar3 - 4;
+      } while (uVar3 != 0);
+      if ((uVar2 & 0xfffffffc) == uVar2) goto LAB_100003f3c;
+      uVar2 = uVar2 & 3;
+    }
+    do {
+      bVar1 = uVar2 != 0;
+      uVar2 = uVar2 - 1;
+    } while (bVar1 && uVar2 != 0);
+  }
+LAB_100003f3c:
+  _printf(""Factorial of %d = %ld"");
+  return 0;
+}
+
+
+","This code prompts a user for a positive integer, then calculates that number's factorial. The factorial is calculated by repeatedly subtracting 4 from the input number until it's less than or equals to 0, then the code continues to subtract 1 until the final factorial result is obtained. This numeric result gets displayed on the screen.",2.639119456093892e-79
 39,C Program to Find G.C.D Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
@@ -1894,7 +2899,34 @@ if (n2 != 0)
 return hcf(n2, n1 % n2);
 else
 return n1;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  int iVar2;
+  int local_18;
+  int iStack_14;
+  
+  _printf(""Enter two positive integers: "");
+  _scanf(""%d %d"");
+  if (local_18 != 0) {
+    do {
+      iVar2 = local_18;
+      iVar1 = 0;
+      if (iVar2 != 0) {
+        iVar1 = iStack_14 / iVar2;
+      }
+      local_18 = iStack_14 - iVar1 * iVar2;
+      iStack_14 = iVar2;
+    } while (local_18 != 0);
+  }
+  _printf(""G.C.D of %d and %d is %d."");
+  return 0;
+}
+
+
+","This program calculates the Greatest Common Divisor (GCD) of two positive integers input by a user. It first prompts the user for the numbers, stores their input, and then uses a loop to calculate the GCD. The user's input is continuously divided and subtracted until there's no remainder, which is then identified as the GCD and printed on the screen.",1.4449754118239432e-78
 40,C Program to Convert Binary Number to Decimal and vice-versa,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Functions
@@ -1975,7 +3007,58 @@ int convert(long long n) {
   }
 
   return dec;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  ulong uVar1;
+  int iVar2;
+  int iVar3;
+  undefined8 uVar4;
+  double dVar5;
+  long local_68;
+  
+  _printf(""Enter a binary number: "");
+  _scanf(""%lld"");
+  if (local_68 != 0) {
+    iVar2 = 0;
+    iVar3 = 0;
+    do {
+      uVar4 = _ldexp(0x3ff0000000000000,iVar2);
+      dVar5 = (double)NEON_fmadd((double)((int)local_68 + (int)(local_68 / 10) * -10),uVar4,
+                                 (double)iVar3);
+      iVar3 = (int)dVar5;
+      iVar2 = iVar2 + 1;
+      uVar1 = local_68 + 9;
+      local_68 = local_68 / 10;
+    } while (0x12 < uVar1);
+  }
+  _printf(""%lld in binary = %d in decimal"");
+  return 0;
+}
+
+
+
+void _ldexp(void)
+
+{
+  (*(code *)PTR__ldexp_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void _ldexp(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","The given program prompts the user to input a binary number, then it converts the binary number into a decimal number. The conversion happens inside a do-while loop, where the entered binary number is repeatedly divided by 10 and the remainder is used for determining the decimal equivalent. Finally, the decimal number is displayed to the user. The `_ldexp` function mentioned manipulates the exponent of the binary input, contributing to the conversion process.",4.6884448047362794e-79
 41,C Program to Convert Octal Number to Decimal and vice-versa,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions","Enter a decimal number: 78
@@ -2035,7 +3118,32 @@ int convertDecimalToOctal(int decimalNumber) {
     }
 
     return octalNumber;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint local_14;
+  
+  _printf(""Enter a decimal number: "");
+  _scanf(""%d"");
+  if (local_14 != 0) {
+    do {
+      uVar1 = local_14 + 7;
+      uVar2 = uVar1;
+      if (-1 < (int)local_14) {
+        uVar2 = local_14;
+      }
+      local_14 = (int)uVar2 >> 3;
+    } while (0xe < uVar1);
+  }
+  _printf(""%d in decimal = %d in octal"");
+  return 0;
+}
+
+
+","This code is a function that interacts with the user to convert a decimal number to an octal number. Initially, it asks the user to enter a decimal number. Then, it checks if the number entered is not 0. If it's not, it starts a loop where it adds 7 to the input number and keeps dividing it by 8 until the result is 14 or less. It finally prints the input number in decimal and its conversion in octal.",8.894676483985203e-232
 42,C Program to Convert Binary Number to Octal and vice-versa,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
@@ -2099,7 +3207,69 @@ int convert(long long bin) {
         i *= 10;
     }
     return oct;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  uint uVar1;
+  ulong uVar2;
+  uint uVar3;
+  int iVar4;
+  uint uVar5;
+  undefined8 uVar6;
+  double dVar7;
+  long local_68;
+  
+  _printf(""Enter a binary number: "");
+  _scanf(""%lld"");
+  if (local_68 != 0) {
+    iVar4 = 0;
+    uVar5 = 0;
+    do {
+      uVar6 = _ldexp(0x3ff0000000000000,iVar4);
+      dVar7 = (double)NEON_fmadd((double)(local_68 % 10),uVar6,(double)uVar5);
+      uVar5 = (uint)dVar7;
+      iVar4 = iVar4 + 1;
+      uVar2 = local_68 + 9;
+      local_68 = local_68 / 10;
+    } while (0x12 < uVar2);
+    if (uVar5 != 0) {
+      do {
+        uVar1 = uVar5 + 7;
+        uVar3 = uVar1;
+        if (-1 < (int)uVar5) {
+          uVar3 = uVar5;
+        }
+        uVar5 = (int)uVar3 >> 3;
+      } while (0xe < uVar1);
+    }
+  }
+  _printf(""%lld in binary = %d in octal"");
+  return 0;
+}
+
+
+
+void _ldexp(void)
+
+{
+  (*(code *)PTR__ldexp_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void _ldexp(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This is a program in C that converts binary numbers to octal numbers. It first asks the user to input a binary number. If the number is not zero, it converts this number to octal. Then, it prints the converted octal number. Functions like _ldexp and _scanf are used for mathematical calculations and getting user input respectively, and _printf is used for displaying messages and results.",2.517379068556967e-78
 43,C Program to Reverse a Sentence Using Recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
@@ -2139,7 +3309,39 @@ void reverseSentence() {
         reverseSentence();
         printf(""%c"", c);
     }
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  
+  iVar1 = _printf(""Enter a sentence: "");
+  FUN_100003f2c(iVar1);
+  return 0;
+}
+
+
+
+int FUN_100003f2c(void)
+
+{
+  int iVar1;
+  char local_11;
+  
+  iVar1 = _scanf(""%c"");
+  if (local_11 != '\n') {
+    FUN_100003f2c(iVar1);
+    iVar1 = _putchar((int)local_11);
+  }
+  return iVar1;
+}
+
+
+","This code consists of two functions that interact together to first print a message asking for a sentence, then take each character of the input individually. 
+
+The `entry` function prints ""Enter a sentence: "" and calls `FUN_100003f2c`. 
+
+`FUN_100003f2c` reads a character from the input, and if it's not the end of line (`\n`), the character gets printed out and `FUN_100003f2c` calls itself again, creating a loop until a newline character is found.",0.04155579872929641
 44,C program to calculate the power using recursion,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-functions
 • https://www.programiz.com/c-programming/c-user-defined-functions
@@ -2183,7 +3385,101 @@ if (a != 0)
 return (base * power(base, a - 1));
 else
 return 1;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  undefined auVar1 [16];
+  undefined auVar2 [16];
+  uint uVar3;
+  int iVar4;
+  int iVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  int iVar11;
+  int iVar12;
+  int iVar13;
+  int iVar14;
+  int iVar15;
+  int iVar16;
+  int iVar17;
+  int iVar18;
+  int iVar19;
+  uint local_28;
+  int iStack_24;
+  
+  _printf(""Enter base number: "");
+  _scanf(""%d"");
+  _printf(""Enter power number(positive integer): "");
+  _scanf(""%d"");
+  if (local_28 != 0) {
+    if (0xf < local_28) {
+      iVar4 = 1;
+      iVar5 = 1;
+      iVar6 = 1;
+      iVar7 = 1;
+      iVar8 = 1;
+      iVar9 = 1;
+      iVar10 = 1;
+      iVar11 = 1;
+      iVar12 = 1;
+      iVar13 = 1;
+      iVar14 = 1;
+      iVar15 = 1;
+      iVar16 = 1;
+      iVar17 = 1;
+      iVar18 = 1;
+      iVar19 = 1;
+      uVar3 = local_28 & 0xfffffff0;
+      do {
+        iVar4 = iVar4 * iStack_24;
+        iVar5 = iVar5 * iStack_24;
+        iVar6 = iVar6 * iStack_24;
+        iVar7 = iVar7 * iStack_24;
+        iVar8 = iVar8 * iStack_24;
+        iVar9 = iVar9 * iStack_24;
+        iVar10 = iVar10 * iStack_24;
+        iVar11 = iVar11 * iStack_24;
+        iVar12 = iVar12 * iStack_24;
+        iVar13 = iVar13 * iStack_24;
+        iVar14 = iVar14 * iStack_24;
+        iVar15 = iVar15 * iStack_24;
+        iVar16 = iVar16 * iStack_24;
+        iVar17 = iVar17 * iStack_24;
+        iVar18 = iVar18 * iStack_24;
+        iVar19 = iVar19 * iStack_24;
+        uVar3 = uVar3 - 0x10;
+      } while (uVar3 != 0);
+      iVar16 = iVar16 * iVar12 * iVar8 * iVar4;
+      iVar17 = iVar17 * iVar13 * iVar9 * iVar5;
+      iVar18 = iVar18 * iVar14 * iVar10 * iVar6;
+      iVar19 = iVar19 * iVar15 * iVar11 * iVar7;
+      auVar1._4_4_ = iVar17;
+      auVar1._0_4_ = iVar16;
+      auVar1._8_4_ = iVar18;
+      auVar1._12_4_ = iVar19;
+      auVar2._4_4_ = iVar17;
+      auVar2._0_4_ = iVar16;
+      auVar2._8_4_ = iVar18;
+      auVar2._12_4_ = iVar19;
+      NEON_ext(auVar1,auVar2,8,1);
+      if (local_28 == (local_28 & 0xfffffff0)) goto LAB_100003f1c;
+      local_28 = local_28 & 0xf;
+    }
+    do {
+      local_28 = local_28 - 1;
+    } while (local_28 != 0);
+  }
+LAB_100003f1c:
+  _printf(""%d^%d = %d"");
+  return 0;
+}
+
+
+","This code represents a power calculator program. The user is first prompted to input a base number, and then a positive power number. The program checks if these numbers reach certain conditions, and if they do, it conducts a series of calculations. Finally, it prints the result of raising the base number to the power number.",3.855761931095808e-155
 45,C Program to Calculate Average Using Arrays,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-do-while-loops
 • https://www.programiz.com/c-programming/c-for-loop
@@ -2245,7 +3541,59 @@ sum += num[i];
 avg = sum / n;
 printf(""Average = %.2f"", avg);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  long lVar2;
+  long lVar3;
+  int local_1ec;
+  
+  lVar2 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter the numbers of elements: "");
+  _scanf(""%d"");
+  while (local_1ec - 0x65U < 0xffffff9c) {
+    _puts(""Error! number should in range of (1 to 100)."");
+    _printf(""Enter the number again: "");
+    _scanf(""%d"");
+  }
+  lVar3 = 0;
+  do {
+    lVar3 = lVar3 + 1;
+    _printf(""%d. Enter number: "");
+    _scanf(""%f"");
+  } while (lVar3 < local_1ec);
+  iVar1 = _printf(""Average = %.2f"");
+  if (*(long *)PTR____stack_chk_guard_100004008 == lVar2) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code represents a program that asks a user to input a number of elements, limited between 1 and 100. For each element, the user is prompted to enter a number. The program also calculates the average of entered numbers. The functions '___stack_chk_fail' serve the purpose of checking for stack overflow, a security feature in programming to prevent buffer overflow attacks.",0.015984405744204167
 46,C Program to Find Largest Element in an Array,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-arrays
@@ -2312,7 +3660,69 @@ int main() {
   printf(""Largest element = %.2lf"", arr[0]);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  long lVar2;
+  double dVar3;
+  double dVar4;
+  uint local_36c;
+  double local_368 [100];
+  long local_48;
+  
+  local_48 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter the number of elements (1 to 100): "");
+  _scanf(""%d"");
+  lVar2 = 0;
+  do {
+    lVar2 = lVar2 + 1;
+    _printf(""Enter number%d: "");
+    _scanf(""%lf"");
+  } while (lVar2 < (int)local_36c);
+  if (1 < (int)local_36c) {
+    lVar2 = 8;
+    dVar3 = local_368[0];
+    do {
+      dVar4 = *(double *)((long)local_368 + lVar2);
+      if (dVar3 < dVar4) {
+        dVar3 = dVar4;
+        local_368[0] = dVar4;
+      }
+      lVar2 = lVar2 + 8;
+    } while ((ulong)local_36c * 8 - lVar2 != 0);
+  }
+  iVar1 = _printf(""Largest element = %.2lf"");
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_48) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code defines a function (`entry`) that prompts a user to input numbers and identifies the largest number from the input. It starts by asking for the total number of elements, then iterates through each number entered. At each iteration, it updates the largest number seen so far. Finally, it prints the largest element. The code also contains safeguards to protect against stack overflow by checking and responding if the stack's integrity is compromised.",9.853610368270602e-79
 47,C Program to Calculate Standard Deviation,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-arrays-functions
@@ -2380,7 +3790,55 @@ float calculateSD(float data[]) {
         SD += pow(data[i] - mean, 2);
     }
     return sqrt(SD / 10);
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  long lVar2;
+  
+  lVar2 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter 10 elements: "");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  _scanf(""%f"");
+  iVar1 = _printf(""\nStandard Deviation = %.6f"");
+  if (*(long *)PTR____stack_chk_guard_100004008 == lVar2) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","In simple terms, this code carries out a process and then checks if there is a stack overflow. First, it prompts the user to input 10 numbers, then it prints the string ""Standard Deviation = %.6f"". After these actions, it checks if a stack overflow has occurred. If a stack overflow is detected, it terminates the program to prevent harmful outcomes.",2.6246418738506103e-155
 48,C Program to Add Two Matrices Using Multi-dimensional Arrays,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
@@ -2482,7 +3940,256 @@ int main() {
     }
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  int *piVar3;
+  undefined8 *puVar4;
+  int *piVar5;
+  undefined8 *puVar6;
+  int *piVar7;
+  ulong uVar8;
+  ulong uVar9;
+  ulong uVar10;
+  ulong uVar11;
+  undefined8 *puVar12;
+  undefined8 *puVar13;
+  int *piVar14;
+  undefined8 *puVar15;
+  int *piVar16;
+  int *piVar17;
+  long lVar18;
+  long lVar19;
+  undefined8 uVar20;
+  undefined8 uVar21;
+  undefined8 uVar22;
+  undefined8 uVar23;
+  undefined8 uVar24;
+  undefined8 uVar25;
+  undefined8 uVar26;
+  undefined8 uVar27;
+  undefined8 uVar28;
+  undefined8 uVar29;
+  undefined8 uVar30;
+  undefined8 uVar31;
+  undefined8 uVar32;
+  undefined8 uVar33;
+  uint uStack_1d520;
+  uint uStack_1d51c;
+  int aiStack_1d518 [8];
+  undefined8 auStack_1d4f8 [4996];
+  int aiStack_138d8 [8];
+  undefined8 auStack_138b8 [4996];
+  int local_9c98 [8];
+  undefined8 auStack_9c78 [4996];
+  long local_58;
+  
+  (*(code *)PTR____chkstk_darwin_100004000)();
+  local_58 = *(long *)PTR____stack_chk_guard_100004010;
+  _printf(""Enter the number of rows (between 1 and 100): "");
+  _scanf(""%d"");
+  _printf(""Enter the number of columns (between 1 and 100): "");
+  _scanf(""%d"");
+  _puts(""\nEnter elements of 1st matrix:"");
+  if ((0 < (int)uStack_1d51c) && (uVar8 = (ulong)uStack_1d520, 0 < (int)uStack_1d520)) {
+    lVar18 = 0;
+    do {
+      lVar18 = lVar18 + 1;
+      if (0 < (int)uVar8) {
+        lVar19 = 0;
+        do {
+          lVar19 = lVar19 + 1;
+          _printf(""Enter element a%d%d: "");
+          _scanf(""%d"");
+          uVar8 = (ulong)(int)uStack_1d520;
+        } while (lVar19 < (long)uVar8);
+      }
+    } while (lVar18 < (int)uStack_1d51c);
+  }
+  _puts(""Enter elements of 2nd matrix:"");
+  if ((0 < (int)uStack_1d51c) && (uVar8 = (ulong)uStack_1d520, 0 < (int)uStack_1d520)) {
+    lVar18 = 0;
+    do {
+      lVar18 = lVar18 + 1;
+      if (0 < (int)uVar8) {
+        lVar19 = 0;
+        do {
+          lVar19 = lVar19 + 1;
+          _printf(""Enter element b%d%d: "");
+          _scanf(""%d"");
+          uVar8 = (ulong)(int)uStack_1d520;
+        } while (lVar19 < (long)uVar8);
+      }
+    } while (lVar18 < (int)uStack_1d51c);
+    if ((0 < (int)uStack_1d51c) && (0 < (int)(uint)uVar8)) {
+      uVar9 = uVar8 & 0xffffffff;
+      if ((uint)uVar8 < 0x10) {
+        uVar8 = 0;
+        piVar17 = aiStack_1d518;
+        piVar16 = aiStack_138d8;
+        piVar14 = local_9c98;
+        uVar10 = uVar9;
+        piVar3 = piVar14;
+        piVar5 = piVar16;
+        piVar7 = piVar17;
+        do {
+          do {
+            *piVar17 = *piVar16 + *piVar14;
+            uVar10 = uVar10 - 1;
+            piVar14 = piVar14 + 1;
+            piVar16 = piVar16 + 1;
+            piVar17 = piVar17 + 1;
+          } while (uVar10 != 0);
+          uVar8 = uVar8 + 1;
+          piVar17 = piVar7 + 100;
+          piVar16 = piVar5 + 100;
+          piVar14 = piVar3 + 100;
+          uVar10 = uVar9;
+          piVar3 = piVar14;
+          piVar5 = piVar16;
+          piVar7 = piVar17;
+        } while (uVar8 != uStack_1d51c);
+      }
+      else {
+        uVar10 = 0;
+        uVar11 = uVar8 & 0xfffffff0;
+        puVar6 = auStack_9c78;
+        puVar4 = auStack_138b8;
+        puVar2 = auStack_1d4f8;
+        uVar8 = uVar8 & 0xfffffff0;
+        piVar17 = aiStack_1d518 + uVar8;
+        piVar16 = aiStack_138d8 + uVar8;
+        piVar14 = local_9c98 + uVar8;
+        uVar8 = uVar11;
+        puVar15 = puVar2;
+        puVar13 = puVar4;
+        puVar12 = puVar6;
+        do {
+          do {
+            uVar20 = puVar6[-4];
+            uVar22 = puVar6[-1];
+            uVar21 = puVar6[-2];
+            uVar24 = puVar6[1];
+            uVar23 = *puVar6;
+            uVar26 = puVar6[3];
+            uVar25 = puVar6[2];
+            uVar27 = puVar4[-4];
+            uVar29 = puVar4[-1];
+            uVar28 = puVar4[-2];
+            uVar31 = puVar4[1];
+            uVar30 = *puVar4;
+            uVar33 = puVar4[3];
+            uVar32 = puVar4[2];
+            puVar2[-3] = CONCAT44((int)((ulong)puVar4[-3] >> 0x20) +
+                                  (int)((ulong)puVar6[-3] >> 0x20),(int)puVar4[-3] + (int)puVar6[-3]
+                                 );
+            puVar2[-4] = CONCAT44((int)((ulong)uVar27 >> 0x20) + (int)((ulong)uVar20 >> 0x20),
+                                  (int)uVar27 + (int)uVar20);
+            puVar2[-1] = CONCAT44((int)((ulong)uVar29 >> 0x20) + (int)((ulong)uVar22 >> 0x20),
+                                  (int)uVar29 + (int)uVar22);
+            puVar2[-2] = CONCAT44((int)((ulong)uVar28 >> 0x20) + (int)((ulong)uVar21 >> 0x20),
+                                  (int)uVar28 + (int)uVar21);
+            puVar2[1] = CONCAT44((int)((ulong)uVar31 >> 0x20) + (int)((ulong)uVar24 >> 0x20),
+                                 (int)uVar31 + (int)uVar24);
+            *puVar2 = CONCAT44((int)((ulong)uVar30 >> 0x20) + (int)((ulong)uVar23 >> 0x20),
+                               (int)uVar30 + (int)uVar23);
+            puVar2[3] = CONCAT44((int)((ulong)uVar33 >> 0x20) + (int)((ulong)uVar26 >> 0x20),
+                                 (int)uVar33 + (int)uVar26);
+            puVar2[2] = CONCAT44((int)((ulong)uVar32 >> 0x20) + (int)((ulong)uVar25 >> 0x20),
+                                 (int)uVar32 + (int)uVar25);
+            uVar8 = uVar8 - 0x10;
+            puVar2 = puVar2 + 8;
+            puVar4 = puVar4 + 8;
+            puVar6 = puVar6 + 8;
+          } while (uVar8 != 0);
+          piVar3 = piVar14;
+          piVar5 = piVar16;
+          piVar7 = piVar17;
+          lVar18 = uVar9 - uVar11;
+          if (uVar11 != uVar9) {
+            do {
+              *piVar7 = *piVar5 + *piVar3;
+              lVar18 = lVar18 + -1;
+              piVar3 = piVar3 + 1;
+              piVar5 = piVar5 + 1;
+              piVar7 = piVar7 + 1;
+            } while (lVar18 != 0);
+          }
+          uVar10 = uVar10 + 1;
+          puVar6 = puVar12 + 0x32;
+          puVar4 = puVar13 + 0x32;
+          puVar2 = puVar15 + 0x32;
+          piVar17 = piVar17 + 100;
+          piVar16 = piVar16 + 100;
+          piVar14 = piVar14 + 100;
+          uVar8 = uVar11;
+          puVar15 = puVar2;
+          puVar13 = puVar4;
+          puVar12 = puVar6;
+        } while (uVar10 != uStack_1d51c);
+      }
+    }
+  }
+  iVar1 = _puts(""\nSum of two matrices: "");
+  if ((0 < (int)uStack_1d51c) && (0 < (int)uStack_1d520)) {
+    lVar18 = 0;
+    do {
+      if (0 < (int)uStack_1d520) {
+        uVar8 = 0;
+        do {
+          iVar1 = _printf(""%d   "");
+          if (uVar8 == uStack_1d520 - 1) {
+            iVar1 = _puts(""\n"");
+          }
+          uVar8 = uVar8 + 1;
+        } while ((long)uVar8 < (long)(int)uStack_1d520);
+      }
+      lVar18 = lVar18 + 1;
+    } while (lVar18 < (int)uStack_1d51c);
+  }
+  if (*(long *)PTR____stack_chk_guard_100004010 != local_58) {
+                    /* WARNING: Subroutine does not return */
+    ___stack_chk_fail(iVar1);
+  }
+  return 0;
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004008)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___chkstk_darwin(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","The given code performs matrix addition operation. It requests the user to input the number of rows and columns (between 1-100), and then the elements for two matrices. It then adds corresponding elements from each matrix together. If the dimensions of the matrices are correct, it prints out the resulting matrix, otherwise, it triggers an error.",0.0516029772424082
 49,C Program to Multiply Two Matrices Using Multi-dimensional Arrays,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -2639,7 +4346,243 @@ int main() {
    display(result, r1, c2);
 
    return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  int *piVar3;
+  ulong uVar4;
+  long lVar5;
+  long lVar6;
+  ulong uVar7;
+  int *piVar8;
+  undefined8 *puVar9;
+  ulong uVar10;
+  int *piVar11;
+  ulong uVar12;
+  int *piVar13;
+  ulong uVar14;
+  ulong uVar15;
+  ulong uVar16;
+  int iVar17;
+  int iVar18;
+  int iVar19;
+  int iVar20;
+  int iVar21;
+  int iVar22;
+  int iVar23;
+  int iVar24;
+  int iVar25;
+  int iVar26;
+  int iVar27;
+  int iVar28;
+  int iVar29;
+  int iVar30;
+  int iVar31;
+  uint local_528;
+  uint local_524;
+  uint local_520;
+  uint local_51c;
+  int local_518 [100];
+  int local_388 [100];
+  int local_1f8 [8];
+  undefined8 auStack_1d8 [46];
+  long local_68;
+  
+  local_68 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter rows and columns for the first matrix: "");
+  _scanf(""%d %d"");
+  _printf(""Enter rows and columns for the second matrix: "");
+  _scanf(""%d %d"");
+  while (local_520 != local_524) {
+    _puts(""Error! Enter rows and columns again."");
+    _printf(""Enter rows and columns for the first matrix: "");
+    _scanf(""%d%d"");
+    _printf(""Enter rows and columns for the second matrix: "");
+    _scanf(""%d%d"");
+  }
+  _puts(""\nEnter elements:"");
+  if ((0 < (int)local_520) && (0 < (int)local_51c)) {
+    uVar14 = 0;
+    do {
+      uVar16 = 0;
+      uVar14 = uVar14 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter a%d%d: "");
+        _scanf(""%d"");
+      } while (local_520 != uVar16);
+    } while (uVar14 != local_51c);
+  }
+  _puts(""\nEnter elements:"");
+  if ((0 < (int)local_524) && (0 < (int)local_528)) {
+    uVar14 = 0;
+    do {
+      uVar16 = 0;
+      uVar14 = uVar14 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter a%d%d: "");
+        _scanf(""%d"");
+      } while (local_528 != uVar16);
+    } while (uVar14 != local_524);
+  }
+  uVar14 = (ulong)local_51c;
+  if (((int)local_51c < 1) || (uVar16 = (ulong)local_528, (int)local_528 < 1)) {
+    iVar1 = _puts(""\nOutput Matrix:"");
+  }
+  else {
+    uVar15 = (ulong)local_520;
+    piVar8 = local_518;
+    uVar7 = uVar14;
+    do {
+      _bzero(piVar8,uVar16 << 2);
+      piVar8 = piVar8 + 10;
+      uVar7 = uVar7 - 1;
+    } while (uVar7 != 0);
+    if (0 < (int)local_520) {
+      if (local_520 < 0x10) {
+        uVar7 = 0;
+        piVar8 = local_1f8;
+        do {
+          uVar10 = 0;
+          piVar11 = local_388;
+          do {
+            iVar1 = local_518[uVar7 * 10 + uVar10];
+            uVar12 = uVar15;
+            piVar3 = piVar8;
+            piVar13 = piVar11;
+            do {
+              iVar1 = iVar1 + *piVar13 * *piVar3;
+              uVar12 = uVar12 - 1;
+              piVar3 = piVar3 + 1;
+              piVar13 = piVar13 + 10;
+            } while (uVar12 != 0);
+            local_518[uVar7 * 10 + uVar10] = iVar1;
+            uVar10 = uVar10 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar10 != uVar16);
+          uVar7 = uVar7 + 1;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar14);
+      }
+      else {
+        uVar7 = 0;
+        uVar10 = uVar15 & 0xfffffff0;
+        puVar9 = auStack_1d8;
+        piVar8 = local_1f8 + (ulong)(local_520 >> 4) * 0x10;
+        do {
+          uVar12 = 0;
+          piVar11 = local_388;
+          do {
+            iVar18 = 0;
+            iVar19 = 0;
+            iVar1 = local_518[uVar7 * 10 + uVar12];
+            iVar17 = 0;
+            iVar20 = 0;
+            iVar21 = 0;
+            iVar22 = 0;
+            iVar23 = 0;
+            iVar24 = 0;
+            iVar25 = 0;
+            iVar26 = 0;
+            iVar27 = 0;
+            iVar28 = 0;
+            iVar29 = 0;
+            iVar30 = 0;
+            iVar31 = 0;
+            puVar2 = puVar9;
+            piVar3 = piVar11;
+            uVar4 = uVar10;
+            do {
+              iVar1 = iVar1 + *piVar3 * (int)puVar2[-4];
+              iVar17 = iVar17 + piVar3[10] * (int)((ulong)puVar2[-4] >> 0x20);
+              iVar18 = iVar18 + piVar3[0x14] * (int)puVar2[-3];
+              iVar19 = iVar19 + piVar3[0x1e] * (int)((ulong)puVar2[-3] >> 0x20);
+              iVar20 = iVar20 + piVar3[0x28] * (int)puVar2[-2];
+              iVar21 = iVar21 + piVar3[0x32] * (int)((ulong)puVar2[-2] >> 0x20);
+              iVar22 = iVar22 + piVar3[0x3c] * (int)puVar2[-1];
+              iVar23 = iVar23 + piVar3[0x46] * (int)((ulong)puVar2[-1] >> 0x20);
+              iVar24 = iVar24 + piVar3[0x50] * (int)*puVar2;
+              iVar25 = iVar25 + piVar3[0x5a] * (int)((ulong)*puVar2 >> 0x20);
+              iVar26 = iVar26 + piVar3[100] * (int)puVar2[1];
+              iVar27 = iVar27 + piVar3[0x6e] * (int)((ulong)puVar2[1] >> 0x20);
+              iVar28 = iVar28 + piVar3[0x78] * (int)puVar2[2];
+              iVar29 = iVar29 + piVar3[0x82] * (int)((ulong)puVar2[2] >> 0x20);
+              iVar30 = iVar30 + piVar3[0x8c] * (int)puVar2[3];
+              iVar31 = iVar31 + piVar3[0x96] * (int)((ulong)puVar2[3] >> 0x20);
+              piVar3 = piVar3 + 0xa0;
+              uVar4 = uVar4 - 0x10;
+              puVar2 = puVar2 + 8;
+            } while (uVar4 != 0);
+            iVar1 = iVar28 + iVar24 + iVar20 + iVar1 + iVar29 + iVar25 + iVar21 + iVar17 +
+                    iVar30 + iVar26 + iVar22 + iVar18 + iVar31 + iVar27 + iVar23 + iVar19;
+            piVar3 = piVar8;
+            lVar5 = (ulong)(local_520 >> 4) * 0x280;
+            lVar6 = uVar15 - uVar10;
+            if (uVar10 != uVar15) {
+              do {
+                iVar1 = iVar1 + *(int *)((long)piVar11 + lVar5) * *piVar3;
+                lVar6 = lVar6 + -1;
+                piVar3 = piVar3 + 1;
+                lVar5 = lVar5 + 0x28;
+              } while (lVar6 != 0);
+            }
+            local_518[uVar7 * 10 + uVar12] = iVar1;
+            uVar12 = uVar12 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar12 != uVar16);
+          uVar7 = uVar7 + 1;
+          puVar9 = puVar9 + 5;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar14);
+      }
+    }
+    _puts(""\nOutput Matrix:"");
+    uVar7 = 0;
+    uVar15 = (ulong)(local_528 - 1);
+    uVar10 = uVar16;
+    do {
+      iVar1 = _printf(""%d  "");
+      if (uVar15 == 0) {
+        iVar1 = _putchar(10);
+      }
+      uVar10 = uVar10 - 1;
+      uVar15 = uVar15 - 1;
+    } while ((uVar10 != 0) ||
+            (uVar7 = uVar7 + 1, uVar15 = (ulong)(local_528 - 1), uVar10 = uVar16, uVar7 != uVar14));
+  }
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_68) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This script appears to be part of a larger program to perform matrix multiplication. It first asks the user to input the sizes of two matrices and validates them. Then, it asks the user to input the elements of the matrices. It performs the multiplication operation on these matrices and displays the result. Moreover, it includes a stack protection mechanism to prevent buffer overflow attacks. If the stack memory is corrupted, the program would stop running and a fail function would be triggered.",0.044682354329445034
 50,C Program to Find Transpose of a Matrix,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-arrays
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
@@ -2737,7 +4680,184 @@ int main() {
         printf(""\n"");
     }
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  undefined4 uVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  bool bVar4;
+  int iVar5;
+  undefined4 *puVar6;
+  undefined4 *puVar7;
+  ulong uVar8;
+  ulong uVar9;
+  ulong uVar10;
+  ulong uVar11;
+  undefined4 *puVar12;
+  ulong uVar13;
+  undefined4 *puVar14;
+  undefined4 *puVar15;
+  undefined4 *puVar16;
+  long lVar17;
+  long lVar18;
+  uint local_380;
+  uint local_37c;
+  undefined4 local_378 [10];
+  undefined4 local_350 [10];
+  undefined4 local_328 [80];
+  undefined4 local_1e8 [100];
+  long local_58;
+  
+  local_58 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter rows and columns: "");
+  _scanf(""%d %d"");
+  _puts(""\nEnter matrix elements:"");
+  uVar9 = (ulong)local_380;
+  bVar4 = true;
+  if (0 < (int)local_37c) {
+    bVar4 = (int)(local_380 - 1) < 0;
+  }
+  if (bVar4 == (0 < (int)local_37c && SBORROW4(local_380,1))) {
+    lVar17 = 0;
+    do {
+      lVar17 = lVar17 + 1;
+      if (0 < (int)uVar9) {
+        lVar18 = 0;
+        do {
+          lVar18 = lVar18 + 1;
+          _printf(""Enter element a%d%d: "");
+          _scanf(""%d"");
+          uVar9 = (ulong)(int)local_380;
+        } while (lVar18 < (long)uVar9);
+      }
+    } while (lVar17 < (int)local_37c);
+  }
+  _puts(""\nEntered matrix: "");
+  if ((0 < (int)local_37c) && (0 < (int)local_380)) {
+    lVar17 = 0;
+    do {
+      if (0 < (int)local_380) {
+        uVar9 = 0;
+        do {
+          _printf(""%d  "");
+          if (uVar9 == local_380 - 1) {
+            _putchar(10);
+          }
+          uVar9 = uVar9 + 1;
+        } while ((long)uVar9 < (long)(int)local_380);
+      }
+      lVar17 = lVar17 + 1;
+    } while (lVar17 < (int)local_37c);
+    if ((0 < (int)local_37c) && (0 < (int)local_380)) {
+      uVar9 = (ulong)local_37c;
+      if (local_380 < 4) {
+        puVar7 = local_350;
+        puVar12 = local_1e8 + 2;
+        do {
+          puVar7[-10] = puVar12[-2];
+          if ((local_380 != 1) && (*puVar7 = puVar12[-1], local_380 != 2)) {
+            puVar7[10] = *puVar12;
+          }
+          puVar7 = puVar7 + 1;
+          puVar12 = puVar12 + 10;
+          uVar9 = uVar9 - 1;
+        } while (uVar9 != 0);
+      }
+      else {
+        uVar11 = 0;
+        uVar10 = (ulong)local_380;
+        uVar13 = uVar10 & 0xfffffffc;
+        puVar6 = local_328;
+        puVar7 = local_1e8 + 2;
+        puVar12 = local_378 + (ulong)(local_380 >> 2) * 0x28;
+        puVar16 = local_1e8 + (ulong)(local_380 >> 2) * 4;
+        uVar8 = uVar13;
+        puVar15 = puVar7;
+        puVar14 = puVar6;
+        do {
+          do {
+            uVar2 = puVar7[-1];
+            uVar1 = *puVar7;
+            uVar3 = puVar7[1];
+            puVar6[-0x14] = puVar7[-2];
+            puVar6[-10] = uVar2;
+            *puVar6 = uVar1;
+            puVar6[10] = uVar3;
+            puVar6 = puVar6 + 0x28;
+            uVar8 = uVar8 - 4;
+            puVar7 = puVar7 + 4;
+          } while (uVar8 != 0);
+          puVar7 = puVar12;
+          lVar17 = uVar10 - uVar13;
+          puVar6 = puVar16;
+          if (uVar13 != uVar10) {
+            do {
+              *puVar7 = *puVar6;
+              lVar17 = lVar17 + -1;
+              puVar7 = puVar7 + 10;
+              puVar6 = puVar6 + 1;
+            } while (lVar17 != 0);
+          }
+          uVar11 = uVar11 + 1;
+          puVar6 = puVar14 + 1;
+          puVar7 = puVar15 + 10;
+          puVar12 = puVar12 + 1;
+          puVar16 = puVar16 + 10;
+          uVar8 = uVar13;
+          puVar15 = puVar7;
+          puVar14 = puVar6;
+        } while (uVar11 != uVar9);
+      }
+    }
+  }
+  iVar5 = _puts(""\nTranspose of the matrix:"");
+  if ((0 < (int)local_380) && (0 < (int)local_37c)) {
+    lVar17 = 0;
+    do {
+      if (0 < (int)local_37c) {
+        uVar9 = 0;
+        do {
+          iVar5 = _printf(""%d  "");
+          if (uVar9 == local_37c - 1) {
+            iVar5 = _putchar(10);
+          }
+          uVar9 = uVar9 + 1;
+        } while ((long)uVar9 < (long)(int)local_37c);
+      }
+      lVar17 = lVar17 + 1;
+    } while (lVar17 < (int)local_380);
+  }
+  if (*(long *)PTR____stack_chk_guard_100004008 != local_58) {
+                    /* WARNING: Subroutine does not return */
+    ___stack_chk_fail(iVar5);
+  }
+  return 0;
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code reads a matrix provided by the user and then computes the transpose of the matrix. The rows and columns of the matrix are taken as input, and then every element of the matrix is accepted as user input. The code displays this entered matrix, and then computes and prints the transpose of the matrix. There's also built-in check for potential stack buffer overflow issues in the code.",0.11575315707838094
 51,C Program to Multiply two Matrices by Passing Matrix to a Function,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -2959,7 +5079,244 @@ void display(int mult[][10], int rowFirst, int columnSecond) {
             }
         }
     }
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  int *piVar3;
+  ulong uVar4;
+  long lVar5;
+  long lVar6;
+  ulong uVar7;
+  int *piVar8;
+  undefined8 *puVar9;
+  ulong uVar10;
+  int *piVar11;
+  ulong uVar12;
+  int *piVar13;
+  ulong uVar14;
+  ulong uVar15;
+  ulong uVar16;
+  int iVar17;
+  int iVar18;
+  int iVar19;
+  int iVar20;
+  int iVar21;
+  int iVar22;
+  int iVar23;
+  int iVar24;
+  int iVar25;
+  int iVar26;
+  int iVar27;
+  int iVar28;
+  int iVar29;
+  int iVar30;
+  int iVar31;
+  uint local_528;
+  uint local_524;
+  uint local_520;
+  uint local_51c;
+  int local_518 [100];
+  int local_388 [100];
+  int local_1f8 [8];
+  undefined8 auStack_1d8 [46];
+  long local_68;
+  
+  local_68 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter rows and columns for the first matrix: "");
+  _scanf(""%d %d"");
+  _printf(""Enter rows and columns for the second matrix: "");
+  _scanf(""%d %d"");
+  while (local_520 != local_524) {
+    _puts(""Error! Column of the first matrix is not equal to the row of the second matrix."");
+    _printf(""Enter rows and columns for the first matrix: "");
+    _scanf(""%d%d"");
+    _printf(""Enter rows and columns for the second matrix: "");
+    _scanf(""%d%d"");
+  }
+  _puts(""\nEnter elements of the first matrix:"");
+  if ((0 < (int)local_51c) && (0 < (int)local_520)) {
+    uVar15 = 0;
+    do {
+      uVar16 = 0;
+      uVar15 = uVar15 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter element a%d%d: "");
+        _scanf(""%d"");
+      } while (local_520 != uVar16);
+    } while (uVar15 != local_51c);
+  }
+  _puts(""\nEnter elements of the second matrix:"");
+  if ((0 < (int)local_520) && (0 < (int)local_528)) {
+    uVar15 = 0;
+    do {
+      uVar16 = 0;
+      uVar15 = uVar15 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter element b%d%d: "");
+        _scanf(""%d"");
+      } while (local_528 != uVar16);
+    } while (uVar15 != local_520);
+  }
+  uVar15 = (ulong)local_51c;
+  if (((int)local_51c < 1) || (uVar16 = (ulong)local_528, (int)local_528 < 1)) {
+    iVar1 = _puts(""\nOutput Matrix:"");
+  }
+  else {
+    uVar14 = (ulong)local_520;
+    piVar8 = local_518;
+    uVar7 = uVar15;
+    do {
+      _bzero(piVar8,uVar16 << 2);
+      piVar8 = piVar8 + 10;
+      uVar7 = uVar7 - 1;
+    } while (uVar7 != 0);
+    if (0 < (int)local_520) {
+      if (local_520 < 0x10) {
+        uVar7 = 0;
+        piVar8 = local_1f8;
+        do {
+          uVar10 = 0;
+          piVar11 = local_388;
+          do {
+            iVar1 = local_518[uVar7 * 10 + uVar10];
+            uVar12 = uVar14;
+            piVar3 = piVar8;
+            piVar13 = piVar11;
+            do {
+              iVar1 = iVar1 + *piVar13 * *piVar3;
+              uVar12 = uVar12 - 1;
+              piVar3 = piVar3 + 1;
+              piVar13 = piVar13 + 10;
+            } while (uVar12 != 0);
+            local_518[uVar7 * 10 + uVar10] = iVar1;
+            uVar10 = uVar10 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar10 != uVar16);
+          uVar7 = uVar7 + 1;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar15);
+      }
+      else {
+        uVar7 = 0;
+        uVar10 = uVar14 & 0xfffffff0;
+        puVar9 = auStack_1d8;
+        piVar8 = local_1f8 + (ulong)(local_520 >> 4) * 0x10;
+        do {
+          uVar12 = 0;
+          piVar11 = local_388;
+          do {
+            iVar18 = 0;
+            iVar19 = 0;
+            iVar1 = local_518[uVar7 * 10 + uVar12];
+            iVar17 = 0;
+            iVar20 = 0;
+            iVar21 = 0;
+            iVar22 = 0;
+            iVar23 = 0;
+            iVar24 = 0;
+            iVar25 = 0;
+            iVar26 = 0;
+            iVar27 = 0;
+            iVar28 = 0;
+            iVar29 = 0;
+            iVar30 = 0;
+            iVar31 = 0;
+            puVar2 = puVar9;
+            piVar3 = piVar11;
+            uVar4 = uVar10;
+            do {
+              iVar1 = iVar1 + *piVar3 * (int)puVar2[-4];
+              iVar17 = iVar17 + piVar3[10] * (int)((ulong)puVar2[-4] >> 0x20);
+              iVar18 = iVar18 + piVar3[0x14] * (int)puVar2[-3];
+              iVar19 = iVar19 + piVar3[0x1e] * (int)((ulong)puVar2[-3] >> 0x20);
+              iVar20 = iVar20 + piVar3[0x28] * (int)puVar2[-2];
+              iVar21 = iVar21 + piVar3[0x32] * (int)((ulong)puVar2[-2] >> 0x20);
+              iVar22 = iVar22 + piVar3[0x3c] * (int)puVar2[-1];
+              iVar23 = iVar23 + piVar3[0x46] * (int)((ulong)puVar2[-1] >> 0x20);
+              iVar24 = iVar24 + piVar3[0x50] * (int)*puVar2;
+              iVar25 = iVar25 + piVar3[0x5a] * (int)((ulong)*puVar2 >> 0x20);
+              iVar26 = iVar26 + piVar3[100] * (int)puVar2[1];
+              iVar27 = iVar27 + piVar3[0x6e] * (int)((ulong)puVar2[1] >> 0x20);
+              iVar28 = iVar28 + piVar3[0x78] * (int)puVar2[2];
+              iVar29 = iVar29 + piVar3[0x82] * (int)((ulong)puVar2[2] >> 0x20);
+              iVar30 = iVar30 + piVar3[0x8c] * (int)puVar2[3];
+              iVar31 = iVar31 + piVar3[0x96] * (int)((ulong)puVar2[3] >> 0x20);
+              piVar3 = piVar3 + 0xa0;
+              uVar4 = uVar4 - 0x10;
+              puVar2 = puVar2 + 8;
+            } while (uVar4 != 0);
+            iVar1 = iVar28 + iVar24 + iVar20 + iVar1 + iVar29 + iVar25 + iVar21 + iVar17 +
+                    iVar30 + iVar26 + iVar22 + iVar18 + iVar31 + iVar27 + iVar23 + iVar19;
+            piVar3 = piVar8;
+            lVar5 = (ulong)(local_520 >> 4) * 0x280;
+            lVar6 = uVar14 - uVar10;
+            if (uVar10 != uVar14) {
+              do {
+                iVar1 = iVar1 + *(int *)((long)piVar11 + lVar5) * *piVar3;
+                lVar6 = lVar6 + -1;
+                piVar3 = piVar3 + 1;
+                lVar5 = lVar5 + 0x28;
+              } while (lVar6 != 0);
+            }
+            local_518[uVar7 * 10 + uVar12] = iVar1;
+            uVar12 = uVar12 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar12 != uVar16);
+          uVar7 = uVar7 + 1;
+          puVar9 = puVar9 + 5;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar15);
+      }
+    }
+    _puts(""\nOutput Matrix:"");
+    uVar7 = 0;
+    uVar14 = (ulong)(local_528 - 1);
+    uVar10 = uVar16;
+    do {
+      iVar1 = _printf(""%d  "");
+      if (uVar14 == 0) {
+        iVar1 = _puts(""\n"");
+      }
+      uVar10 = uVar10 - 1;
+      uVar14 = uVar14 - 1;
+    } while ((uVar10 != 0) ||
+            (uVar7 = uVar7 + 1, uVar14 = (ulong)(local_528 - 1), uVar10 = uVar16, uVar7 != uVar15));
+  }
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_68) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This program manages matrix multiplication of two matrices. The user is requested to enter sizes for the two matrices, and then the elements of the two matrices. If the column number of the first matrix is not equal to the row number of the second, an error message prompts the user to re-enter the matrix dimensions. The results are printed as an output matrix. To protect against stack overflow, stack canaries are employed for detecting stack corruption.
+",1.902522886359521e-78
 52,C Program to Access Array Elements Using Pointer,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-for-loop
 • https://www.programiz.com/c-programming/c-arrays
@@ -3006,7 +5363,55 @@ int main() {
     for (int i = 0; i < 5; ++i)
         printf(""%d\n"", *(data + i));
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  long lVar2;
+  
+  lVar2 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter elements: "");
+  _scanf(""%d"");
+  _scanf(""%d"");
+  _scanf(""%d"");
+  _scanf(""%d"");
+  _scanf(""%d"");
+  _puts(""You entered: "");
+  _printf(""%d\n"");
+  _printf(""%d\n"");
+  _printf(""%d\n"");
+  _printf(""%d\n"");
+  iVar1 = _printf(""%d\n"");
+  if (*(long *)PTR____stack_chk_guard_100004008 == lVar2) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This program is asking the user to enter 5 numbers, one at a time, and then prints those numbers. It begins by checking a value called 'stack-check-guard' to ensure data hasn't been incorrectly modified. If the value breaks during execution, the program halts to prevent further issues. This provides a security measure against certain types of vulnerabilities.",8.468479108737059e-156
 53,C Program Swap Numbers in Cyclic Order Using Call by Reference,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
@@ -3079,7 +5484,21 @@ void cyclicSwap(int *n1, int *n2, int *n3) {
     *n2 = *n1;
     *n1 = *n3;
     *n3 = temp;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter a, b and c respectively: "");
+  _scanf(""%d %d %d"");
+  _puts(""Value before swapping:"");
+  _printf(""a = %d \nb = %d \nc = %d\n"");
+  _puts(""Value after swapping:"");
+  _printf(""a = %d \nb = %d \nc = %d"");
+  return 0;
+}
+
+
+","This code appears to be a part of a larger program for swapping three values. It first prompts the user to enter three integers (a, b, and c). It then prints the values of a, b, and c before swapping. However, the code is incomplete. The swapping functionality and the variables aren't defined, hence the results won't reflect the changes.",0.051543295988077595
 54,C Program to Find Largest Number Using Dynamic Memory Allocation,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
@@ -3179,7 +5598,51 @@ int main() {
   free(data);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  double *pdVar1;
+  long lVar2;
+  double dVar3;
+  double dVar4;
+  uint local_44;
+  
+  _printf(""Enter the total number of elements: "");
+  _scanf(""%d"");
+  pdVar1 = (double *)_calloc((long)(int)local_44,8);
+  if (pdVar1 == (double *)0x0) {
+    _printf(""Error!!! memory not allocated."");
+                    /* WARNING: Subroutine does not return */
+    _exit(0);
+  }
+  if (0 < (int)local_44) {
+    lVar2 = 0;
+    do {
+      lVar2 = lVar2 + 1;
+      _printf(""Enter number%d: "");
+      _scanf(""%lf"");
+    } while (lVar2 < (int)local_44);
+    dVar3 = *pdVar1;
+    if (1 < (int)local_44) {
+      lVar2 = 8;
+      do {
+        dVar4 = *(double *)((long)pdVar1 + lVar2);
+        if (dVar3 < dVar4) {
+          *pdVar1 = dVar4;
+          dVar3 = dVar4;
+        }
+        lVar2 = lVar2 + 8;
+      } while ((ulong)local_44 * 8 - lVar2 != 0);
+    }
+  }
+  _printf(""Largest number = %.2lf"");
+  _free(pdVar1);
+  return 0;
+}
+
+
+","This code is a function creating a list of elements that the user inputs. Firstly, it asks for the total number of elements. Then it reserves necessary memory for those elements. If it can't reserve memory, it prompts an error message and exits the program. It then inputs each number from the user, finds and stores the largest number. Finally, it releases the reserved memory and concludes the program.",0.020574095233171198
 55,C Program to Find the Frequency of Characters in a String,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3228,7 +5691,56 @@ int main() {
 
     printf(""Frequency of %c = %d"", ch, count);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  char *pcVar2;
+  char local_410;
+  char acStack_40f [999];
+  long local_28;
+  
+  local_28 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter a string: "");
+  pcVar2 = &local_410;
+  _fgets(&local_410,1000,*(FILE **)PTR____stdinp_100004010);
+  _printf(""Enter a character to find its frequency: "");
+  _scanf(""%c"");
+  while (local_410 != '\0') {
+    pcVar2 = pcVar2 + 1;
+    local_410 = *pcVar2;
+  }
+  iVar1 = _printf(""Frequency of %c = %d"");
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_28) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code is designed to count the frequency of a specific character in a given string. It first asks the user for a string and a character. Then, it iterates through the string, checking each character until it finds a match. The code also includes a 'stack check fail' function to handle errors that may occur during the execution.",7.908160028125065e-79
 56,"C Program to Count the Number of Vowels, Consonants and so on","To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3318,7 +5830,59 @@ int main() {
   printf(""\nWhite spaces: %d"", space);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  char *pcVar1;
+  __darwin_ct_rune_t _Var2;
+  int iVar3;
+  char local_fe [150];
+  long local_68;
+  
+  local_68 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter a line of string: "");
+  _fgets(local_fe,0x96,*(FILE **)PTR____stdinp_100004010);
+  pcVar1 = local_fe;
+  while (local_fe[0] != '\0') {
+    _Var2 = ___tolower((int)local_fe[0]);
+    *pcVar1 = (char)_Var2;
+    local_fe[0] = pcVar1[1];
+    pcVar1 = pcVar1 + 1;
+  }
+  _printf(""Vowels: %d"");
+  _printf(""\nConsonants: %d"");
+  _printf(""\nDigits: %d"");
+  iVar3 = _printf(""\nWhite spaces: %d"");
+  if (*(long *)PTR____stack_chk_guard_100004008 != local_68) {
+                    /* WARNING: Subroutine does not return */
+    ___stack_chk_fail(iVar3);
+  }
+  return 0;
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code is a simple C program designed to take a string input from the user, convert the string to lower case, and detect security violations. It also contains stubs for displaying counts of vowels, consonants, digits, and whitespace characters in a user-provided string. The stack_check function is meant to prevent stack overflow, a common security issue.",0.029160695366268422
 57,C Program to Remove all Characters in a String Except Alphabets,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3365,7 +5929,80 @@ line[j] = '\0';
 printf(""Output String: "");
 puts(line);
 return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  byte bVar1;
+  byte *pbVar2;
+  int iVar3;
+  long lVar4;
+  byte *pbVar5;
+  uint uVar6;
+  byte *pbVar7;
+  byte local_be [150];
+  long local_28;
+  
+  local_28 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter a string: "");
+  _fgets((char *)local_be,0x96,*(FILE **)PTR____stdinp_100004010);
+  if (local_be[0] != 0) {
+    lVar4 = 0;
+    pbVar5 = local_be;
+    do {
+      uVar6 = (uint)local_be[0];
+      if (0x19 < uVar6 - 0x61) {
+        do {
+          if ((uVar6 == 0) || (uVar6 - 0x41 < 0x1a)) break;
+          bVar1 = local_be[lVar4];
+          pbVar7 = local_be + lVar4;
+          pbVar2 = pbVar5;
+          while (bVar1 != 0) {
+            pbVar7 = pbVar2 + 1;
+            bVar1 = *pbVar7;
+            *pbVar2 = bVar1;
+            pbVar2 = pbVar7;
+          }
+          *pbVar7 = 0;
+          uVar6 = (uint)*pbVar5;
+        } while (0x19 < uVar6 - 0x61);
+      }
+      lVar4 = lVar4 + 1;
+      pbVar5 = pbVar5 + 1;
+      local_be[0] = *pbVar5;
+    } while (local_be[0] != 0);
+  }
+  _printf(""Output String: "");
+  iVar3 = _puts((char *)local_be);
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_28) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar3);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code first asks the user to input a string. After that, it filters out any characters from the string that are not lowercase letters (a-z). Following this, the code outputs the filtered string. There is also a security check in place to make sure the program's memory stack hasn't been tampered with (storing the same value at the beginning and comparing at the end), otherwise, it halts the program.",1.476096223397962e-78
 58,C Program to Find the Length of a String,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Programming Strings
@@ -3394,7 +6031,16 @@ int main() {
     
     printf(""Length of the string: %d"", i);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Length of the string: %d"");
+  return 0;
+}
+
+
+","This code is a simple program in C language. It starts with defining a function named 'entry' which returns an 'undefined8' type value (a term commonly used in reverse-engineering contexts). Within this function, a command '_printf' is used to print the text ""Length of the string: %d"" on the screen. The function then ends by returning the value '0'. However, this code lacks an actual value to replace '%d'.",0.026171791323868772
 59,C Program to Concatenate Two Strings,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3441,7 +6087,85 @@ int main() {
   puts(s1);
 
   return 0;
-}"
+}"," 
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 entry(void)
+
+{
+  long lVar1;
+  int iVar2;
+  long lVar3;
+  undefined8 local_80;
+  undefined8 uStack_78;
+  undefined8 uStack_70;
+  undefined8 uStack_68;
+  undefined8 local_60;
+  undefined8 uStack_58;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  undefined8 local_40;
+  undefined8 uStack_38;
+  undefined8 uStack_30;
+  undefined8 uStack_28;
+  undefined4 local_20;
+  long local_18;
+  
+  local_18 = *(long *)PTR____stack_chk_guard_100004008;
+  uStack_58 = _UNK_100003f48;
+  local_60 = _DAT_100003f40;
+  uStack_48 = _UNK_100003f58;
+  uStack_50 = _DAT_100003f50;
+  uStack_38 = _UNK_100003f68;
+  local_40 = _DAT_100003f60;
+  uStack_28 = _UNK_100003f78;
+  uStack_30 = _DAT_100003f70;
+  uStack_78 = ram0x000100003f28;
+  local_80 = s_programming_100003f20._0_8_;
+  uStack_68 = _UNK_100003f38;
+  uStack_70 = _DAT_100003f30;
+  local_20 = 0;
+  lVar1 = 0;
+  do {
+    lVar3 = lVar1;
+    lVar1 = lVar3 + 1;
+  } while (*(char *)((long)&local_80 + lVar3) != '\0');
+  *(undefined8 *)((long)&local_80 + lVar3) = s_is_awesome_100003f84._0_8_;
+  *(undefined2 *)((long)&uStack_78 + lVar3) = 0x656d;
+  *(undefined *)((long)&local_80 + (ulong)((int)(lVar3 + 1) + 9)) = 0;
+  _printf(""After concatenation: "");
+  iVar2 = _puts((char *)&local_80);
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_18) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar2);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code corresponds to a function in a C program. Here's a brief explanation:
+
+This function seems to be part of a larger system and runs when the program begins. It mainly focuses on string manipulation, specifically concatenating a string. After concatenating, it prints out the resulting string. Lastly, the function verifies memory integrity by checking a global variable. If the memory is altered, it calls an error-handling function to prevent potential stack overflow errors.",4.319897682605e-155
 60,C Program to Copy String Without Using strcpy(),"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3476,7 +6200,60 @@ int main() {
     s2[i] = '\0';
     printf(""String s2: %s"", s2);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  long lVar2;
+  char acStack_10c [228];
+  long local_28;
+  
+  local_28 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter string s1: "");
+  _fgets(acStack_10c + 0x80,100,*(FILE **)PTR____stdinp_100004010);
+  if (acStack_10c[128] == '\0') {
+    lVar2 = 0;
+  }
+  else {
+    lVar2 = 0;
+    do {
+      acStack_10c[lVar2 + 0x1c] = acStack_10c[128];
+      lVar2 = (long)(char)((char)lVar2 + '\x01');
+      acStack_10c[128] = acStack_10c[lVar2 + 0x80];
+    } while (acStack_10c[128] != '\0');
+  }
+  acStack_10c[lVar2 + 0x1c] = '\0';
+  iVar1 = _printf(""String s2: %s"");
+  if (*(long *)PTR____stack_chk_guard_100004008 != local_28) {
+                    /* WARNING: Subroutine does not return */
+    ___stack_chk_fail(iVar1);
+  }
+  return 0;
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This code primarily performs the task of getting an input string from the user and replicating it. At the start, it asks the user for a string and reads it in. Then it checks if the first character of the entered string is a null character ('\0'), if not, the code replicates the string entered by the user. After completion, it prints the replicated string. Additionally, it uses stack protection to detect stack overflows and prevent potential exploits.",5.189751364738402e-155
 61,C Program to Sort Elements in Lexicographical Order (Dictionary Order),"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-multi-dimensional-arrays
 • https://www.programiz.com/c-programming/c-strings
@@ -3549,7 +6326,144 @@ int main() {
       fputs(str[i], stdout);
    }
    return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  undefined *puVar1;
+  int iVar2;
+  undefined auStack_174 [50];
+  char acStack_142 [50];
+  char acStack_110 [50];
+  char acStack_de [50];
+  char acStack_ac [50];
+  char acStack_7a [50];
+  long local_48;
+  
+  local_48 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter 5 words: "");
+  puVar1 = PTR____stdinp_100004010;
+  _fgets(acStack_142,0x32,*(FILE **)PTR____stdinp_100004010);
+  _fgets(acStack_110,0x32,*(FILE **)puVar1);
+  _fgets(acStack_de,0x32,*(FILE **)puVar1);
+  _fgets(acStack_ac,0x32,*(FILE **)puVar1);
+  _fgets(acStack_7a,0x32,*(FILE **)puVar1);
+  iVar2 = _strcmp(acStack_142,acStack_110);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_110,0xfa);
+    ___strcpy_chk(acStack_110,auStack_174,200);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_de);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_de,0xfa);
+    ___strcpy_chk(acStack_de,auStack_174,0x96);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_ac,0xfa);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_7a,0xfa);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_de);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_de,200);
+    ___strcpy_chk(acStack_de,auStack_174,0x96);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_ac,200);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_7a,200);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_de,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_de,0x32);
+    ___strcpy_chk(acStack_de,acStack_ac,0x96);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_de,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_de,0x32);
+    ___strcpy_chk(acStack_de,acStack_7a,0x96);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_ac,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_ac,0x32);
+    ___strcpy_chk(acStack_ac,acStack_7a,100);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  _puts(""\nIn the lexicographical order: "");
+  puVar1 = PTR____stdoutp_100004018;
+  _fputs(acStack_142,*(FILE **)PTR____stdoutp_100004018);
+  _fputs(acStack_110,*(FILE **)puVar1);
+  _fputs(acStack_de,*(FILE **)puVar1);
+  _fputs(acStack_ac,*(FILE **)puVar1);
+  iVar2 = _fputs(acStack_7a,*(FILE **)puVar1);
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_48) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar2);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+void ___strcpy_chk(void)
+
+{
+  (*(code *)PTR____strcpy_chk_100004020)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___strcpy_chk(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","The given program takes five words as input from the user and sorts them in lexicographical (dictionary) order. The program then prints the sorted words. All this is done in a function called `entry`. In the process of sorting, it performs string comparison and copying via `_strcmp` and `___strcpy_chk` respectively. Also, there are checks ensuring that the memory stack's integrity is maintained with `___stack_chk_fail`.",1.1331194545141508e-78
 62,C Program to Store Information of a Student Using Structure,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-structures
 
@@ -3610,7 +6524,27 @@ int main() {
     printf(""Marks: %.1f\n"", s.marks);
 
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""Enter information:"");
+  _printf(""Enter name: "");
+  _fgets(&DAT_100008000,0x32,*(FILE **)PTR____stdinp_100004000);
+  _printf(""Enter roll number: "");
+  _scanf(""%d"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  _puts(""Displaying Information:"");
+  _printf(""Name: "");
+  _printf(""%s"");
+  _printf(""Roll number: %d\n"");
+  _printf(""Marks: %.1f\n"");
+  return 0;
+}
+
+
+","This code is a simple program that collects and displays student's information. It prompts the user to input their name, roll number, and marks. After receiving this information, it displays it back to the user. This demonstration emphasizes user input and output in a console application using basic, built-in functions.",4.2733844881936e-155
 63,C Program to Add Two Distances (in inch-feet system) using Structures,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C struct
@@ -3690,7 +6624,30 @@ int main() {
    }
    printf(""\nSum of distances = %d\'-%.1f\"""", result.feet, result.inch);
    return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  float fVar1;
+  
+  _puts(""Enter 1st distance"");
+  _printf(""Enter feet: "");
+  _scanf(""%d"");
+  _printf(""Enter inch: "");
+  _scanf(""%f"");
+  _puts(""\nEnter 2nd distance"");
+  _printf(""Enter feet: "");
+  _scanf(""%d"");
+  _printf(""Enter inch: "");
+  _scanf(""%f"");
+  for (fVar1 = DAT_100008004 + DAT_10000800c; 12.0 <= fVar1; fVar1 = fVar1 + -12.0) {
+  }
+  _printf(""\nSum of distances = %d\'-%.1f\"""");
+  return 0;
+}
+
+
+","This code is a function that gathers two sets of distance inputs: one in feet and one in inches. It then adds these inputs together. If the sum of inches exceeds 12 (which is equivalent to 1 foot), it subtracts 12 from the total inches until the total is less than 12. Finally, it prints the sum as feet and inches.",0.046110288353287926
 64,C Program to Add Two Complex Numbers by Passing Structure to a Function,"To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
 • https://www.programiz.com/c-programming/c-structures
 • https://www.programiz.com/c-programming/c-structure-function
@@ -3763,7 +6720,22 @@ complex add(complex n1, complex n2) {
     temp.real = n1.real + n2.real;
     temp.imag = n1.imag + n2.imag;
     return (temp);
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""For 1st complex number "");
+  _printf(""Enter the real and imaginary parts: "");
+  _scanf(""%f %f"");
+  _puts(""\nFor 2nd complex number "");
+  _printf(""Enter the real and imaginary parts: "");
+  _scanf(""%f %f"");
+  _printf(""Sum = %.1f + %.1fi"");
+  return 0;
+}
+
+
+","This code is mainly dealing with complex numbers. It first asks the user to input the real and imaginary parts for two complex numbers separately. After getting these parts, it calculates the sum of these two complex numbers and prints the result. The sum is displayed in the format real part + imaginary part i.",1.1587743819403133e-78
 65,C Program to Calculate Difference Between Two Time Periods,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C User-defined functions
@@ -3890,7 +6862,24 @@ void differenceBetweenTimePeriod(struct TIME start,
    }
    diff->minutes = start.minutes - stop.minutes;
    diff->hours = start.hours - stop.hours;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""Enter the start time. "");
+  _printf(""Enter hours, minutes and seconds: "");
+  _scanf(""%d %d %d"");
+  _puts(""Enter the stop time. "");
+  _printf(""Enter hours, minutes and seconds: "");
+  _scanf(""%d %d %d"");
+  _printf(""\nTime Difference: %d:%d:%d - "");
+  _printf(""%d:%d:%d "");
+  _printf(""= %d:%d:%d\n"");
+  return 0;
+}
+
+
+","This code is a basic program to calculate the time difference. It asks the user to input start time and stop time, with each defined by hours, minutes, and seconds. The last section prints the time difference. However, it's worth noting that the code isn't finished, as it doesn't specify where the scanned data gets stored or how the time difference is computed.",4.115646977583518e-155
 66,C Program to Store Information of Students Using Structure,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Arrays
@@ -3978,7 +6967,72 @@ int main() {
         printf(""\n"");
     }
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""Enter information of students:"");
+  DAT_100008034 = 1;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_100008070 = 2;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_1000080ac = 3;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_1000080e8 = 4;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_100008124 = 5;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  _puts(""Displaying Information:\n"");
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_100008000);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_10000803c);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_100008078);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_1000080b4);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_1000080f0);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  return 0;
+}
+
+
+","This is a student record entry program. It first prompts the user to enter information for five students, which includes their roll number, first name, and marks. The data is then stored in memory. Afterwards, it displays the entered information for each student, including the roll number, first name, and marks.",2.650640251091874e-155
 67,C Program to Store Data in Structures Dynamically,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Pointers
@@ -4047,7 +7101,39 @@ int main() {
   free(ptr);
 
   return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  void *pvVar1;
+  long lVar2;
+  int local_44;
+  
+  _printf(""Enter the number of records: "");
+  _scanf(""%d"");
+  pvVar1 = _malloc((long)local_44 * 0x24);
+  if (0 < local_44) {
+    lVar2 = 0;
+    do {
+      _puts(""Enter subject and marks:"");
+      _scanf(""%s %d"");
+      lVar2 = lVar2 + 1;
+    } while (lVar2 < local_44);
+  }
+  _puts(""Displaying Information:"");
+  if (0 < local_44) {
+    lVar2 = 0;
+    do {
+      _printf(""%s\t%d\n"");
+      lVar2 = lVar2 + 1;
+    } while (lVar2 < local_44);
+  }
+  _free(pvVar1);
+  return 0;
+}
+
+
+","This program starts by asking the user to input the number of records they want to create. It then allocates memory for these records. With a loop, it asks the user to repeatedly input the subject and marks for each record. Lastly, it prints all the entered records and frees up the memory allocated earlier.",0.06616259609591664
 68,C Program to Write a Sentence to a File,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C File Handling
@@ -4098,7 +7184,55 @@ int main() {
     fprintf(fptr, ""%s"", sentence);
     fclose(fptr);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  FILE *pFVar2;
+  char acStack_410 [1000];
+  long local_28;
+  
+  local_28 = *(long *)PTR____stack_chk_guard_100004008;
+  pFVar2 = _fopen(""program.txt"",""w"");
+  if (pFVar2 == (FILE *)0x0) {
+    _printf(""Error!"");
+                    /* WARNING: Subroutine does not return */
+    _exit(1);
+  }
+  _puts(""Enter a sentence:"");
+  _fgets(acStack_410,1000,*(FILE **)PTR____stdinp_100004010);
+  _fputs(acStack_410,pFVar2);
+  iVar1 = _fclose(pFVar2);
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_28) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","The code opens a text file named ""program.txt"" for writing. If it cannot open the file, the program ends with an Error message. Otherwise, it asks users to enter a sentence, reads the sentence from the standard input (usually, the keyboard), and writes it into the file. If there is a problem with the stack memory, it throws an error.",5.308426893184207e-155
 69,C Program to Read the First Line From a File,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C File Handling
@@ -4150,7 +7284,53 @@ int main() {
     fclose(fptr);
 
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  FILE *pFVar2;
+  long lVar3;
+  
+  lVar3 = *(long *)PTR____stack_chk_guard_100004008;
+  pFVar2 = _fopen(""program.txt"",""r"");
+  if (pFVar2 == (FILE *)0x0) {
+    _printf(""Error! File cannot be opened."");
+                    /* WARNING: Subroutine does not return */
+    _exit(1);
+  }
+  _fscanf(pFVar2,""%[^\n]"");
+  _printf(""Data from the file:\n%s"");
+  iVar1 = _fclose(pFVar2);
+  if (*(long *)PTR____stack_chk_guard_100004008 == lVar3) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","This is a simple C program used to read data from a file named 'program.txt'. It first opens this file and then checks if it is opened properly. If the file isn't available or accessible, it prints an error message. If the operation is successful, it reads the file till it finds a newline. After reading, it closes the file and checks for any errors. The ""_stack_chk_fail"" functions are part of a mechanism to detect stack overflows, a common programming error.",0.07015799428292915
 70,C Program to Display its own Source Code as Output,"To understand this example, you should have the knowledge of the following C programming topics:
 
 C Preprocessor and Macros
@@ -4195,4 +7375,21 @@ int main() {
     
     fclose(fp);
     return 0;
-}"
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  FILE *pFVar2;
+  
+  pFVar2 = _fopen(""./binaries/temp_70.c"",""r"");
+  do {
+    iVar1 = _getc(pFVar2);
+    _putchar(iVar1);
+  } while (iVar1 != -1);
+  _fclose(pFVar2);
+  return 0;
+}
+
+
+","This is a simple program in C that opens a file named 'temp_70.c' located in the 'binaries' directory and reads its content. For each character it reads, the program prints the character to the standard output (likely your console or terminal). It continues to do this until it reaches the end of the file, and then it closes the file.",3.5143947218092386e-155
