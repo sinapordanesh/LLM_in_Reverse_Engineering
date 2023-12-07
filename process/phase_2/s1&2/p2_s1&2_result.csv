@@ -1,0 +1,1130 @@
+﻿id,Name,original_code,decompiled,explanation,fv_naming
+7,"C Program to Find the Size of int, float, double and char","#include<stdio.h>
+int main() {
+int intType;
+float floatType;
+double doubleType;
+char charType;
+// sizeof evaluates the size of a variable
+printf(""Size of int: %zu bytes\n"", sizeof(intType));
+printf(""Size of float: %zu bytes\n"", sizeof(floatType));
+printf(""Size of double: %zu bytes\n"", sizeof(doubleType));
+printf(""Size of char: %zu byte\n"", sizeof(charType));
+return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Size of int: %zu bytes\n"");
+  _printf(""Size of float: %zu bytes\n"");
+  _printf(""Size of double: %zu bytes\n"");
+  _printf(""Size of char: %zu byte\n"");
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-data-types
+• https://www.programiz.com/c-programming/c-variables-constants
+• https://www.programiz.com/c-programming/c-input-output
+The sizeof(variable)operator computes the size of a variable. And, to print the result returned by sizeof, we use either %lu or %zu format specifier.
+
+In this program, 4 variables intType, floatType, doubleType and charType are declared.
+Then, the size of each variable is computed using the sizeof operator.","```json
+{
+    ""variables"": []
+}
+```
+```json
+{
+    ""functions"": [
+        {""originalName"": ""entry"", ""newName"": ""printDataSizeInfo""}
+    ]
+}
+```"
+20,C Program to Display Fibonacci Sequence,"#include <stdio.h>
+int main() {
+int i, n;
+// initialize first and second terms
+int t1 = 0, t2 = 1;
+// initialize the next term (3rd term)
+int nextTerm = t1 + t2;
+// get no. of terms from user
+printf(""Enter the number of terms: "");
+scanf(""%d"", &n);
+// print the first two terms t1 and t2
+printf(""Fibonacci Series: %d, %d, "", t1, t2);
+// print 3rd to nth terms
+for (i = 3; i <= n; ++i) {
+printf(""%d, "", nextTerm);
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+}
+return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  int local_34;
+  
+  _printf(""Enter the number of terms: "");
+  _scanf(""%d"");
+  _printf(""Fibonacci Series: %d, %d, "");
+  if (2 < local_34) {
+    iVar1 = 2;
+    do {
+      _printf(""%d, "");
+      iVar1 = iVar1 + 1;
+    } while (iVar1 < local_34);
+  }
+  return 0;
+}
+
+
+0","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-operators
+• https://www.programiz.com/c-programming/c-do-while-loops
+• https://www.programiz.com/c-programming/c-for-loop
+• https://www.programiz.com/c-programming/c-break-continue-statement
+The Fibonacci sequence is a sequence where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+
+The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+Visit this page to learn about https://www.mathsisfun.com/numbers/fibonacci-sequence.html.
+
+Let us suppose n = 10. First, we have printed the first two terms of the Fibonacci sequence before using a for loop to print the next n terms.
+L","```json
+{
+  ""variables"": [
+    {""originalName"": ""iVar1"", ""newName"": ""currentTermIndex""},
+    {""originalName"": ""local_34"", ""newName"": ""numTerms""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""_printf"", ""newName"": ""printf""},
+    {""originalName"": ""_scanf"", ""newName"": ""scanf""},
+    {""originalName"": ""entry"", ""newName"": ""printFibonacciSeries""}
+  ]
+}
+```"
+49,C Program to Multiply Two Matrices Using Multi-dimensional Arrays,"#include <stdio.h>
+
+// function to get matrix elements entered by the user
+void getMatrixElements(int matrix[][10], int row, int column) {
+
+   printf(""\nEnter elements: \n"");
+
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""Enter a%d%d: "", i + 1, j + 1);
+         scanf(""%d"", &matrix[i][j]);
+      }
+   }
+}
+
+// function to multiply two matrices
+void multiplyMatrices(int first[][10],
+                      int second[][10],
+                      int result[][10],
+                      int r1, int c1, int r2, int c2) {
+
+   // Initializing elements of matrix mult to 0.
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         result[i][j] = 0;
+      }
+   }
+
+   // Multiplying first and second matrices and storing it in result
+   for (int i = 0; i < r1; ++i) {
+      for (int j = 0; j < c2; ++j) {
+         for (int k = 0; k < c1; ++k) {
+            result[i][j] += first[i][k] * second[k][j];
+         }
+      }
+   }
+}
+
+// function to display the matrix
+void display(int result[][10], int row, int column) {
+
+   printf(""\nOutput Matrix:\n"");
+   for (int i = 0; i < row; ++i) {
+      for (int j = 0; j < column; ++j) {
+         printf(""%d  "", result[i][j]);
+         if (j == column - 1)
+            printf(""\n"");
+      }
+   }
+}
+
+int main() {
+   int first[10][10], second[10][10], result[10][10], r1, c1, r2, c2;
+   printf(""Enter rows and column for the first matrix: "");
+   scanf(""%d %d"", &r1, &c1);
+   printf(""Enter rows and column for the second matrix: "");
+   scanf(""%d %d"", &r2, &c2);
+
+   // Taking input until
+   // 1st matrix columns is not equal to 2nd matrix row
+   while (c1 != r2) {
+      printf(""Error! Enter rows and columns again.\n"");
+      printf(""Enter rows and columns for the first matrix: "");
+      scanf(""%d%d"", &r1, &c1);
+      printf(""Enter rows and columns for the second matrix: "");
+      scanf(""%d%d"", &r2, &c2);
+   }
+
+   // get elements of the first matrix
+   getMatrixElements(first, r1, c1);
+
+   // get elements of the second matrix
+   getMatrixElements(second, r2, c2);
+
+   // multiply two matrices.
+   multiplyMatrices(first, second, result, r1, c1, r2, c2);
+
+   // display the result
+   display(result, r1, c2);
+
+   return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  int *piVar3;
+  ulong uVar4;
+  long lVar5;
+  long lVar6;
+  ulong uVar7;
+  int *piVar8;
+  undefined8 *puVar9;
+  ulong uVar10;
+  int *piVar11;
+  ulong uVar12;
+  int *piVar13;
+  ulong uVar14;
+  ulong uVar15;
+  ulong uVar16;
+  int iVar17;
+  int iVar18;
+  int iVar19;
+  int iVar20;
+  int iVar21;
+  int iVar22;
+  int iVar23;
+  int iVar24;
+  int iVar25;
+  int iVar26;
+  int iVar27;
+  int iVar28;
+  int iVar29;
+  int iVar30;
+  int iVar31;
+  uint local_528;
+  uint local_524;
+  uint local_520;
+  uint local_51c;
+  int local_518 [100];
+  int local_388 [100];
+  int local_1f8 [8];
+  undefined8 auStack_1d8 [46];
+  long local_68;
+  
+  local_68 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter rows and columns for the first matrix: "");
+  _scanf(""%d %d"");
+  _printf(""Enter rows and columns for the second matrix: "");
+  _scanf(""%d %d"");
+  while (local_520 != local_524) {
+    _puts(""Error! Enter rows and columns again."");
+    _printf(""Enter rows and columns for the first matrix: "");
+    _scanf(""%d%d"");
+    _printf(""Enter rows and columns for the second matrix: "");
+    _scanf(""%d%d"");
+  }
+  _puts(""\nEnter elements:"");
+  if ((0 < (int)local_520) && (0 < (int)local_51c)) {
+    uVar14 = 0;
+    do {
+      uVar16 = 0;
+      uVar14 = uVar14 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter a%d%d: "");
+        _scanf(""%d"");
+      } while (local_520 != uVar16);
+    } while (uVar14 != local_51c);
+  }
+  _puts(""\nEnter elements:"");
+  if ((0 < (int)local_524) && (0 < (int)local_528)) {
+    uVar14 = 0;
+    do {
+      uVar16 = 0;
+      uVar14 = uVar14 + 1;
+      do {
+        uVar16 = uVar16 + 1;
+        _printf(""Enter a%d%d: "");
+        _scanf(""%d"");
+      } while (local_528 != uVar16);
+    } while (uVar14 != local_524);
+  }
+  uVar14 = (ulong)local_51c;
+  if (((int)local_51c < 1) || (uVar16 = (ulong)local_528, (int)local_528 < 1)) {
+    iVar1 = _puts(""\nOutput Matrix:"");
+  }
+  else {
+    uVar15 = (ulong)local_520;
+    piVar8 = local_518;
+    uVar7 = uVar14;
+    do {
+      _bzero(piVar8,uVar16 << 2);
+      piVar8 = piVar8 + 10;
+      uVar7 = uVar7 - 1;
+    } while (uVar7 != 0);
+    if (0 < (int)local_520) {
+      if (local_520 < 0x10) {
+        uVar7 = 0;
+        piVar8 = local_1f8;
+        do {
+          uVar10 = 0;
+          piVar11 = local_388;
+          do {
+            iVar1 = local_518[uVar7 * 10 + uVar10];
+            uVar12 = uVar15;
+            piVar3 = piVar8;
+            piVar13 = piVar11;
+            do {
+              iVar1 = iVar1 + *piVar13 * *piVar3;
+              uVar12 = uVar12 - 1;
+              piVar3 = piVar3 + 1;
+              piVar13 = piVar13 + 10;
+            } while (uVar12 != 0);
+            local_518[uVar7 * 10 + uVar10] = iVar1;
+            uVar10 = uVar10 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar10 != uVar16);
+          uVar7 = uVar7 + 1;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar14);
+      }
+      else {
+        uVar7 = 0;
+        uVar10 = uVar15 & 0xfffffff0;
+        puVar9 = auStack_1d8;
+        piVar8 = local_1f8 + (ulong)(local_520 >> 4) * 0x10;
+        do {
+          uVar12 = 0;
+          piVar11 = local_388;
+          do {
+            iVar18 = 0;
+            iVar19 = 0;
+            iVar1 = local_518[uVar7 * 10 + uVar12];
+            iVar17 = 0;
+            iVar20 = 0;
+            iVar21 = 0;
+            iVar22 = 0;
+            iVar23 = 0;
+            iVar24 = 0;
+            iVar25 = 0;
+            iVar26 = 0;
+            iVar27 = 0;
+            iVar28 = 0;
+            iVar29 = 0;
+            iVar30 = 0;
+            iVar31 = 0;
+            puVar2 = puVar9;
+            piVar3 = piVar11;
+            uVar4 = uVar10;
+            do {
+              iVar1 = iVar1 + *piVar3 * (int)puVar2[-4];
+              iVar17 = iVar17 + piVar3[10] * (int)((ulong)puVar2[-4] >> 0x20);
+              iVar18 = iVar18 + piVar3[0x14] * (int)puVar2[-3];
+              iVar19 = iVar19 + piVar3[0x1e] * (int)((ulong)puVar2[-3] >> 0x20);
+              iVar20 = iVar20 + piVar3[0x28] * (int)puVar2[-2];
+              iVar21 = iVar21 + piVar3[0x32] * (int)((ulong)puVar2[-2] >> 0x20);
+              iVar22 = iVar22 + piVar3[0x3c] * (int)puVar2[-1];
+              iVar23 = iVar23 + piVar3[0x46] * (int)((ulong)puVar2[-1] >> 0x20);
+              iVar24 = iVar24 + piVar3[0x50] * (int)*puVar2;
+              iVar25 = iVar25 + piVar3[0x5a] * (int)((ulong)*puVar2 >> 0x20);
+              iVar26 = iVar26 + piVar3[100] * (int)puVar2[1];
+              iVar27 = iVar27 + piVar3[0x6e] * (int)((ulong)puVar2[1] >> 0x20);
+              iVar28 = iVar28 + piVar3[0x78] * (int)puVar2[2];
+              iVar29 = iVar29 + piVar3[0x82] * (int)((ulong)puVar2[2] >> 0x20);
+              iVar30 = iVar30 + piVar3[0x8c] * (int)puVar2[3];
+              iVar31 = iVar31 + piVar3[0x96] * (int)((ulong)puVar2[3] >> 0x20);
+              piVar3 = piVar3 + 0xa0;
+              uVar4 = uVar4 - 0x10;
+              puVar2 = puVar2 + 8;
+            } while (uVar4 != 0);
+            iVar1 = iVar28 + iVar24 + iVar20 + iVar1 + iVar29 + iVar25 + iVar21 + iVar17 +
+                    iVar30 + iVar26 + iVar22 + iVar18 + iVar31 + iVar27 + iVar23 + iVar19;
+            piVar3 = piVar8;
+            lVar5 = (ulong)(local_520 >> 4) * 0x280;
+            lVar6 = uVar15 - uVar10;
+            if (uVar10 != uVar15) {
+              do {
+                iVar1 = iVar1 + *(int *)((long)piVar11 + lVar5) * *piVar3;
+                lVar6 = lVar6 + -1;
+                piVar3 = piVar3 + 1;
+                lVar5 = lVar5 + 0x28;
+              } while (lVar6 != 0);
+            }
+            local_518[uVar7 * 10 + uVar12] = iVar1;
+            uVar12 = uVar12 + 1;
+            piVar11 = piVar11 + 1;
+          } while (uVar12 != uVar16);
+          uVar7 = uVar7 + 1;
+          puVar9 = puVar9 + 5;
+          piVar8 = piVar8 + 10;
+        } while (uVar7 != uVar14);
+      }
+    }
+    _puts(""\nOutput Matrix:"");
+    uVar7 = 0;
+    uVar15 = (ulong)(local_528 - 1);
+    uVar10 = uVar16;
+    do {
+      iVar1 = _printf(""%d  "");
+      if (uVar15 == 0) {
+        iVar1 = _putchar(10);
+      }
+      uVar10 = uVar10 - 1;
+      uVar15 = uVar15 - 1;
+    } while ((uVar10 != 0) ||
+            (uVar7 = uVar7 + 1, uVar15 = (ulong)(local_528 - 1), uVar10 = uVar16, uVar7 != uVar14));
+  }
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_68) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C Multidimensional Arrays
+This program asks the user to enter the size (rows and columns) of two matrices.
+
+To multiply two matrices, the number of columns of the first matrix should be equal to the number of rows of the second matrix.
+
+The program below asks for the number of rows and columns of two matrices until the above condition is satisfied.
+
+Then, the multiplication of two matrices is performed, and the result is displayed on the screen.
+
+To perform this, we have created three functions:
+
+getMatrixElements() - to take matrix elements input from the user.
+multiplyMatrices() - to multiply two matrices.
+display() - to display the resultant matrix after multiplication.",Timeout occurred.
+53,C Program Swap Numbers in Cyclic Order Using Call by Reference,"#include <stdio.h>
+void cyclicSwap(int *a, int *b, int *c);
+int main() {
+int a, b, c;
+printf(""Enter a, b and c respectively: "");
+scanf(""%d %d %d"", &a, &b, &c);
+printf(""Value before swapping:\n"");
+printf(""a = %d \nb = %d \nc = %d\n"", a, b, c);
+cyclicSwap(&a, &b, &c);
+printf(""Value after swapping:\n"");
+printf(""a = %d \nb = %d \nc = %d"", a, b, c);
+return 0;
+}
+void cyclicSwap(int *n1, int *n2, int *n3) {
+int temp;
+// swapping in cyclic order
+temp = *n2;
+*n2 = *n1;
+*n1 = *n3;
+*n3 = temp;
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Enter a, b and c respectively: "");
+  _scanf(""%d %d %d"");
+  _puts(""Value before swapping:"");
+  _printf(""a = %d \nb = %d \nc = %d\n"");
+  _puts(""Value after swapping:"");
+  _printf(""a = %d \nb = %d \nc = %d"");
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C Pointers
+C Pass Addresses and Pointers
+
+Here, the three numbers entered by the user are stored in variables a, b and c respectively. The addresses of these numbers are passed to the cyclicSwap() function.
+
+cyclicSwap(&a, &b, &c);
+
+In the function definition of cyclicSwap(), we have assigned these addresses to pointers.
+
+cyclicSwap(int *n1, int *n2, int *n3) {
+    ...
+}
+
+
+When n1, n2 and n3 inside cyclicSwap() are changed, the values of a, b and c inside main() are also changed.
+Note: The cyclicSwap() function is not returning anything.","```json
+{
+  ""variables"": [
+    {""originalName"": ""_printf"", ""newName"": ""print""},
+    {""originalName"": ""_scanf"", ""newName"": ""scan""},
+    {""originalName"": ""_puts"", ""newName"": ""printLine""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""entry"", ""newName"": ""main""}
+  ]
+}
+```"
+58,C Program to Find the Length of a String,"#include <stdio.h>
+int main() {
+    char s[] = ""Programming is fun"";
+    int i;
+
+    for (i = 0; s[i] != '\0'; ++i);
+    
+    printf(""Length of the string: %d"", i);
+    return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  _printf(""Length of the string: %d"");
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C Programming Strings
+String Manipulations In C Programming Using Library Functions
+C for Loop
+As you know, the best way to find the length of a string is by using the strlen() function. However, in this example, we will find the length of a string manually.
+
+Here, using a for loop, we have iterated over characters of the string from i = 0 to until '\0' (null character) is encountered. In each iteration, the value of i is increased by 1.
+When the loop ends, the length of the string will be stored in the i variable.
+Note: Here, the array s[] has 19 elements. The last element s[18] is the null character '\0'. But our loop does not count this character as it terminates upon encountering it.","```json
+{
+  ""variables"": []
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""entry"", ""newName"": ""main""}
+  ]
+}
+```"
+61,C Program to Sort Elements in Lexicographical Order (Dictionary Order),"#include <stdio.h>
+#include <string.h>
+int main() {
+char str[5][50], temp[50];
+printf(""Enter 5 words: "");
+// Getting strings input
+for (int i = 0; i < 5; ++i) {
+fgets(str[i], sizeof(str[i]), stdin);
+}
+// storing strings in the lexicographical order
+for (int i = 0; i < 5; ++i) {
+for (int j = i + 1; j < 5; ++j) {
+// swapping strings if they are not in the lexicographical order
+if (strcmp(str[i], str[j]) > 0) {
+strcpy(temp, str[i]);
+strcpy(str[i], str[j]);
+strcpy(str[j], temp);
+}
+}
+}
+printf(""\nIn the lexicographical order: \n"");
+for (int i = 0; i < 5; ++i) {
+fputs(str[i], stdout);
+}
+return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  undefined *puVar1;
+  int iVar2;
+  undefined auStack_174 [50];
+  char acStack_142 [50];
+  char acStack_110 [50];
+  char acStack_de [50];
+  char acStack_ac [50];
+  char acStack_7a [50];
+  long local_48;
+  
+  local_48 = *(long *)PTR____stack_chk_guard_100004008;
+  _printf(""Enter 5 words: "");
+  puVar1 = PTR____stdinp_100004010;
+  _fgets(acStack_142,0x32,*(FILE **)PTR____stdinp_100004010);
+  _fgets(acStack_110,0x32,*(FILE **)puVar1);
+  _fgets(acStack_de,0x32,*(FILE **)puVar1);
+  _fgets(acStack_ac,0x32,*(FILE **)puVar1);
+  _fgets(acStack_7a,0x32,*(FILE **)puVar1);
+  iVar2 = _strcmp(acStack_142,acStack_110);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_110,0xfa);
+    ___strcpy_chk(acStack_110,auStack_174,200);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_de);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_de,0xfa);
+    ___strcpy_chk(acStack_de,auStack_174,0x96);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_ac,0xfa);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_142,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_142,0x32);
+    ___strcpy_chk(acStack_142,acStack_7a,0xfa);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_de);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_de,200);
+    ___strcpy_chk(acStack_de,auStack_174,0x96);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_ac,200);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_110,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_110,0x32);
+    ___strcpy_chk(acStack_110,acStack_7a,200);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_de,acStack_ac);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_de,0x32);
+    ___strcpy_chk(acStack_de,acStack_ac,0x96);
+    ___strcpy_chk(acStack_ac,auStack_174,100);
+  }
+  iVar2 = _strcmp(acStack_de,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_de,0x32);
+    ___strcpy_chk(acStack_de,acStack_7a,0x96);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  iVar2 = _strcmp(acStack_ac,acStack_7a);
+  if (0 < iVar2) {
+    ___strcpy_chk(auStack_174,acStack_ac,0x32);
+    ___strcpy_chk(acStack_ac,acStack_7a,100);
+    ___strcpy_chk(acStack_7a,auStack_174,0x32);
+  }
+  _puts(""\nIn the lexicographical order: "");
+  puVar1 = PTR____stdoutp_100004018;
+  _fputs(acStack_142,*(FILE **)PTR____stdoutp_100004018);
+  _fputs(acStack_110,*(FILE **)puVar1);
+  _fputs(acStack_de,*(FILE **)puVar1);
+  _fputs(acStack_ac,*(FILE **)puVar1);
+  iVar2 = _fputs(acStack_7a,*(FILE **)puVar1);
+  if (*(long *)PTR____stack_chk_guard_100004008 == local_48) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar2);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+void ___strcpy_chk(void)
+
+{
+  (*(code *)PTR____strcpy_chk_100004020)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___strcpy_chk(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-multi-dimensional-arrays
+• https://www.programiz.com/c-programming/c-strings
+• https://www.programiz.com/c-programming/string-handling-functions
+
+To solve this program, a two-dimensional string named str is created. The string can hold a maximum of 5 strings and each string can have a maximum of 50 characters (including the null character).
+
+In the program, we have used two library functions:
+• https://www.programiz.com/c-programming/library-function/string.h/strcmp - to compare strings
+• https://www.programiz.com/c-programming/library-function/string.h/strcpy - to copy strings
+These functions are used to compare strings and sort them in the correct order.","```json
+{
+  ""variables"": [
+    {""originalName"": ""puVar1"", ""newName"": ""inputFilePointer""},
+    {""originalName"": ""iVar2"", ""newName"": ""comparisonResult""},
+    {""originalName"": ""auStack_174"", ""newName"": ""tempWordBuffer""},
+    {""originalName"": ""acStack_142"", ""newName"": ""word1""},
+    {""originalName"": ""acStack_110"", ""newName"": ""word2""},
+    {""originalName"": ""acStack_de"", ""newName"": ""word3""},
+    {""originalName"": ""acStack_ac"", ""newName"": ""word4""},
+    {""originalName"": ""acStack_7a"", ""newName"": ""word5""},
+    {""originalName"": ""local_48"", ""newName"": ""stackCheckGuard""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""entry"", ""newName"": ""main""},
+    {""originalName"": ""___stack_chk_fail"", ""newName"": ""stackCheckFail""},
+    {""originalName"": ""___strcpy_chk"", ""newName"": ""safeStringCopy""},
+    {""originalName"": ""_printf"", ""newName"": ""print""},
+    {""originalName"": ""_fgets"", ""newName"": ""getString""},
+    {""originalName"": ""_strcmp"", ""newName"": ""compareStrings""},
+    {""originalName"": ""_puts"", ""newName"": ""outputString""},
+    {""originalName"": ""_fputs"", ""newName"": ""fileOutputString""}
+  ]
+}
+```"
+62,C Program to Store Information of a Student Using Structure,"#include <stdio.h>
+struct student {
+    char name[50];
+    int roll;
+    float marks;
+} s;
+
+int main() {
+    printf(""Enter information:\n"");
+    printf(""Enter name: "");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf(""Enter roll number: "");
+    scanf(""%d"", &s.roll);
+    printf(""Enter marks: "");
+    scanf(""%f"", &s.marks);
+
+    printf(""Displaying Information:\n"");
+    printf(""Name: "");
+    printf(""%s"", s.name);
+    printf(""Roll number: %d\n"", s.roll);
+    printf(""Marks: %.1f\n"", s.marks);
+
+    return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""Enter information:"");
+  _printf(""Enter name: "");
+  _fgets(&DAT_100008000,0x32,*(FILE **)PTR____stdinp_100004000);
+  _printf(""Enter roll number: "");
+  _scanf(""%d"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  _puts(""Displaying Information:"");
+  _printf(""Name: "");
+  _printf(""%s"");
+  _printf(""Roll number: %d\n"");
+  _printf(""Marks: %.1f\n"");
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following https://www.programiz.com/c-programming topics:
+• https://www.programiz.com/c-programming/c-structures
+
+In this program, a structure student is created. The structure has three members: name (string), roll (integer) and marks (float).
+
+Then, a structure variable s is created to store information and display it on the screen.","```json
+{
+  ""variables"": [
+    {""originalName"": ""DAT_100008000"", ""newName"": ""userInputBuffer""},
+    {""originalName"": ""PTR____stdinp_100004000"", ""newName"": ""stdinPointer""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""_puts"", ""newName"": ""puts""},
+    {""originalName"": ""_printf"", ""newName"": ""printf""},
+    {""originalName"": ""_fgets"", ""newName"": ""fgets""},
+    {""originalName"": ""_scanf"", ""newName"": ""scanf""},
+    {""originalName"": ""entry"", ""newName"": ""main""}
+  ]
+}
+```"
+66,C Program to Store Information of Students Using Structure,"#include <stdio.h>
+struct student {
+    char firstName[50];
+    int roll;
+    float marks;
+} s[5];
+
+int main() {
+    int i;
+    printf(""Enter information of students:\n"");
+
+    // storing information
+    for (i = 0; i < 5; ++i) {
+        s[i].roll = i + 1;
+        printf(""\nFor roll number%d,\n"", s[i].roll);
+        printf(""Enter first name: "");
+        scanf(""%s"", s[i].firstName);
+        printf(""Enter marks: "");
+        scanf(""%f"", &s[i].marks);
+    }
+    printf(""Displaying Information:\n\n"");
+
+    // displaying information
+    for (i = 0; i < 5; ++i) {
+        printf(""\nRoll number: %d\n"", i + 1);
+        printf(""First name: "");
+        puts(s[i].firstName);
+        printf(""Marks: %.1f"", s[i].marks);
+        printf(""\n"");
+    }
+    return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  _puts(""Enter information of students:"");
+  DAT_100008034 = 1;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_100008070 = 2;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_1000080ac = 3;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_1000080e8 = 4;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  DAT_100008124 = 5;
+  _printf(""\nFor roll number%d,\n"");
+  _printf(""Enter first name: "");
+  _scanf(""%s"");
+  _printf(""Enter marks: "");
+  _scanf(""%f"");
+  _puts(""Displaying Information:\n"");
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_100008000);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_10000803c);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_100008078);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_1000080b4);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  _printf(""\nRoll number: %d\n"");
+  _printf(""First name: "");
+  _puts(&DAT_1000080f0);
+  _printf(""Marks: %.1f"");
+  _putchar(10);
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C Arrays
+C struct
+
+In this program, a structure student is created. The structure has three members: name (string), roll (integer) and marks (float).
+
+Then, we created an array of structures s having 5 elements to store information of 5 students.
+Using a for loop, the program takes the information of 5 students from the user and stores it in the array of structure. Then using another for loop, the information entered by the user is displayed on the screen.","```json
+{
+  ""variables"": [
+    {""originalName"": ""DAT_100008034"", ""newName"": ""rollNumber1""},
+    {""originalName"": ""DAT_100008070"", ""newName"": ""rollNumber2""},
+    {""originalName"": ""DAT_1000080ac"", ""newName"": ""rollNumber3""},
+    {""originalName"": ""DAT_1000080e8"", ""newName"": ""rollNumber4""},
+    {""originalName"": ""DAT_100008124"", ""newName"": ""rollNumber5""},
+    {""originalName"": ""DAT_100008000"", ""newName"": ""firstName1""},
+    {""originalName"": ""DAT_10000803c"", ""newName"": ""firstName2""},
+    {""originalName"": ""DAT_100008078"", ""newName"": ""firstName3""},
+    {""originalName"": ""DAT_1000080b4"", ""newName"": ""firstName4""},
+    {""originalName"": ""DAT_1000080f0"", ""newName"": ""firstName5""}
+  ]
+}
+```
+```json
+{
+  ""functions"": [
+    {""originalName"": ""_puts"", ""newName"": ""displayMessage""},
+    {""originalName"": ""_printf"", ""newName"": ""displayFormattedMessage""},
+    {""originalName"": ""_scanf"", ""newName"": ""readInput""},
+    {""originalName"": ""_putchar"", ""newName"": ""displayCharacter""}
+  ]
+}
+```"
+69,C Program to Read the First Line From a File,"#include <stdio.h>
+#include <stdlib.h> // For exit() function
+int main() {
+    char c[1000];
+    FILE *fptr;
+    if ((fptr = fopen(""program.txt"", ""r"")) == NULL) {
+        printf(""Error! File cannot be opened."");
+        // Program exits if the file pointer returns NULL.
+        exit(1);
+    }
+
+    // reads text until newline is encountered
+    fscanf(fptr, ""%[^\n]"", c);
+    printf(""Data from the file:\n%s"", c);
+    fclose(fptr);
+
+    return 0;"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  FILE *pFVar2;
+  long lVar3;
+  
+  lVar3 = *(long *)PTR____stack_chk_guard_100004008;
+  pFVar2 = _fopen(""program.txt"",""r"");
+  if (pFVar2 == (FILE *)0x0) {
+    _printf(""Error! File cannot be opened."");
+                    /* WARNING: Subroutine does not return */
+    _exit(1);
+  }
+  _fscanf(pFVar2,""%[^\n]"");
+  _printf(""Data from the file:\n%s"");
+  iVar1 = _fclose(pFVar2);
+  if (*(long *)PTR____stack_chk_guard_100004008 == lVar3) {
+    return 0;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail(iVar1);
+}
+
+
+
+void ___stack_chk_fail(void)
+
+{
+  (*(code *)PTR____stack_chk_fail_100004000)();
+  return;
+}
+
+
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void ___stack_chk_fail(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C File Handling
+C Programming Strings
+
+If the file is found, the program saves the content of the file to a string c until '\n' newline is encountered.
+Suppose the program.txt file contains the following text in the current directory.
+
+C programming is awesome.
+I love C programming.
+How are you doing? 
+
+
+The output of the program will be:
+
+Data from the file:
+C programming is awesome.
+
+If the file program.txt is not found, the program prints the error message.","```json
+{
+  ""variables"": [
+    {""originalName"": ""iVar1"", ""newName"": ""fileCloseStatus""},
+    {""originalName"": ""pFVar2"", ""newName"": ""filePointer""},
+    {""originalName"": ""lVar3"", ""newName"": ""stackCheckGuard""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""entry"", ""newName"": ""main""},
+    {""originalName"": ""_fopen"", ""newName"": ""openFile""},
+    {""originalName"": ""_printf"", ""newName"": ""printMessage""},
+    {""originalName"": ""_exit"", ""newName"": ""exitProgram""},
+    {""originalName"": ""_fscanf"", ""newName"": ""scanFile""},
+    {""originalName"": ""_fclose"", ""newName"": ""closeFile""},
+    {""originalName"": ""___stack_chk_fail"", ""newName"": ""stackCheckFail""},
+    {""originalName"": ""___stack_chk_fail"", ""newName"": ""stackCheckFailDuplicate""},
+    {""originalName"": ""halt_baddata"", ""newName"": ""haltBadData""}
+  ]
+}
+```"
+70,C Program to Display its own Source Code as Output,"#include <stdio.h>
+int main() {
+    FILE *fp;
+    int c;
+   
+    // open the current input file
+    fp = fopen(__FILE__,""r"");
+
+    do {
+         c = getc(fp);   // read character 
+         putchar(c);     // display character
+    }
+    while(c != EOF);  // loop until the end of file is reached
+    
+    fclose(fp);
+    return 0;
+}"," 
+undefined8 entry(void)
+
+{
+  int iVar1;
+  FILE *pFVar2;
+  
+  pFVar2 = _fopen(""./binaries/temp_70.c"",""r"");
+  do {
+    iVar1 = _getc(pFVar2);
+    _putchar(iVar1);
+  } while (iVar1 != -1);
+  _fclose(pFVar2);
+  return 0;
+}
+
+
+","To understand this example, you should have the knowledge of the following C programming topics:
+
+C Preprocessor and Macros
+C File Handling
+Though this problem seems complex, the concept behind this program is straightforward; display the content from the same file you are writing the source code.
+
+Procedure to display its own source code in C programming
+In C programming, there is a predefined macro named __FILE__ that gives the name of the current input file.
+
+#include <stdio.h>
+int main() {
+
+   // location the current input file.
+   printf(""%s"",__FILE__);
+}","```json
+{
+  ""variables"": [
+    {""originalName"": ""iVar1"", ""newName"": ""readChar""},
+    {""originalName"": ""pFVar2"", ""newName"": ""filePointer""}
+  ]
+}
+```
+
+```json
+{
+  ""functions"": [
+    {""originalName"": ""_fopen"", ""newName"": ""fopen""},
+    {""originalName"": ""_getc"", ""newName"": ""getc""},
+    {""originalName"": ""_putchar"", ""newName"": ""putchar""},
+    {""originalName"": ""_fclose"", ""newName"": ""fclose""},
+    {""originalName"": ""entry"", ""newName"": ""printFileContents""}
+  ]
+}
+```"
