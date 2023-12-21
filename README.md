@@ -48,7 +48,10 @@ For each scenario, we estimated the token size of prompts and responses to manag
 
 ## Scenario_1
 
-<img src="./images/Untitled 1.svg" alt="phase1" width="600"/>
+<div style="text-align: center;">
+    <img src="./images/Untitled 1.svg" alt="phase1" width="1000"/>
+</div>
+
 
 In the first scenario, we will pass commented original code to the GPT-4 and ask the model for generating explanation on the code. Then, we'll store the result for later BLEU score calculation versus original explanation on the application that we gathered from the source code website. We will query 70 times on GPT4 and storing responses on a `.csv` file 
 
@@ -57,14 +60,14 @@ In the first scenario, we will pass commented original code to the GPT-4 and ask
 ```
 Problem Name: <problem_name>
 
-<code> 
+<code_secion> 
 
 Please provide an explanation of this C code in a concise and straightforward manner, similar to a brief textbook definition. Focus on the main components and their basic functions, avoiding technical jargon. Aim for an explanation of around 60-80 words, suitable for beginners in programming.
 ```
 
 - This prompt contains the <problem_name> for guiding better the model on what it's going to explain.
-- The code which is being used for this prompt is the <code> which contains reasonable comments on the code.
-- Also, we have `C code` comment for giving the model about the programming language.
+- The code which is being used for this prompt is the <code_secion> which contains reasonable comments on the code.
+- Also, we have "C code" comment for giving the model about the programming language.
 
 ### Experimental Data
 
@@ -74,20 +77,22 @@ Dat for this phase can be found in this [link](https://github.com/sinapordanesh/
 
 ## Scenario_2
 
-<img src="./images/Untitled 2.svg" alt="phase2" width="600"/>
+<div style="text-align: center;">
+    <img src="./images/Untitled 2.svg" alt="phase2" width="1000"/>
+</div>
 
 In the second scenario, we will pass **un-commented** original code to the GPT-4 and ask the model for generating explanation on the code. We also removed the problem_name from the prompt for making the code a bit more unclear. Then, we'll store the result for later BLEU score calculation versus original explanation on the application that we gathered from the source code website. We will query 70 times on GPT4 and storing responses on a `.csv` file 
 
 ### Prompt
 
 ```
-<code> 
+<code_secion> 
 
 Please provide an explanation of this code in a concise and straightforward manner, similar to a brief textbook definition. Focus on the main components and their basic functions, avoiding technical jargon. Aim for an explanation of around 60-80 words, suitable for beginners in programming.
 ```
 
 - This prompt contains the <problem_name> for guiding better the model on what it's going to explain.
-- The uncommented code will be placed on <code>.
+- The uncommented code will be placed on <code_secion>.
 
 ### Experimental Data
 
@@ -97,20 +102,21 @@ Dat for this phase can be found in this [link](https://github.com/sinapordanesh/
 
 ## Scenario_3
 
-<img src="./images/Untitled 3.svg" alt="phase3" width="600"/>
-
+<div style="text-align: center;">
+    <img src="./images/Untitled 3.svg" alt="phase3" width="1000"/>
+</div>
 
 In the third scenario, we will pass decompiled code to the GPT-4 and ask the model for generating explanation on the code. For reaching to the decompiled code, we first compiled the code using gcc and then decompiled all resulted binary using Ghidra. Afterwards, we gathered all resulted decompiled code on a new `.csv` file. Then, we'll store the result for later BLEU score calculation versus original explanation on the application that we gathered from the source code website. We will query 70 times on GPT4 and storing responses on a `.csv` file.
 
 ### Prompt
 
 ```
-<code> 
+<code_secion> 
 
 Please provide an explanation of this C code in a concise and straightforward manner, similar to a brief textbook definition. Focus on the main components and their basic functions, avoiding technical jargon. Aim for an explanation of around 60-80 words, suitable for beginners in programming.
 ```
 
-- We put decompiled code on <code> section of each prompt in each iteration over dataset.
+- We put decompiled code on <code_secion> section of each prompt in each iteration over dataset.
 
 ### Experimental Data
 
