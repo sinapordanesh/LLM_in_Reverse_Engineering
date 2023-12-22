@@ -136,13 +136,17 @@ In this scenario, we will focus more on some real world malware analyziz by prov
     <img src="./images/p2-data.svg" alt="phase3" width="600"/>
 </div>
 
+<p align="center">
+  <img src="./images/p2-data.svg" alt="phase3" width="600"/>
+</p>
+
 ## Source
 
 In Phase 2, our experiment delves into malware understanding. All compilation and decompilation processes occurred in an isolated environment to maintain safety and integrity. No scripts or binary files from this phase are included in the GitHub repository. Data sources vary across samples, as specified in the data file.
 
 Access the data [here](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/experiment/data/phase_2). Key files and folders:
 
-- **[`phase_2.cvs.csv`](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/experiment/data/phase_2/phase_2.cvs.csv)**
+- **[`phase_2.csv`](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/experiment/data/phase_2/phase_2.cvs.csv)**
 - [code](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/experiment/data/phase_2/code) directory
 
 ## Structure
