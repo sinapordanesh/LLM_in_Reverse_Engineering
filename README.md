@@ -132,10 +132,6 @@ In this scenario, we will focus more on some real world malware analyziz by prov
 
 # Data
 
-<div style="text-align: center;">
-    <img src="./images/p2-data.svg" alt="phase3" width="600"/>
-</div>
-
 <p align="center">
   <img src="./images/p2-data.svg" alt="phase3" width="600"/>
 </p>
@@ -180,9 +176,9 @@ Token estimations are different in each scenario. Ditailed token estimation sect
 
 ## Scenario_1&2: Variable & Function Name Detection
 
-<div style="text-align: center;">
+<p align="center">
     <img src="./images/p2-s1&2.svg" alt="phase3" width="600"/>
-</div>
+</p>
 
 We used 10 sample data rows from the first phase to understand variable and function naming better. We aimed to enhance readability and comprehension by assigning meaningful and human-readable names to functions and variables.
 
@@ -227,9 +223,9 @@ We developed a rubric focusing on meaningfulness and effectiveness of the rename
 
 ## Scenario_3: Binary Understanding
 
-<div style="text-align: center;">
+<p align="center">
     <img src="./images/p2-s3.svg" alt="phase3" width="600"/>
-</div>
+</p>
 
 This section involved setting a series of questions to evaluate the code's functionality and security implications. Questions only have binary Y/N answers. For more information about why these questions where selected, please refer to the experiment's report. 
 
@@ -287,9 +283,9 @@ Just return Y or N in front of each question ID, without any extra word!!
 
 ## Scenario_4: Function Explanation
 
-<div style="text-align: center;">
+<p align="center">
     <img src="./images/p2-s4.svg" alt="phase3" width="600"/>
-</div>
+</p>
 
 Comparing GPT-4 responses on original and decompiled code, focusing on function explanations from the perspective of reverse engineering and security analysis.
 
@@ -352,9 +348,9 @@ Rubric for Reverse Engineering Explanation Evaluation with categories including 
 
  
 
-<div style="text-align: center;">
+<p align="center">
     <img src="./images/p2-s5.svg" alt="phase3" width="600"/>
-</div>
+</p>
 
 The objective of this scenario is deepen understanding of the code through a set of specific questions.
 
