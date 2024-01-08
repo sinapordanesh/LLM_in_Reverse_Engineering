@@ -1,3 +1,13 @@
+# Exploring the Efficacy of Large Language Models(GPT-4) in Binary Reverse Engineering - Experiment Setup 
+This repository is dedicated to our groundbreaking research project, "Exploring the Capabilities of Large Language Models in Binary Reverse Engineering." Here, we delve into the fascinating world of applying advanced AI models, particularly GPT-4, to the nuanced field of reverse engineering. Our research, published in an academic paper, investigates how these sophisticated models interpret and explain both human-written and decompiled binary code.
+
+Ditailed Experimental design, resutlts, analyziz, and disscussion will be find on the (project report)[]
+
+<div style="text-align: center;">
+    <img src="./images/paper.svg" alt="phase1" width="800"/>
+</div>
+
+
 # Phase_1
 
 In Phase 1 of our experiment, we explore the capability of GPT-4 in providing explanations for C programming code. Our objective is to assess the AI model's proficiency in understanding and elucidating programming concepts, which is critical for educational purposes and assisting novice programmers.
