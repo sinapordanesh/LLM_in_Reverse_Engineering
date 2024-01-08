@@ -71,7 +71,7 @@ Please provide an explanation of this C code in a concise and straightforward ma
 
 ### Experimental Data
 
-Dat for this phase can be found in this [link](https://github.com/sinapordanesh/Exploring-the-Efficacy-of-Large-Language-Models-GPT-4-in-Binary-Reverse-Engineering/tree/main/data/phase_1).
+Dat for this phase can be found in this [link](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/data/phase_1).
 
 - `phase_1_data.csv`
 
