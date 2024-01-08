@@ -1,7 +1,7 @@
 # Exploring the Efficacy of Large Language Models(GPT-4) in Binary Reverse Engineering - Experiment Setup 
 This repository is dedicated to our groundbreaking research project, "Exploring the Capabilities of Large Language Models in Binary Reverse Engineering." Here, we delve into the fascinating world of applying advanced AI models, particularly GPT-4, to the nuanced field of reverse engineering. Our research, published in an academic paper, investigates how these sophisticated models interpret and explain both human-written and decompiled binary code.
 
-Ditailed Experimental design, resutlts, analyziz, and disscussion will be find on the (project report)[]
+Ditailed Experimental design, resutlts, analyziz, and disscussion will be find on the [project report](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/report/Exploring%20the%20Efficacy%20of%20Large%20Language%20Models%20(GPT-4)%20in%20Binary%20Reverse%20Engineering.pdf)
 
 <div style="text-align: center;">
     <img src="./images/paper.svg" alt="phase1" width="800"/>
