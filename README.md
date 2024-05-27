@@ -1,7 +1,7 @@
 # Exploring the Efficacy of Large Language Models(GPT-4) in Binary Reverse Engineering - Experiment Setup 
 This repository is dedicated to our groundbreaking research project, "Exploring the Capabilities of Large Language Models in Binary Reverse Engineering." Here, we delve into the fascinating world of applying advanced AI models, particularly GPT-4, to the nuanced field of reverse engineering. Our research, published in an academic paper, investigates how these sophisticated models interpret and explain both human-written and decompiled binary code.
 
-Ditailed Experimental design, resutlts, analyziz, and disscussion will be find on the [project report](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/Exploring%20the%20Efficacy%20of%20Large%20Language%20Models%20(GPT-4)%20in%20Binary%20Reverse%20Engineering.pdf)
+Ditailed Experimental design, resutlts, analyziz, and disscussion will be find on the [project report](./Exploring%20the%20Efficacy%20of%20Large%20Language%20Models%20(GPT-4)%20in%20Binary%20Reverse%20Engineering.pdf)
 
 <div style="text-align: center;">
     <img src="./images/paper.svg" alt="phase1" width="800"/>
@@ -83,8 +83,7 @@ Please provide an explanation of this C code in a concise and straightforward ma
 
 ### Experimental Data
 
-Dat for this phase can be found in this [link](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/data/phase_1).
-
+Dat for this phase can be found in this [link](./experiment/data/phase_1).
 - `phase_1_data.csv`
 
 ## Scenario_2
@@ -108,7 +107,7 @@ Please provide an explanation of this code in a concise and straightforward mann
 
 ### Experimental Data
 
-Dat for this phase can be found in this [link](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/data/phase_1).
+Dat for this phase can be found in this [link](./experiment/data/phase_1/)
 
 - `phase_1_data.csv`
 
@@ -132,8 +131,7 @@ Please provide an explanation of this C code in a concise and straightforward ma
 
 ### Experimental Data
 
-Dat for this phase can be found in this [link](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/experiment/data/phase_1).
-
+Dat for this phase can be found in this [link](./experiment/data/phase_1/)
 - `phase_1_data.csv`
 - `phase_1_data_decompiled`
 
@@ -152,10 +150,10 @@ In this scenario, we will focus more on some real world malware analyziz by prov
 
 In Phase 2, our experiment delves into malware understanding. All compilation and decompilation processes occurred in an isolated environment to maintain safety and integrity. No scripts or binary files from this phase are included in the GitHub repository. Data sources vary across samples, as specified in the data file.
 
-Access the data [here](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/experiment/data/phase_2). Key files and folders:
+Access the data [here](./experiment/data/phase_2). Key files and folders:
 
-- **[`phase_2.csv`](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/experiment/data/phase_2/phase_2.cvs.csv)**
-- [code](https://github.com/sinapordanesh/ENEL-592-Project/tree/main/experiment/data/phase_2/code) directory
+- **[`phase_2.csv`](./experiment/data/phase_2/phase_2.cvs.csv)**
+- [code](./experiment/data/phase_2/code) directory
 
 ## Structure
 
@@ -194,7 +192,7 @@ Token estimations are different in each scenario. Ditailed token estimation sect
 
 We used 10 sample data rows from the first phase to understand variable and function naming better. We aimed to enhance readability and comprehension by assigning meaningful and human-readable names to functions and variables.
 
-- The data file for these two scenarios: **[`p2_s1&2.csv`](https://github.com/sinapordanesh/ENEL-592-Project/blob/main/experiment/process/phase_2/s1%262/p2_s1%262.csv)**
+- The data file for these two scenarios: **[`p2_s1&2.csv`](./experiment/process/phase_2/s1&2/p2_s1&2.csv)**
 
 ### **Prompt**
 
